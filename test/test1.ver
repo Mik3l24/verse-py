@@ -1,0 +1,23 @@
+// Test file for the Verbose language.
+
+variable Float32 named global_var.
+
+function named increment
+arguments
+    constant pointer to variable Float32 named foo,
+    variable Float32 named bar assigned 1.0
+procedure
+    assign at foo; value foo + bar.
+end
+
+function returning Int32 named main
+procedure
+    printLine a.
+
+    inline Float32 named pi assigned 3.14159.
+
+    assign global_var value 73.56.
+    increment global_var with pi.
+
+    return 0.
+end
