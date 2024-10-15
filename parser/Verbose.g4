@@ -263,7 +263,7 @@ while
 ;
 
 do_while
-: DO block WHILE expression P_PERIOD
+: block WHILE expression P_PERIOD
 ;
 
 //# Declarations
