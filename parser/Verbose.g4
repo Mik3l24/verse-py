@@ -71,6 +71,7 @@ RETURNING: 'returning';
 
 INLINE: 'inline';
 FORCED: 'forced';
+OPTIONAL: 'optional';
 
 RETURN: 'return';
 BREAK: 'break';
@@ -112,7 +113,7 @@ fragment DIGIT: [0-9];
 function_access: V_IDENTIFIER;
 
 inline_part
-: FORCED? INLINE
+: OPTIONAL? INLINE
 |
 ;
 
@@ -120,7 +121,7 @@ inline_part
 //## In-expression calls
 expr_call
 : CALL function_access
-| expr_call_nonterm P_SEMIC
+| expr_call_nonterm P_SEMIC?
 ;
 
 
@@ -133,7 +134,7 @@ expr_call_nonterm
 //## Access expressions (variables, dereference, array access, member access)
 access_expr
 : V_IDENTIFIER # Variable
-| access_expr_nonterm P_SEMIC # Nonterm
+| access_expr_nonterm P_SEMIC? # Nonterm
 | access_expr P_ACCESSOR V_IDENTIFIER # MemberAccess
 ;
 
@@ -143,13 +144,11 @@ access_expr_nonterm
 ;
 
 //## Generic expressions
-/** currently expressions must be always explicitly terminated. */
+///** currently expressions must be always explicitly terminated. */
 expression
-: access_expr # Molec
-| V_INTEGER # Molec
-| V_FLOAT # Molec
-| V_STRING # Molec
-| expr_call # Molec
+: V_INTEGER # Literal
+| V_FLOAT # Literal
+| V_STRING # Literal
 // Parethesis
 | L_PARENTHESIS expression R_PARENTHESIS # Molec
 | L_BRACKET expression R_BRACKET # Molec
@@ -163,6 +162,9 @@ expression
 | expression operator=(O_PLUS|O_MINUS) expression # BinaryOp
 | expression operator=(O_BIT_AND|O_BIT_XOR|O_BIT_OR) expression # BinaryOp
 | expression operator=(O_EQUAL|O_NOT_EQUAL|O_LESS|O_GREATER|O_LESS_EQUAL|O_GREATER_EQUAL) expression # BinaryOp
+// Expressions that may need termination
+| access_expr # Access
+| expr_call # Call
 ;
 
 

@@ -98,6 +98,24 @@ class VerboseListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by VerboseParser#CallOrAccess.
+    def enterCallOrAccess(self, ctx:VerboseParser.CallOrAccessContext):
+        pass
+
+    # Exit a parse tree produced by VerboseParser#CallOrAccess.
+    def exitCallOrAccess(self, ctx:VerboseParser.CallOrAccessContext):
+        pass
+
+
+    # Enter a parse tree produced by VerboseParser#Literal.
+    def enterLiteral(self, ctx:VerboseParser.LiteralContext):
+        pass
+
+    # Exit a parse tree produced by VerboseParser#Literal.
+    def exitLiteral(self, ctx:VerboseParser.LiteralContext):
+        pass
+
+
     # Enter a parse tree produced by VerboseParser#Molec.
     def enterMolec(self, ctx:VerboseParser.MolecContext):
         pass

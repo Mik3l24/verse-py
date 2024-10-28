@@ -59,6 +59,16 @@ class VerboseVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by VerboseParser#CallOrAccess.
+    def visitCallOrAccess(self, ctx:VerboseParser.CallOrAccessContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by VerboseParser#Literal.
+    def visitLiteral(self, ctx:VerboseParser.LiteralContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by VerboseParser#Molec.
     def visitMolec(self, ctx:VerboseParser.MolecContext):
         return self.visitChildren(ctx)

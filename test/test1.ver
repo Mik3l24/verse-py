@@ -7,17 +7,20 @@ arguments
     constant pointer to variable Float32 named foo,
     variable Float32 named bar assigned 1.0
 procedure
-    assign at foo; value foo + bar.
+    assign at foo value foo + bar.
 end
 
 function returning Int32 named main
 procedure
+    constant string named a assigned "Hello".
     printLine a.
 
+    variable pointer to variable Int8 named ptr
+        assigned allocateMem with 2.
     inline Float32 named pi assigned 3.14159.
 
     assign global_var value 73.56.
-    increment global_var with pi.
+    increment global_var with at ptr + 1; * pi.
 
     return 0.
 end
