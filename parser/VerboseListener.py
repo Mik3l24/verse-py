@@ -386,6 +386,15 @@ class VerboseListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by VerboseParser#type_decl.
+    def enterType_decl(self, ctx:VerboseParser.Type_declContext):
+        pass
+
+    # Exit a parse tree produced by VerboseParser#type_decl.
+    def exitType_decl(self, ctx:VerboseParser.Type_declContext):
+        pass
+
+
     # Enter a parse tree produced by VerboseParser#module_item.
     def enterModule_item(self, ctx:VerboseParser.Module_itemContext):
         pass

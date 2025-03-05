@@ -103,6 +103,9 @@ CALL: 'call';
 
 SIZEOF: 'sizeof' | 'sizeOf';
 
+TYPE: 'type';
+IS: 'is';
+
 V_IDENTIFIER: [a-zA-Z_] [a-zA-Z0-9_]*;
 
 // FUTURE - Compiler instructions
@@ -301,13 +304,18 @@ function
   block
 ;
 
+//## Type
+type_decl
+: TYPE NAMED? V_IDENTIFIER IS type_expr
+;
+
 //## Module
 module_item
 : section
 | function
 | var_decl P_PERIOD
 // Future
-//| type_decl
+| type_decl P_PERIOD
 //| compiler_instruction
 //| include_decl
 ;

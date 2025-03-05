@@ -219,6 +219,11 @@ class VerboseVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by VerboseParser#type_decl.
+    def visitType_decl(self, ctx:VerboseParser.Type_declContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by VerboseParser#module_item.
     def visitModule_item(self, ctx:VerboseParser.Module_itemContext):
         return self.visitChildren(ctx)
