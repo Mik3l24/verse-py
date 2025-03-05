@@ -8,6 +8,15 @@ else:
 # This class defines a complete listener for a parse tree produced by VerboseParser.
 class VerboseListener(ParseTreeListener):
 
+    # Enter a parse tree produced by VerboseParser#module.
+    def enterModule(self, ctx:VerboseParser.ModuleContext):
+        pass
+
+    # Exit a parse tree produced by VerboseParser#module.
+    def exitModule(self, ctx:VerboseParser.ModuleContext):
+        pass
+
+
     # Enter a parse tree produced by VerboseParser#function_access.
     def enterFunction_access(self, ctx:VerboseParser.Function_accessContext):
         pass
@@ -383,15 +392,6 @@ class VerboseListener(ParseTreeListener):
 
     # Exit a parse tree produced by VerboseParser#section.
     def exitSection(self, ctx:VerboseParser.SectionContext):
-        pass
-
-
-    # Enter a parse tree produced by VerboseParser#module.
-    def enterModule(self, ctx:VerboseParser.ModuleContext):
-        pass
-
-    # Exit a parse tree produced by VerboseParser#module.
-    def exitModule(self, ctx:VerboseParser.ModuleContext):
         pass
 
 

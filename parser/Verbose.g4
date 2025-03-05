@@ -112,6 +112,9 @@ fragment DIGIT: [0-9];
 
 
 // Parser rules
+// Starting rule
+module: module_item* EOF;
+
 //# Common
 function_access: V_IDENTIFIER;
 
@@ -156,6 +159,9 @@ expression
 | L_PARENTHESIS expression R_PARENTHESIS # Molec
 | L_BRACKET expression R_BRACKET # Molec
 | L_BRACE expression R_BRACE # Molec
+// Expressions that may need termination
+| expr_call # Call
+| access_expr # Access
 // Unary operators
 | O_MINUS expression # UnaryOp
 | O_BIT_NOT expression # UnaryOp
@@ -165,9 +171,6 @@ expression
 | expression operator=(O_PLUS|O_MINUS) expression # BinaryOp
 | expression operator=(O_BIT_AND|O_BIT_XOR|O_BIT_OR) expression # BinaryOp
 | expression operator=(O_EQUAL|O_NOT_EQUAL|O_LESS|O_GREATER|O_LESS_EQUAL|O_GREATER_EQUAL) expression # BinaryOp
-// Expressions that may need termination
-| access_expr # Access
-| expr_call # Call
 ;
 
 
@@ -283,15 +286,16 @@ name_decl_part
 ;
 
 target_decl_part
-: (TARGET|TARGETS) type_expr (P_COMMA type_expr)* P_COMMA? END?
+: (TARGET|TARGETS) var_decl (P_COMMA type_expr)* P_COMMA? END?
 ;
 
 arguments_decl_part
-: ARGUMENTS (var_decl P_COMMA)* var_decl P_COMMA? END?
+: ARGUMENTS var_decl (P_COMMA type_expr)* P_COMMA? END?
 ;
 
 function
-: FUNCTION
+: inline_part
+  FUNCTION
   return_type_decl_part?
   name_decl_part?
   target_decl_part?
@@ -318,6 +322,3 @@ section_header
 section
 : section_header* BEGIN module_item* END
 ;
-
-module: module_item* EOF;
-

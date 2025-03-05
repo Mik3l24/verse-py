@@ -9,6 +9,11 @@ else:
 
 class VerboseVisitor(ParseTreeVisitor):
 
+    # Visit a parse tree produced by VerboseParser#module.
+    def visitModule(self, ctx:VerboseParser.ModuleContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by VerboseParser#function_access.
     def visitFunction_access(self, ctx:VerboseParser.Function_accessContext):
         return self.visitChildren(ctx)
@@ -216,11 +221,6 @@ class VerboseVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by VerboseParser#section.
     def visitSection(self, ctx:VerboseParser.SectionContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by VerboseParser#module.
-    def visitModule(self, ctx:VerboseParser.ModuleContext):
         return self.visitChildren(ctx)
 
 
