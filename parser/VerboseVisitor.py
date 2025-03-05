@@ -54,18 +54,23 @@ class VerboseVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by VerboseParser#Call.
+    def visitCall(self, ctx:VerboseParser.CallContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by VerboseParser#UnaryOp.
     def visitUnaryOp(self, ctx:VerboseParser.UnaryOpContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by VerboseParser#CallOrAccess.
-    def visitCallOrAccess(self, ctx:VerboseParser.CallOrAccessContext):
+    # Visit a parse tree produced by VerboseParser#Literal.
+    def visitLiteral(self, ctx:VerboseParser.LiteralContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by VerboseParser#Literal.
-    def visitLiteral(self, ctx:VerboseParser.LiteralContext):
+    # Visit a parse tree produced by VerboseParser#Access.
+    def visitAccess(self, ctx:VerboseParser.AccessContext):
         return self.visitChildren(ctx)
 
 
@@ -184,6 +189,11 @@ class VerboseVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by VerboseParser#target_decl_part.
+    def visitTarget_decl_part(self, ctx:VerboseParser.Target_decl_partContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by VerboseParser#arguments_decl_part.
     def visitArguments_decl_part(self, ctx:VerboseParser.Arguments_decl_partContext):
         return self.visitChildren(ctx)
@@ -196,6 +206,16 @@ class VerboseVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by VerboseParser#module_item.
     def visitModule_item(self, ctx:VerboseParser.Module_itemContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by VerboseParser#Target.
+    def visitTarget(self, ctx:VerboseParser.TargetContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by VerboseParser#section.
+    def visitSection(self, ctx:VerboseParser.SectionContext):
         return self.visitChildren(ctx)
 
 

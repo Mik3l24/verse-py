@@ -10,123 +10,139 @@ else:
 
 def serializedATN():
     return [
-        4,1,59,324,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        4,1,62,364,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
         6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
         2,14,7,14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,20,
         7,20,2,21,7,21,2,22,7,22,2,23,7,23,2,24,7,24,2,25,7,25,2,26,7,26,
-        2,27,7,27,2,28,7,28,2,29,7,29,2,30,7,30,2,31,7,31,1,0,1,0,1,1,3,
-        1,68,8,1,1,1,1,1,3,1,72,8,1,1,2,1,2,1,2,1,2,3,2,78,8,2,3,2,80,8,
-        2,1,3,3,3,83,8,3,1,3,1,3,1,3,3,3,88,8,3,1,3,1,3,1,4,1,4,1,4,1,4,
-        3,4,96,8,4,3,4,98,8,4,1,4,1,4,1,4,5,4,103,8,4,10,4,12,4,106,9,4,
-        1,5,1,5,1,5,1,5,1,5,1,5,1,5,3,5,115,8,5,1,6,1,6,1,6,1,6,1,6,1,6,
-        1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,
-        1,6,1,6,3,6,141,8,6,3,6,143,8,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,
-        1,6,1,6,1,6,1,6,5,6,157,8,6,10,6,12,6,160,9,6,1,7,1,7,3,7,164,8,
-        7,1,8,1,8,1,8,1,9,1,9,3,9,171,8,9,1,10,1,10,1,10,1,10,1,11,1,11,
-        1,11,1,11,1,11,1,11,3,11,183,8,11,1,11,1,11,1,12,1,12,1,12,1,12,
-        1,12,1,13,1,13,1,14,1,14,1,14,5,14,197,8,14,10,14,12,14,200,9,14,
-        1,14,1,14,3,14,204,8,14,1,15,1,15,1,16,1,16,3,16,210,8,16,1,16,1,
-        16,3,16,214,8,16,1,16,3,16,217,8,16,1,17,1,17,1,17,1,17,1,17,3,17,
-        224,8,17,1,18,1,18,3,18,228,8,18,1,19,1,19,3,19,232,8,19,1,20,1,
-        20,3,20,236,8,20,1,21,1,21,1,21,1,21,1,21,3,21,243,8,21,1,22,1,22,
-        3,22,247,8,22,1,22,5,22,250,8,22,10,22,12,22,253,9,22,1,22,1,22,
-        1,23,1,23,1,23,1,23,1,23,1,23,3,23,263,8,23,3,23,265,8,23,1,24,1,
-        24,1,24,1,24,1,25,1,25,1,25,1,25,1,25,1,26,1,26,1,26,1,27,1,27,1,
-        27,1,28,1,28,1,28,1,28,5,28,286,8,28,10,28,12,28,289,9,28,1,28,1,
-        28,3,28,293,8,28,1,28,3,28,296,8,28,1,29,1,29,3,29,300,8,29,1,29,
-        3,29,303,8,29,1,29,3,29,306,8,29,1,29,1,29,1,30,1,30,1,30,1,30,3,
-        30,314,8,30,1,31,5,31,317,8,31,10,31,12,31,320,9,31,1,31,1,31,1,
-        31,0,2,8,12,32,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,
-        36,38,40,42,44,46,48,50,52,54,56,58,60,62,0,7,1,0,18,19,1,0,16,17,
-        1,0,26,28,1,0,20,25,1,0,49,50,1,0,46,47,2,0,8,8,48,48,348,0,64,1,
-        0,0,0,2,71,1,0,0,0,4,79,1,0,0,0,6,82,1,0,0,0,8,97,1,0,0,0,10,114,
-        1,0,0,0,12,142,1,0,0,0,14,163,1,0,0,0,16,165,1,0,0,0,18,170,1,0,
-        0,0,20,172,1,0,0,0,22,182,1,0,0,0,24,186,1,0,0,0,26,191,1,0,0,0,
-        28,198,1,0,0,0,30,205,1,0,0,0,32,207,1,0,0,0,34,218,1,0,0,0,36,225,
-        1,0,0,0,38,229,1,0,0,0,40,233,1,0,0,0,42,242,1,0,0,0,44,244,1,0,
-        0,0,46,256,1,0,0,0,48,266,1,0,0,0,50,270,1,0,0,0,52,275,1,0,0,0,
-        54,278,1,0,0,0,56,281,1,0,0,0,58,297,1,0,0,0,60,313,1,0,0,0,62,318,
-        1,0,0,0,64,65,5,59,0,0,65,1,1,0,0,0,66,68,5,42,0,0,67,66,1,0,0,0,
-        67,68,1,0,0,0,68,69,1,0,0,0,69,72,5,40,0,0,70,72,1,0,0,0,71,67,1,
-        0,0,0,71,70,1,0,0,0,72,3,1,0,0,0,73,74,5,58,0,0,74,80,3,0,0,0,75,
-        77,3,6,3,0,76,78,5,8,0,0,77,76,1,0,0,0,77,78,1,0,0,0,78,80,1,0,0,
-        0,79,73,1,0,0,0,79,75,1,0,0,0,80,5,1,0,0,0,81,83,5,58,0,0,82,81,
-        1,0,0,0,82,83,1,0,0,0,83,84,1,0,0,0,84,85,3,0,0,0,85,87,5,32,0,0,
-        86,88,5,35,0,0,87,86,1,0,0,0,87,88,1,0,0,0,88,89,1,0,0,0,89,90,3,
-        28,14,0,90,7,1,0,0,0,91,92,6,4,-1,0,92,98,5,59,0,0,93,95,3,10,5,
-        0,94,96,5,8,0,0,95,94,1,0,0,0,95,96,1,0,0,0,96,98,1,0,0,0,97,91,
-        1,0,0,0,97,93,1,0,0,0,98,104,1,0,0,0,99,100,10,1,0,0,100,101,5,9,
-        0,0,101,103,5,59,0,0,102,99,1,0,0,0,103,106,1,0,0,0,104,102,1,0,
-        0,0,104,105,1,0,0,0,105,9,1,0,0,0,106,104,1,0,0,0,107,108,5,56,0,
-        0,108,115,3,12,6,0,109,110,5,55,0,0,110,111,3,8,4,0,111,112,5,56,
-        0,0,112,113,3,12,6,0,113,115,1,0,0,0,114,107,1,0,0,0,114,109,1,0,
-        0,0,115,11,1,0,0,0,116,117,6,6,-1,0,117,143,5,4,0,0,118,143,5,3,
-        0,0,119,143,5,5,0,0,120,121,5,10,0,0,121,122,3,12,6,0,122,123,5,
-        11,0,0,123,143,1,0,0,0,124,125,5,12,0,0,125,126,3,12,6,0,126,127,
-        5,13,0,0,127,143,1,0,0,0,128,129,5,14,0,0,129,130,3,12,6,0,130,131,
-        5,15,0,0,131,143,1,0,0,0,132,133,5,17,0,0,133,143,3,12,6,8,134,135,
-        5,29,0,0,135,143,3,12,6,7,136,137,5,57,0,0,137,143,3,12,6,6,138,
-        141,3,8,4,0,139,141,3,4,2,0,140,138,1,0,0,0,140,139,1,0,0,0,141,
-        143,1,0,0,0,142,116,1,0,0,0,142,118,1,0,0,0,142,119,1,0,0,0,142,
-        120,1,0,0,0,142,124,1,0,0,0,142,128,1,0,0,0,142,132,1,0,0,0,142,
-        134,1,0,0,0,142,136,1,0,0,0,142,140,1,0,0,0,143,158,1,0,0,0,144,
-        145,10,5,0,0,145,146,7,0,0,0,146,157,3,12,6,6,147,148,10,4,0,0,148,
-        149,7,1,0,0,149,157,3,12,6,5,150,151,10,3,0,0,151,152,7,2,0,0,152,
-        157,3,12,6,4,153,154,10,2,0,0,154,155,7,3,0,0,155,157,3,12,6,3,156,
-        144,1,0,0,0,156,147,1,0,0,0,156,150,1,0,0,0,156,153,1,0,0,0,157,
-        160,1,0,0,0,158,156,1,0,0,0,158,159,1,0,0,0,159,13,1,0,0,0,160,158,
-        1,0,0,0,161,164,3,16,8,0,162,164,3,18,9,0,163,161,1,0,0,0,163,162,
-        1,0,0,0,164,15,1,0,0,0,165,166,7,4,0,0,166,167,3,18,9,0,167,17,1,
-        0,0,0,168,171,5,59,0,0,169,171,3,20,10,0,170,168,1,0,0,0,170,169,
-        1,0,0,0,171,19,1,0,0,0,172,173,5,51,0,0,173,174,5,33,0,0,174,175,
-        3,14,7,0,175,21,1,0,0,0,176,183,3,32,16,0,177,183,3,34,17,0,178,
-        183,3,24,12,0,179,183,3,36,18,0,180,183,3,38,19,0,181,183,3,40,20,
-        0,182,176,1,0,0,0,182,177,1,0,0,0,182,178,1,0,0,0,182,179,1,0,0,
-        0,182,180,1,0,0,0,182,181,1,0,0,0,182,183,1,0,0,0,183,184,1,0,0,
-        0,184,185,5,6,0,0,185,23,1,0,0,0,186,187,5,53,0,0,187,188,3,8,4,
-        0,188,189,5,54,0,0,189,190,3,12,6,0,190,25,1,0,0,0,191,192,3,12,
-        6,0,192,27,1,0,0,0,193,194,3,26,13,0,194,195,5,7,0,0,195,197,1,0,
-        0,0,196,193,1,0,0,0,197,200,1,0,0,0,198,196,1,0,0,0,198,199,1,0,
-        0,0,199,201,1,0,0,0,200,198,1,0,0,0,201,203,3,26,13,0,202,204,5,
-        7,0,0,203,202,1,0,0,0,203,204,1,0,0,0,204,29,1,0,0,0,205,206,3,8,
-        4,0,206,31,1,0,0,0,207,209,3,0,0,0,208,210,3,30,15,0,209,208,1,0,
-        0,0,209,210,1,0,0,0,210,216,1,0,0,0,211,213,5,32,0,0,212,214,5,35,
-        0,0,213,212,1,0,0,0,213,214,1,0,0,0,214,215,1,0,0,0,215,217,3,28,
-        14,0,216,211,1,0,0,0,216,217,1,0,0,0,217,33,1,0,0,0,218,219,3,2,
-        1,0,219,220,3,14,7,0,220,223,3,54,27,0,221,222,5,52,0,0,222,224,
-        3,12,6,0,223,221,1,0,0,0,223,224,1,0,0,0,224,35,1,0,0,0,225,227,
-        5,44,0,0,226,228,5,59,0,0,227,226,1,0,0,0,227,228,1,0,0,0,228,37,
-        1,0,0,0,229,231,5,45,0,0,230,232,5,59,0,0,231,230,1,0,0,0,231,232,
-        1,0,0,0,232,39,1,0,0,0,233,235,5,43,0,0,234,236,3,12,6,0,235,234,
-        1,0,0,0,235,236,1,0,0,0,236,41,1,0,0,0,237,243,3,22,11,0,238,243,
-        3,44,22,0,239,243,3,46,23,0,240,243,3,48,24,0,241,243,3,50,25,0,
-        242,237,1,0,0,0,242,238,1,0,0,0,242,239,1,0,0,0,242,240,1,0,0,0,
-        242,241,1,0,0,0,243,43,1,0,0,0,244,246,7,5,0,0,245,247,3,54,27,0,
-        246,245,1,0,0,0,246,247,1,0,0,0,247,251,1,0,0,0,248,250,3,42,21,
-        0,249,248,1,0,0,0,250,253,1,0,0,0,251,249,1,0,0,0,251,252,1,0,0,
-        0,252,254,1,0,0,0,253,251,1,0,0,0,254,255,7,6,0,0,255,45,1,0,0,0,
-        256,257,5,37,0,0,257,258,3,12,6,0,258,264,3,44,22,0,259,262,5,38,
-        0,0,260,263,3,44,22,0,261,263,3,46,23,0,262,260,1,0,0,0,262,261,
-        1,0,0,0,263,265,1,0,0,0,264,259,1,0,0,0,264,265,1,0,0,0,265,47,1,
-        0,0,0,266,267,5,36,0,0,267,268,3,12,6,0,268,269,3,44,22,0,269,49,
-        1,0,0,0,270,271,3,44,22,0,271,272,5,36,0,0,272,273,3,12,6,0,273,
-        274,5,6,0,0,274,51,1,0,0,0,275,276,5,39,0,0,276,277,3,14,7,0,277,
-        53,1,0,0,0,278,279,5,30,0,0,279,280,5,59,0,0,280,55,1,0,0,0,281,
-        287,5,35,0,0,282,283,3,34,17,0,283,284,5,7,0,0,284,286,1,0,0,0,285,
-        282,1,0,0,0,286,289,1,0,0,0,287,285,1,0,0,0,287,288,1,0,0,0,288,
-        290,1,0,0,0,289,287,1,0,0,0,290,292,3,34,17,0,291,293,5,7,0,0,292,
-        291,1,0,0,0,292,293,1,0,0,0,293,295,1,0,0,0,294,296,5,48,0,0,295,
-        294,1,0,0,0,295,296,1,0,0,0,296,57,1,0,0,0,297,299,5,34,0,0,298,
-        300,3,52,26,0,299,298,1,0,0,0,299,300,1,0,0,0,300,302,1,0,0,0,301,
-        303,3,54,27,0,302,301,1,0,0,0,302,303,1,0,0,0,303,305,1,0,0,0,304,
-        306,3,56,28,0,305,304,1,0,0,0,305,306,1,0,0,0,306,307,1,0,0,0,307,
-        308,3,44,22,0,308,59,1,0,0,0,309,314,3,58,29,0,310,311,3,34,17,0,
-        311,312,5,6,0,0,312,314,1,0,0,0,313,309,1,0,0,0,313,310,1,0,0,0,
-        314,61,1,0,0,0,315,317,3,60,30,0,316,315,1,0,0,0,317,320,1,0,0,0,
-        318,316,1,0,0,0,318,319,1,0,0,0,319,321,1,0,0,0,320,318,1,0,0,0,
-        321,322,5,0,0,1,322,63,1,0,0,0,39,67,71,77,79,82,87,95,97,104,114,
-        140,142,156,158,163,170,182,198,203,209,213,216,223,227,231,235,
-        242,246,251,262,264,287,292,295,299,302,305,313,318
+        2,27,7,27,2,28,7,28,2,29,7,29,2,30,7,30,2,31,7,31,2,32,7,32,2,33,
+        7,33,2,34,7,34,1,0,1,0,1,1,3,1,74,8,1,1,1,1,1,3,1,78,8,1,1,2,1,2,
+        1,2,1,2,3,2,84,8,2,3,2,86,8,2,1,3,3,3,89,8,3,1,3,1,3,1,3,3,3,94,
+        8,3,1,3,1,3,1,4,1,4,1,4,1,4,3,4,102,8,4,3,4,104,8,4,1,4,1,4,1,4,
+        5,4,109,8,4,10,4,12,4,112,9,4,1,5,1,5,1,5,1,5,1,5,1,5,1,5,3,5,121,
+        8,5,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,
+        1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,3,6,147,8,6,1,6,1,6,1,6,1,6,
+        1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,5,6,161,8,6,10,6,12,6,164,9,6,1,
+        7,1,7,3,7,168,8,7,1,8,1,8,1,8,1,9,1,9,3,9,175,8,9,1,10,1,10,1,10,
+        1,10,1,11,1,11,1,11,1,11,1,11,1,11,3,11,187,8,11,1,11,1,11,1,12,
+        1,12,1,12,1,12,1,12,1,13,1,13,1,14,1,14,1,14,5,14,201,8,14,10,14,
+        12,14,204,9,14,1,14,1,14,3,14,208,8,14,1,15,1,15,1,16,1,16,3,16,
+        214,8,16,1,16,1,16,3,16,218,8,16,1,16,3,16,221,8,16,1,17,1,17,1,
+        17,1,17,1,17,3,17,228,8,17,1,18,1,18,3,18,232,8,18,1,19,1,19,3,19,
+        236,8,19,1,20,1,20,3,20,240,8,20,1,21,1,21,1,21,1,21,1,21,3,21,247,
+        8,21,1,22,1,22,3,22,251,8,22,1,22,5,22,254,8,22,10,22,12,22,257,
+        9,22,1,22,1,22,1,23,1,23,1,23,1,23,1,23,1,23,3,23,267,8,23,3,23,
+        269,8,23,1,24,1,24,1,24,1,24,1,25,1,25,1,25,1,25,1,25,1,26,1,26,
+        1,26,1,27,1,27,1,27,1,28,1,28,1,28,1,28,5,28,290,8,28,10,28,12,28,
+        293,9,28,1,28,3,28,296,8,28,1,28,3,28,299,8,28,1,29,1,29,1,29,1,
+        29,5,29,305,8,29,10,29,12,29,308,9,29,1,29,1,29,3,29,312,8,29,1,
+        29,3,29,315,8,29,1,30,1,30,3,30,319,8,30,1,30,3,30,322,8,30,1,30,
+        3,30,325,8,30,1,30,3,30,328,8,30,1,30,1,30,1,31,1,31,1,31,1,31,1,
+        31,3,31,337,8,31,1,32,1,32,1,33,5,33,342,8,33,10,33,12,33,345,9,
+        33,1,33,1,33,5,33,349,8,33,10,33,12,33,352,9,33,1,33,1,33,1,34,5,
+        34,357,8,34,10,34,12,34,360,9,34,1,34,1,34,1,34,0,2,8,12,35,0,2,
+        4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,
+        50,52,54,56,58,60,62,64,66,68,0,8,1,0,18,19,1,0,16,17,1,0,26,28,
+        1,0,20,25,1,0,52,53,1,0,48,49,2,0,8,8,51,51,1,0,36,37,392,0,70,1,
+        0,0,0,2,77,1,0,0,0,4,85,1,0,0,0,6,88,1,0,0,0,8,103,1,0,0,0,10,120,
+        1,0,0,0,12,146,1,0,0,0,14,167,1,0,0,0,16,169,1,0,0,0,18,174,1,0,
+        0,0,20,176,1,0,0,0,22,186,1,0,0,0,24,190,1,0,0,0,26,195,1,0,0,0,
+        28,202,1,0,0,0,30,209,1,0,0,0,32,211,1,0,0,0,34,222,1,0,0,0,36,229,
+        1,0,0,0,38,233,1,0,0,0,40,237,1,0,0,0,42,246,1,0,0,0,44,248,1,0,
+        0,0,46,260,1,0,0,0,48,270,1,0,0,0,50,274,1,0,0,0,52,279,1,0,0,0,
+        54,282,1,0,0,0,56,285,1,0,0,0,58,300,1,0,0,0,60,316,1,0,0,0,62,336,
+        1,0,0,0,64,338,1,0,0,0,66,343,1,0,0,0,68,358,1,0,0,0,70,71,5,62,
+        0,0,71,1,1,0,0,0,72,74,5,44,0,0,73,72,1,0,0,0,73,74,1,0,0,0,74,75,
+        1,0,0,0,75,78,5,42,0,0,76,78,1,0,0,0,77,73,1,0,0,0,77,76,1,0,0,0,
+        78,3,1,0,0,0,79,80,5,61,0,0,80,86,3,0,0,0,81,83,3,6,3,0,82,84,5,
+        8,0,0,83,82,1,0,0,0,83,84,1,0,0,0,84,86,1,0,0,0,85,79,1,0,0,0,85,
+        81,1,0,0,0,86,5,1,0,0,0,87,89,5,61,0,0,88,87,1,0,0,0,88,89,1,0,0,
+        0,89,90,1,0,0,0,90,91,3,0,0,0,91,93,5,32,0,0,92,94,5,35,0,0,93,92,
+        1,0,0,0,93,94,1,0,0,0,94,95,1,0,0,0,95,96,3,28,14,0,96,7,1,0,0,0,
+        97,98,6,4,-1,0,98,104,5,62,0,0,99,101,3,10,5,0,100,102,5,8,0,0,101,
+        100,1,0,0,0,101,102,1,0,0,0,102,104,1,0,0,0,103,97,1,0,0,0,103,99,
+        1,0,0,0,104,110,1,0,0,0,105,106,10,1,0,0,106,107,5,9,0,0,107,109,
+        5,62,0,0,108,105,1,0,0,0,109,112,1,0,0,0,110,108,1,0,0,0,110,111,
+        1,0,0,0,111,9,1,0,0,0,112,110,1,0,0,0,113,114,5,59,0,0,114,121,3,
+        12,6,0,115,116,5,58,0,0,116,117,3,8,4,0,117,118,5,59,0,0,118,119,
+        3,12,6,0,119,121,1,0,0,0,120,113,1,0,0,0,120,115,1,0,0,0,121,11,
+        1,0,0,0,122,123,6,6,-1,0,123,147,5,4,0,0,124,147,5,3,0,0,125,147,
+        5,5,0,0,126,127,5,10,0,0,127,128,3,12,6,0,128,129,5,11,0,0,129,147,
+        1,0,0,0,130,131,5,12,0,0,131,132,3,12,6,0,132,133,5,13,0,0,133,147,
+        1,0,0,0,134,135,5,14,0,0,135,136,3,12,6,0,136,137,5,15,0,0,137,147,
+        1,0,0,0,138,139,5,17,0,0,139,147,3,12,6,9,140,141,5,29,0,0,141,147,
+        3,12,6,8,142,143,5,60,0,0,143,147,3,12,6,7,144,147,3,8,4,0,145,147,
+        3,4,2,0,146,122,1,0,0,0,146,124,1,0,0,0,146,125,1,0,0,0,146,126,
+        1,0,0,0,146,130,1,0,0,0,146,134,1,0,0,0,146,138,1,0,0,0,146,140,
+        1,0,0,0,146,142,1,0,0,0,146,144,1,0,0,0,146,145,1,0,0,0,147,162,
+        1,0,0,0,148,149,10,6,0,0,149,150,7,0,0,0,150,161,3,12,6,7,151,152,
+        10,5,0,0,152,153,7,1,0,0,153,161,3,12,6,6,154,155,10,4,0,0,155,156,
+        7,2,0,0,156,161,3,12,6,5,157,158,10,3,0,0,158,159,7,3,0,0,159,161,
+        3,12,6,4,160,148,1,0,0,0,160,151,1,0,0,0,160,154,1,0,0,0,160,157,
+        1,0,0,0,161,164,1,0,0,0,162,160,1,0,0,0,162,163,1,0,0,0,163,13,1,
+        0,0,0,164,162,1,0,0,0,165,168,3,16,8,0,166,168,3,18,9,0,167,165,
+        1,0,0,0,167,166,1,0,0,0,168,15,1,0,0,0,169,170,7,4,0,0,170,171,3,
+        18,9,0,171,17,1,0,0,0,172,175,5,62,0,0,173,175,3,20,10,0,174,172,
+        1,0,0,0,174,173,1,0,0,0,175,19,1,0,0,0,176,177,5,54,0,0,177,178,
+        5,33,0,0,178,179,3,14,7,0,179,21,1,0,0,0,180,187,3,32,16,0,181,187,
+        3,34,17,0,182,187,3,24,12,0,183,187,3,36,18,0,184,187,3,38,19,0,
+        185,187,3,40,20,0,186,180,1,0,0,0,186,181,1,0,0,0,186,182,1,0,0,
+        0,186,183,1,0,0,0,186,184,1,0,0,0,186,185,1,0,0,0,186,187,1,0,0,
+        0,187,188,1,0,0,0,188,189,5,6,0,0,189,23,1,0,0,0,190,191,5,56,0,
+        0,191,192,3,8,4,0,192,193,5,57,0,0,193,194,3,12,6,0,194,25,1,0,0,
+        0,195,196,3,12,6,0,196,27,1,0,0,0,197,198,3,26,13,0,198,199,5,7,
+        0,0,199,201,1,0,0,0,200,197,1,0,0,0,201,204,1,0,0,0,202,200,1,0,
+        0,0,202,203,1,0,0,0,203,205,1,0,0,0,204,202,1,0,0,0,205,207,3,26,
+        13,0,206,208,5,7,0,0,207,206,1,0,0,0,207,208,1,0,0,0,208,29,1,0,
+        0,0,209,210,3,8,4,0,210,31,1,0,0,0,211,213,3,0,0,0,212,214,3,30,
+        15,0,213,212,1,0,0,0,213,214,1,0,0,0,214,220,1,0,0,0,215,217,5,32,
+        0,0,216,218,5,35,0,0,217,216,1,0,0,0,217,218,1,0,0,0,218,219,1,0,
+        0,0,219,221,3,28,14,0,220,215,1,0,0,0,220,221,1,0,0,0,221,33,1,0,
+        0,0,222,223,3,2,1,0,223,224,3,14,7,0,224,227,3,54,27,0,225,226,5,
+        55,0,0,226,228,3,12,6,0,227,225,1,0,0,0,227,228,1,0,0,0,228,35,1,
+        0,0,0,229,231,5,46,0,0,230,232,5,62,0,0,231,230,1,0,0,0,231,232,
+        1,0,0,0,232,37,1,0,0,0,233,235,5,47,0,0,234,236,5,62,0,0,235,234,
+        1,0,0,0,235,236,1,0,0,0,236,39,1,0,0,0,237,239,5,45,0,0,238,240,
+        3,12,6,0,239,238,1,0,0,0,239,240,1,0,0,0,240,41,1,0,0,0,241,247,
+        3,22,11,0,242,247,3,44,22,0,243,247,3,46,23,0,244,247,3,48,24,0,
+        245,247,3,50,25,0,246,241,1,0,0,0,246,242,1,0,0,0,246,243,1,0,0,
+        0,246,244,1,0,0,0,246,245,1,0,0,0,247,43,1,0,0,0,248,250,7,5,0,0,
+        249,251,3,54,27,0,250,249,1,0,0,0,250,251,1,0,0,0,251,255,1,0,0,
+        0,252,254,3,42,21,0,253,252,1,0,0,0,254,257,1,0,0,0,255,253,1,0,
+        0,0,255,256,1,0,0,0,256,258,1,0,0,0,257,255,1,0,0,0,258,259,7,6,
+        0,0,259,45,1,0,0,0,260,261,5,39,0,0,261,262,3,12,6,0,262,268,3,44,
+        22,0,263,266,5,40,0,0,264,267,3,44,22,0,265,267,3,46,23,0,266,264,
+        1,0,0,0,266,265,1,0,0,0,267,269,1,0,0,0,268,263,1,0,0,0,268,269,
+        1,0,0,0,269,47,1,0,0,0,270,271,5,38,0,0,271,272,3,12,6,0,272,273,
+        3,44,22,0,273,49,1,0,0,0,274,275,3,44,22,0,275,276,5,38,0,0,276,
+        277,3,12,6,0,277,278,5,6,0,0,278,51,1,0,0,0,279,280,5,41,0,0,280,
+        281,3,14,7,0,281,53,1,0,0,0,282,283,5,30,0,0,283,284,5,62,0,0,284,
+        55,1,0,0,0,285,286,7,7,0,0,286,291,3,14,7,0,287,288,5,7,0,0,288,
+        290,3,14,7,0,289,287,1,0,0,0,290,293,1,0,0,0,291,289,1,0,0,0,291,
+        292,1,0,0,0,292,295,1,0,0,0,293,291,1,0,0,0,294,296,5,7,0,0,295,
+        294,1,0,0,0,295,296,1,0,0,0,296,298,1,0,0,0,297,299,5,51,0,0,298,
+        297,1,0,0,0,298,299,1,0,0,0,299,57,1,0,0,0,300,306,5,35,0,0,301,
+        302,3,34,17,0,302,303,5,7,0,0,303,305,1,0,0,0,304,301,1,0,0,0,305,
+        308,1,0,0,0,306,304,1,0,0,0,306,307,1,0,0,0,307,309,1,0,0,0,308,
+        306,1,0,0,0,309,311,3,34,17,0,310,312,5,7,0,0,311,310,1,0,0,0,311,
+        312,1,0,0,0,312,314,1,0,0,0,313,315,5,51,0,0,314,313,1,0,0,0,314,
+        315,1,0,0,0,315,59,1,0,0,0,316,318,5,34,0,0,317,319,3,52,26,0,318,
+        317,1,0,0,0,318,319,1,0,0,0,319,321,1,0,0,0,320,322,3,54,27,0,321,
+        320,1,0,0,0,321,322,1,0,0,0,322,324,1,0,0,0,323,325,3,56,28,0,324,
+        323,1,0,0,0,324,325,1,0,0,0,325,327,1,0,0,0,326,328,3,58,29,0,327,
+        326,1,0,0,0,327,328,1,0,0,0,328,329,1,0,0,0,329,330,3,44,22,0,330,
+        61,1,0,0,0,331,337,3,66,33,0,332,337,3,60,30,0,333,334,3,34,17,0,
+        334,335,5,6,0,0,335,337,1,0,0,0,336,331,1,0,0,0,336,332,1,0,0,0,
+        336,333,1,0,0,0,337,63,1,0,0,0,338,339,3,56,28,0,339,65,1,0,0,0,
+        340,342,3,64,32,0,341,340,1,0,0,0,342,345,1,0,0,0,343,341,1,0,0,
+        0,343,344,1,0,0,0,344,346,1,0,0,0,345,343,1,0,0,0,346,350,5,50,0,
+        0,347,349,3,62,31,0,348,347,1,0,0,0,349,352,1,0,0,0,350,348,1,0,
+        0,0,350,351,1,0,0,0,351,353,1,0,0,0,352,350,1,0,0,0,353,354,5,51,
+        0,0,354,67,1,0,0,0,355,357,3,62,31,0,356,355,1,0,0,0,357,360,1,0,
+        0,0,358,356,1,0,0,0,358,359,1,0,0,0,359,361,1,0,0,0,360,358,1,0,
+        0,0,361,362,5,0,0,1,362,69,1,0,0,0,44,73,77,83,85,88,93,101,103,
+        110,120,146,160,162,167,174,186,202,207,213,217,220,227,231,235,
+        239,246,250,255,266,268,291,295,298,306,311,314,318,321,324,327,
+        336,343,350,358
     ]
 
 class VerboseParser ( Parser ):
@@ -145,9 +161,10 @@ class VerboseParser ( Parser ):
                      "'*'", "'/'", "<INVALID>", "'!='", "'<'", "'>'", "'<='", 
                      "'>='", "'&'", "'|'", "'^'", "<INVALID>", "'named'", 
                      "'from'", "'with'", "'to'", "'function'", "'arguments'", 
-                     "'while'", "'if'", "'else'", "'returning'", "'inline'", 
-                     "'forced'", "'optional'", "'return'", "'break'", "'continue'", 
-                     "'procedure'", "'do'", "'end'", "'variable'", "'constant'", 
+                     "'targets'", "'target'", "'while'", "'if'", "'else'", 
+                     "'returning'", "'inline'", "'forced'", "'optional'", 
+                     "'return'", "'break'", "'continue'", "'procedure'", 
+                     "'do'", "'begin'", "'end'", "'variable'", "'constant'", 
                      "'pointer'", "'assigned'", "'assign'", "'value'", "'index'", 
                      "'at'", "'not'", "'call'" ]
 
@@ -158,11 +175,12 @@ class VerboseParser ( Parser ):
                       "O_DIVIDE", "O_EQUAL", "O_NOT_EQUAL", "O_LESS", "O_GREATER", 
                       "O_LESS_EQUAL", "O_GREATER_EQUAL", "O_BIT_AND", "O_BIT_OR", 
                       "O_BIT_XOR", "O_BIT_NOT", "NAMED", "FROM", "WITH", 
-                      "TO", "FUNCTION", "ARGUMENTS", "WHILE", "IF", "ELSE", 
-                      "RETURNING", "INLINE", "FORCED", "OPTIONAL", "RETURN", 
-                      "BREAK", "CONTINUE", "PROCEDURE", "DO", "END", "VARIABLE", 
-                      "CONSTANT", "POINTER", "ASSIGNED", "ASSIGN", "VALUE", 
-                      "INDEX", "AT", "NOT", "CALL", "V_IDENTIFIER" ]
+                      "TO", "FUNCTION", "ARGUMENTS", "TARGETS", "TARGET", 
+                      "WHILE", "IF", "ELSE", "RETURNING", "INLINE", "FORCED", 
+                      "OPTIONAL", "RETURN", "BREAK", "CONTINUE", "PROCEDURE", 
+                      "DO", "BEGIN", "END", "VARIABLE", "CONSTANT", "POINTER", 
+                      "ASSIGNED", "ASSIGN", "VALUE", "INDEX", "AT", "NOT", 
+                      "CALL", "V_IDENTIFIER" ]
 
     RULE_function_access = 0
     RULE_inline_part = 1
@@ -192,10 +210,13 @@ class VerboseParser ( Parser ):
     RULE_do_while = 25
     RULE_return_type_decl_part = 26
     RULE_name_decl_part = 27
-    RULE_arguments_decl_part = 28
-    RULE_function = 29
-    RULE_module_item = 30
-    RULE_module = 31
+    RULE_target_decl_part = 28
+    RULE_arguments_decl_part = 29
+    RULE_function = 30
+    RULE_module_item = 31
+    RULE_section_header = 32
+    RULE_section = 33
+    RULE_module = 34
 
     ruleNames =  [ "function_access", "inline_part", "expr_call", "expr_call_nonterm", 
                    "access_expr", "access_expr_nonterm", "expression", "type_expr", 
@@ -204,8 +225,9 @@ class VerboseParser ( Parser ):
                    "call_target", "call_statement", "var_decl", "break_statement", 
                    "continue_statement", "return_statement", "block_item", 
                    "block", "if", "while", "do_while", "return_type_decl_part", 
-                   "name_decl_part", "arguments_decl_part", "function", 
-                   "module_item", "module" ]
+                   "name_decl_part", "target_decl_part", "arguments_decl_part", 
+                   "function", "module_item", "section_header", "section", 
+                   "module" ]
 
     EOF = Token.EOF
     WS=1
@@ -243,30 +265,33 @@ class VerboseParser ( Parser ):
     TO=33
     FUNCTION=34
     ARGUMENTS=35
-    WHILE=36
-    IF=37
-    ELSE=38
-    RETURNING=39
-    INLINE=40
-    FORCED=41
-    OPTIONAL=42
-    RETURN=43
-    BREAK=44
-    CONTINUE=45
-    PROCEDURE=46
-    DO=47
-    END=48
-    VARIABLE=49
-    CONSTANT=50
-    POINTER=51
-    ASSIGNED=52
-    ASSIGN=53
-    VALUE=54
-    INDEX=55
-    AT=56
-    NOT=57
-    CALL=58
-    V_IDENTIFIER=59
+    TARGETS=36
+    TARGET=37
+    WHILE=38
+    IF=39
+    ELSE=40
+    RETURNING=41
+    INLINE=42
+    FORCED=43
+    OPTIONAL=44
+    RETURN=45
+    BREAK=46
+    CONTINUE=47
+    PROCEDURE=48
+    DO=49
+    BEGIN=50
+    END=51
+    VARIABLE=52
+    CONSTANT=53
+    POINTER=54
+    ASSIGNED=55
+    ASSIGN=56
+    VALUE=57
+    INDEX=58
+    AT=59
+    NOT=60
+    CALL=61
+    V_IDENTIFIER=62
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -313,7 +338,7 @@ class VerboseParser ( Parser ):
         self.enterRule(localctx, 0, self.RULE_function_access)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 64
+            self.state = 70
             self.match(VerboseParser.V_IDENTIFIER)
         except RecognitionException as re:
             localctx.exception = re
@@ -363,23 +388,23 @@ class VerboseParser ( Parser ):
         self.enterRule(localctx, 2, self.RULE_inline_part)
         self._la = 0 # Token type
         try:
-            self.state = 71
+            self.state = 77
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [40, 42]:
+            if token in [42, 44]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 67
+                self.state = 73
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==42:
-                    self.state = 66
+                if _la==44:
+                    self.state = 72
                     self.match(VerboseParser.OPTIONAL)
 
 
-                self.state = 69
+                self.state = 75
                 self.match(VerboseParser.INLINE)
                 pass
-            elif token in [49, 50, 51, 59]:
+            elif token in [52, 53, 54, 62]:
                 self.enterOuterAlt(localctx, 2)
 
                 pass
@@ -441,26 +466,26 @@ class VerboseParser ( Parser ):
         localctx = VerboseParser.Expr_callContext(self, self._ctx, self.state)
         self.enterRule(localctx, 4, self.RULE_expr_call)
         try:
-            self.state = 79
+            self.state = 85
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,3,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 73
+                self.state = 79
                 self.match(VerboseParser.CALL)
-                self.state = 74
+                self.state = 80
                 self.function_access()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 75
+                self.state = 81
                 self.expr_call_nonterm()
-                self.state = 77
+                self.state = 83
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,2,self._ctx)
                 if la_ == 1:
-                    self.state = 76
+                    self.state = 82
                     self.match(VerboseParser.P_SEMIC)
 
 
@@ -527,27 +552,27 @@ class VerboseParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 82
+            self.state = 88
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==58:
-                self.state = 81
+            if _la==61:
+                self.state = 87
                 self.match(VerboseParser.CALL)
 
 
-            self.state = 84
+            self.state = 90
             self.function_access()
-            self.state = 85
+            self.state = 91
             self.match(VerboseParser.WITH)
-            self.state = 87
+            self.state = 93
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==35:
-                self.state = 86
+                self.state = 92
                 self.match(VerboseParser.ARGUMENTS)
 
 
-            self.state = 89
+            self.state = 95
             self.call_arguments()
         except RecognitionException as re:
             localctx.exception = re
@@ -664,28 +689,28 @@ class VerboseParser ( Parser ):
         self.enterRecursionRule(localctx, 8, self.RULE_access_expr, _p)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 97
+            self.state = 103
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [59]:
+            if token in [62]:
                 localctx = VerboseParser.VariableContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
 
-                self.state = 92
+                self.state = 98
                 self.match(VerboseParser.V_IDENTIFIER)
                 pass
-            elif token in [55, 56]:
+            elif token in [58, 59]:
                 localctx = VerboseParser.NontermContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 93
+                self.state = 99
                 self.access_expr_nonterm()
-                self.state = 95
+                self.state = 101
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,6,self._ctx)
                 if la_ == 1:
-                    self.state = 94
+                    self.state = 100
                     self.match(VerboseParser.P_SEMIC)
 
 
@@ -694,7 +719,7 @@ class VerboseParser ( Parser ):
                 raise NoViableAltException(self)
 
             self._ctx.stop = self._input.LT(-1)
-            self.state = 104
+            self.state = 110
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,8,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
@@ -704,15 +729,15 @@ class VerboseParser ( Parser ):
                     _prevctx = localctx
                     localctx = VerboseParser.MemberAccessContext(self, VerboseParser.Access_exprContext(self, _parentctx, _parentState))
                     self.pushNewRecursionContext(localctx, _startState, self.RULE_access_expr)
-                    self.state = 99
+                    self.state = 105
                     if not self.precpred(self._ctx, 1):
                         from antlr4.error.Errors import FailedPredicateException
                         raise FailedPredicateException(self, "self.precpred(self._ctx, 1)")
-                    self.state = 100
+                    self.state = 106
                     self.match(VerboseParser.P_ACCESSOR)
-                    self.state = 101
+                    self.state = 107
                     self.match(VerboseParser.V_IDENTIFIER) 
-                self.state = 106
+                self.state = 112
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,8,self._ctx)
 
@@ -807,27 +832,27 @@ class VerboseParser ( Parser ):
         localctx = VerboseParser.Access_expr_nontermContext(self, self._ctx, self.state)
         self.enterRule(localctx, 10, self.RULE_access_expr_nonterm)
         try:
-            self.state = 114
+            self.state = 120
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [56]:
+            if token in [59]:
                 localctx = VerboseParser.DereferenceContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
-                self.state = 107
+                self.state = 113
                 self.match(VerboseParser.AT)
-                self.state = 108
+                self.state = 114
                 self.expression(0)
                 pass
-            elif token in [55]:
+            elif token in [58]:
                 localctx = VerboseParser.ArrayAccessContext(self, localctx)
                 self.enterOuterAlt(localctx, 2)
-                self.state = 109
+                self.state = 115
                 self.match(VerboseParser.INDEX)
-                self.state = 110
+                self.state = 116
                 self.access_expr(0)
-                self.state = 111
+                self.state = 117
                 self.match(VerboseParser.AT)
-                self.state = 112
+                self.state = 118
                 self.expression(0)
                 pass
             else:
@@ -856,6 +881,31 @@ class VerboseParser ( Parser ):
      
         def copyFrom(self, ctx:ParserRuleContext):
             super().copyFrom(ctx)
+
+
+    class CallContext(ExpressionContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a VerboseParser.ExpressionContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def expr_call(self):
+            return self.getTypedRuleContext(VerboseParser.Expr_callContext,0)
+
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterCall" ):
+                listener.enterCall(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitCall" ):
+                listener.exitCall(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCall" ):
+                return visitor.visitCall(self)
+            else:
+                return visitor.visitChildren(self)
 
 
     class UnaryOpContext(ExpressionContext):
@@ -889,34 +939,6 @@ class VerboseParser ( Parser ):
                 return visitor.visitChildren(self)
 
 
-    class CallOrAccessContext(ExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a VerboseParser.ExpressionContext
-            super().__init__(parser)
-            self.copyFrom(ctx)
-
-        def access_expr(self):
-            return self.getTypedRuleContext(VerboseParser.Access_exprContext,0)
-
-        def expr_call(self):
-            return self.getTypedRuleContext(VerboseParser.Expr_callContext,0)
-
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCallOrAccess" ):
-                listener.enterCallOrAccess(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCallOrAccess" ):
-                listener.exitCallOrAccess(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCallOrAccess" ):
-                return visitor.visitCallOrAccess(self)
-            else:
-                return visitor.visitChildren(self)
-
-
     class LiteralContext(ExpressionContext):
 
         def __init__(self, parser, ctx:ParserRuleContext): # actually a VerboseParser.ExpressionContext
@@ -941,6 +963,31 @@ class VerboseParser ( Parser ):
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitLiteral" ):
                 return visitor.visitLiteral(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class AccessContext(ExpressionContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a VerboseParser.ExpressionContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def access_expr(self):
+            return self.getTypedRuleContext(VerboseParser.Access_exprContext,0)
+
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterAccess" ):
+                listener.enterAccess(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitAccess" ):
+                listener.exitAccess(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAccess" ):
+                return visitor.visitAccess(self)
             else:
                 return visitor.visitChildren(self)
 
@@ -1048,133 +1095,137 @@ class VerboseParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 142
+            self.state = 146
             self._errHandler.sync(self)
-            token = self._input.LA(1)
-            if token in [4]:
+            la_ = self._interp.adaptivePredict(self._input,10,self._ctx)
+            if la_ == 1:
                 localctx = VerboseParser.LiteralContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
 
-                self.state = 117
+                self.state = 123
                 self.match(VerboseParser.V_INTEGER)
                 pass
-            elif token in [3]:
+
+            elif la_ == 2:
                 localctx = VerboseParser.LiteralContext(self, localctx)
-                self._ctx = localctx
-                _prevctx = localctx
-                self.state = 118
-                self.match(VerboseParser.V_FLOAT)
-                pass
-            elif token in [5]:
-                localctx = VerboseParser.LiteralContext(self, localctx)
-                self._ctx = localctx
-                _prevctx = localctx
-                self.state = 119
-                self.match(VerboseParser.V_STRING)
-                pass
-            elif token in [10]:
-                localctx = VerboseParser.MolecContext(self, localctx)
-                self._ctx = localctx
-                _prevctx = localctx
-                self.state = 120
-                self.match(VerboseParser.L_PARENTHESIS)
-                self.state = 121
-                self.expression(0)
-                self.state = 122
-                self.match(VerboseParser.R_PARENTHESIS)
-                pass
-            elif token in [12]:
-                localctx = VerboseParser.MolecContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
                 self.state = 124
-                self.match(VerboseParser.L_BRACKET)
-                self.state = 125
-                self.expression(0)
-                self.state = 126
-                self.match(VerboseParser.R_BRACKET)
+                self.match(VerboseParser.V_FLOAT)
                 pass
-            elif token in [14]:
+
+            elif la_ == 3:
+                localctx = VerboseParser.LiteralContext(self, localctx)
+                self._ctx = localctx
+                _prevctx = localctx
+                self.state = 125
+                self.match(VerboseParser.V_STRING)
+                pass
+
+            elif la_ == 4:
                 localctx = VerboseParser.MolecContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 128
-                self.match(VerboseParser.L_BRACE)
-                self.state = 129
+                self.state = 126
+                self.match(VerboseParser.L_PARENTHESIS)
+                self.state = 127
                 self.expression(0)
-                self.state = 130
-                self.match(VerboseParser.R_BRACE)
+                self.state = 128
+                self.match(VerboseParser.R_PARENTHESIS)
                 pass
-            elif token in [17]:
-                localctx = VerboseParser.UnaryOpContext(self, localctx)
+
+            elif la_ == 5:
+                localctx = VerboseParser.MolecContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
+                self.state = 130
+                self.match(VerboseParser.L_BRACKET)
+                self.state = 131
+                self.expression(0)
                 self.state = 132
-                self.match(VerboseParser.O_MINUS)
-                self.state = 133
-                self.expression(8)
+                self.match(VerboseParser.R_BRACKET)
                 pass
-            elif token in [29]:
-                localctx = VerboseParser.UnaryOpContext(self, localctx)
+
+            elif la_ == 6:
+                localctx = VerboseParser.MolecContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
                 self.state = 134
-                self.match(VerboseParser.O_BIT_NOT)
+                self.match(VerboseParser.L_BRACE)
                 self.state = 135
-                self.expression(7)
+                self.expression(0)
+                self.state = 136
+                self.match(VerboseParser.R_BRACE)
                 pass
-            elif token in [57]:
+
+            elif la_ == 7:
                 localctx = VerboseParser.UnaryOpContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 136
-                self.match(VerboseParser.NOT)
-                self.state = 137
-                self.expression(6)
+                self.state = 138
+                self.match(VerboseParser.O_MINUS)
+                self.state = 139
+                self.expression(9)
                 pass
-            elif token in [55, 56, 58, 59]:
-                localctx = VerboseParser.CallOrAccessContext(self, localctx)
+
+            elif la_ == 8:
+                localctx = VerboseParser.UnaryOpContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
                 self.state = 140
-                self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,10,self._ctx)
-                if la_ == 1:
-                    self.state = 138
-                    self.access_expr(0)
-                    pass
-
-                elif la_ == 2:
-                    self.state = 139
-                    self.expr_call()
-                    pass
-
-
+                self.match(VerboseParser.O_BIT_NOT)
+                self.state = 141
+                self.expression(8)
                 pass
-            else:
-                raise NoViableAltException(self)
+
+            elif la_ == 9:
+                localctx = VerboseParser.UnaryOpContext(self, localctx)
+                self._ctx = localctx
+                _prevctx = localctx
+                self.state = 142
+                self.match(VerboseParser.NOT)
+                self.state = 143
+                self.expression(7)
+                pass
+
+            elif la_ == 10:
+                localctx = VerboseParser.AccessContext(self, localctx)
+                self._ctx = localctx
+                _prevctx = localctx
+                self.state = 144
+                self.access_expr(0)
+                pass
+
+            elif la_ == 11:
+                localctx = VerboseParser.CallContext(self, localctx)
+                self._ctx = localctx
+                _prevctx = localctx
+                self.state = 145
+                self.expr_call()
+                pass
+
 
             self._ctx.stop = self._input.LT(-1)
-            self.state = 158
+            self.state = 162
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,13,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,12,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
-                    self.state = 156
+                    self.state = 160
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,12,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input,11,self._ctx)
                     if la_ == 1:
                         localctx = VerboseParser.BinaryOpContext(self, VerboseParser.ExpressionContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expression)
-                        self.state = 144
-                        if not self.precpred(self._ctx, 5):
+                        self.state = 148
+                        if not self.precpred(self._ctx, 6):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 5)")
-                        self.state = 145
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 6)")
+                        self.state = 149
                         localctx.operator = self._input.LT(1)
                         _la = self._input.LA(1)
                         if not(_la==18 or _la==19):
@@ -1182,18 +1233,18 @@ class VerboseParser ( Parser ):
                         else:
                             self._errHandler.reportMatch(self)
                             self.consume()
-                        self.state = 146
-                        self.expression(6)
+                        self.state = 150
+                        self.expression(7)
                         pass
 
                     elif la_ == 2:
                         localctx = VerboseParser.BinaryOpContext(self, VerboseParser.ExpressionContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expression)
-                        self.state = 147
-                        if not self.precpred(self._ctx, 4):
+                        self.state = 151
+                        if not self.precpred(self._ctx, 5):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 4)")
-                        self.state = 148
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 5)")
+                        self.state = 152
                         localctx.operator = self._input.LT(1)
                         _la = self._input.LA(1)
                         if not(_la==16 or _la==17):
@@ -1201,18 +1252,18 @@ class VerboseParser ( Parser ):
                         else:
                             self._errHandler.reportMatch(self)
                             self.consume()
-                        self.state = 149
-                        self.expression(5)
+                        self.state = 153
+                        self.expression(6)
                         pass
 
                     elif la_ == 3:
                         localctx = VerboseParser.BinaryOpContext(self, VerboseParser.ExpressionContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expression)
-                        self.state = 150
-                        if not self.precpred(self._ctx, 3):
+                        self.state = 154
+                        if not self.precpred(self._ctx, 4):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 3)")
-                        self.state = 151
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 4)")
+                        self.state = 155
                         localctx.operator = self._input.LT(1)
                         _la = self._input.LA(1)
                         if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 469762048) != 0)):
@@ -1220,18 +1271,18 @@ class VerboseParser ( Parser ):
                         else:
                             self._errHandler.reportMatch(self)
                             self.consume()
-                        self.state = 152
-                        self.expression(4)
+                        self.state = 156
+                        self.expression(5)
                         pass
 
                     elif la_ == 4:
                         localctx = VerboseParser.BinaryOpContext(self, VerboseParser.ExpressionContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expression)
-                        self.state = 153
-                        if not self.precpred(self._ctx, 2):
+                        self.state = 157
+                        if not self.precpred(self._ctx, 3):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
-                        self.state = 154
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 3)")
+                        self.state = 158
                         localctx.operator = self._input.LT(1)
                         _la = self._input.LA(1)
                         if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 66060288) != 0)):
@@ -1239,14 +1290,14 @@ class VerboseParser ( Parser ):
                         else:
                             self._errHandler.reportMatch(self)
                             self.consume()
-                        self.state = 155
-                        self.expression(3)
+                        self.state = 159
+                        self.expression(4)
                         pass
 
              
-                self.state = 160
+                self.state = 164
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,13,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,12,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -1297,17 +1348,17 @@ class VerboseParser ( Parser ):
         localctx = VerboseParser.Type_exprContext(self, self._ctx, self.state)
         self.enterRule(localctx, 14, self.RULE_type_expr)
         try:
-            self.state = 163
+            self.state = 167
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [49, 50]:
+            if token in [52, 53]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 161
+                self.state = 165
                 self.mutability_node()
                 pass
-            elif token in [51, 59]:
+            elif token in [54, 62]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 162
+                self.state = 166
                 self.simple_type_expr()
                 pass
             else:
@@ -1367,15 +1418,15 @@ class VerboseParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 165
+            self.state = 169
             localctx.mut = self._input.LT(1)
             _la = self._input.LA(1)
-            if not(_la==49 or _la==50):
+            if not(_la==52 or _la==53):
                 localctx.mut = self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
                 self.consume()
-            self.state = 166
+            self.state = 170
             self.simple_type_expr()
         except RecognitionException as re:
             localctx.exception = re
@@ -1425,17 +1476,17 @@ class VerboseParser ( Parser ):
         localctx = VerboseParser.Simple_type_exprContext(self, self._ctx, self.state)
         self.enterRule(localctx, 18, self.RULE_simple_type_expr)
         try:
-            self.state = 170
+            self.state = 174
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [59]:
+            if token in [62]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 168
+                self.state = 172
                 self.match(VerboseParser.V_IDENTIFIER)
                 pass
-            elif token in [51]:
+            elif token in [54]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 169
+                self.state = 173
                 self.pointer_node()
                 pass
             else:
@@ -1493,11 +1544,11 @@ class VerboseParser ( Parser ):
         self.enterRule(localctx, 20, self.RULE_pointer_node)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 172
+            self.state = 176
             self.match(VerboseParser.POINTER)
-            self.state = 173
+            self.state = 177
             self.match(VerboseParser.TO)
-            self.state = 174
+            self.state = 178
             self.type_expr()
         except RecognitionException as re:
             localctx.exception = re
@@ -1568,35 +1619,35 @@ class VerboseParser ( Parser ):
         self.enterRule(localctx, 22, self.RULE_statement)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 182
+            self.state = 186
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,16,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,15,self._ctx)
             if la_ == 1:
-                self.state = 176
+                self.state = 180
                 self.call_statement()
 
             elif la_ == 2:
-                self.state = 177
+                self.state = 181
                 self.var_decl()
 
             elif la_ == 3:
-                self.state = 178
+                self.state = 182
                 self.assignment()
 
             elif la_ == 4:
-                self.state = 179
+                self.state = 183
                 self.break_statement()
 
             elif la_ == 5:
-                self.state = 180
+                self.state = 184
                 self.continue_statement()
 
             elif la_ == 6:
-                self.state = 181
+                self.state = 185
                 self.return_statement()
 
 
-            self.state = 184
+            self.state = 188
             self.match(VerboseParser.P_PERIOD)
         except RecognitionException as re:
             localctx.exception = re
@@ -1654,13 +1705,13 @@ class VerboseParser ( Parser ):
         self.enterRule(localctx, 24, self.RULE_assignment)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 186
+            self.state = 190
             self.match(VerboseParser.ASSIGN)
-            self.state = 187
+            self.state = 191
             self.access_expr(0)
-            self.state = 188
+            self.state = 192
             self.match(VerboseParser.VALUE)
-            self.state = 189
+            self.state = 193
             self.expression(0)
         except RecognitionException as re:
             localctx.exception = re
@@ -1708,7 +1759,7 @@ class VerboseParser ( Parser ):
         self.enterRule(localctx, 26, self.RULE_call_argument)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 191
+            self.state = 195
             self.expression(0)
         except RecognitionException as re:
             localctx.exception = re
@@ -1765,26 +1816,26 @@ class VerboseParser ( Parser ):
         self.enterRule(localctx, 28, self.RULE_call_arguments)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 198
+            self.state = 202
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,17,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,16,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
-                    self.state = 193
+                    self.state = 197
                     self.call_argument()
-                    self.state = 194
+                    self.state = 198
                     self.match(VerboseParser.P_COMMA) 
-                self.state = 200
+                self.state = 204
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,17,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,16,self._ctx)
 
-            self.state = 201
+            self.state = 205
             self.call_argument()
-            self.state = 203
+            self.state = 207
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,18,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,17,self._ctx)
             if la_ == 1:
-                self.state = 202
+                self.state = 206
                 self.match(VerboseParser.P_COMMA)
 
 
@@ -1834,7 +1885,7 @@ class VerboseParser ( Parser ):
         self.enterRule(localctx, 30, self.RULE_call_target)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 205
+            self.state = 209
             self.access_expr(0)
         except RecognitionException as re:
             localctx.exception = re
@@ -1897,31 +1948,31 @@ class VerboseParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 207
+            self.state = 211
             self.function_access()
-            self.state = 209
+            self.state = 213
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 684547143360315392) != 0):
-                self.state = 208
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 5476377146882523136) != 0):
+                self.state = 212
                 self.call_target()
 
 
-            self.state = 216
+            self.state = 220
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==32:
-                self.state = 211
+                self.state = 215
                 self.match(VerboseParser.WITH)
-                self.state = 213
+                self.state = 217
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==35:
-                    self.state = 212
+                    self.state = 216
                     self.match(VerboseParser.ARGUMENTS)
 
 
-                self.state = 215
+                self.state = 219
                 self.call_arguments()
 
 
@@ -1987,19 +2038,19 @@ class VerboseParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 218
+            self.state = 222
             self.inline_part()
-            self.state = 219
-            self.type_expr()
-            self.state = 220
-            self.name_decl_part()
             self.state = 223
+            self.type_expr()
+            self.state = 224
+            self.name_decl_part()
+            self.state = 227
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==52:
-                self.state = 221
+            if _la==55:
+                self.state = 225
                 self.match(VerboseParser.ASSIGNED)
-                self.state = 222
+                self.state = 226
                 self.expression(0)
 
 
@@ -2052,13 +2103,13 @@ class VerboseParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 225
+            self.state = 229
             self.match(VerboseParser.BREAK)
-            self.state = 227
+            self.state = 231
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==59:
-                self.state = 226
+            if _la==62:
+                self.state = 230
                 self.match(VerboseParser.V_IDENTIFIER)
 
 
@@ -2111,13 +2162,13 @@ class VerboseParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 229
+            self.state = 233
             self.match(VerboseParser.CONTINUE)
-            self.state = 231
+            self.state = 235
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==59:
-                self.state = 230
+            if _la==62:
+                self.state = 234
                 self.match(VerboseParser.V_IDENTIFIER)
 
 
@@ -2171,13 +2222,13 @@ class VerboseParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 233
+            self.state = 237
             self.match(VerboseParser.RETURN)
-            self.state = 235
+            self.state = 239
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 1116892708124906552) != 0):
-                self.state = 234
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 8935141661240087608) != 0):
+                self.state = 238
                 self.expression(0)
 
 
@@ -2242,36 +2293,36 @@ class VerboseParser ( Parser ):
         localctx = VerboseParser.Block_itemContext(self, self._ctx, self.state)
         self.enterRule(localctx, 42, self.RULE_block_item)
         try:
-            self.state = 242
+            self.state = 246
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,26,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,25,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 237
+                self.state = 241
                 self.statement()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 238
+                self.state = 242
                 self.block()
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 239
+                self.state = 243
                 self.if_()
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 240
+                self.state = 244
                 self.while_()
                 pass
 
             elif la_ == 5:
                 self.enterOuterAlt(localctx, 5)
-                self.state = 241
+                self.state = 245
                 self.do_while()
                 pass
 
@@ -2342,34 +2393,34 @@ class VerboseParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 244
+            self.state = 248
             _la = self._input.LA(1)
-            if not(_la==46 or _la==47):
+            if not(_la==48 or _la==49):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
                 self.consume()
-            self.state = 246
+            self.state = 250
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==30:
-                self.state = 245
+                self.state = 249
                 self.name_decl_part()
 
 
-            self.state = 251
+            self.state = 255
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 589686983832371264) != 0):
-                self.state = 248
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 4716382340257939520) != 0):
+                self.state = 252
                 self.block_item()
-                self.state = 253
+                self.state = 257
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 254
+            self.state = 258
             _la = self._input.LA(1)
-            if not(_la==8 or _la==48):
+            if not(_la==8 or _la==51):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -2438,27 +2489,27 @@ class VerboseParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 256
+            self.state = 260
             self.match(VerboseParser.IF)
-            self.state = 257
+            self.state = 261
             self.expression(0)
-            self.state = 258
+            self.state = 262
             self.block()
-            self.state = 264
+            self.state = 268
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==38:
-                self.state = 259
+            if _la==40:
+                self.state = 263
                 self.match(VerboseParser.ELSE)
-                self.state = 262
+                self.state = 266
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
-                if token in [46, 47]:
-                    self.state = 260
+                if token in [48, 49]:
+                    self.state = 264
                     self.block()
                     pass
-                elif token in [37]:
-                    self.state = 261
+                elif token in [39]:
+                    self.state = 265
                     self.if_()
                     pass
                 else:
@@ -2519,11 +2570,11 @@ class VerboseParser ( Parser ):
         self.enterRule(localctx, 48, self.RULE_while)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 266
+            self.state = 270
             self.match(VerboseParser.WHILE)
-            self.state = 267
+            self.state = 271
             self.expression(0)
-            self.state = 268
+            self.state = 272
             self.block()
         except RecognitionException as re:
             localctx.exception = re
@@ -2581,13 +2632,13 @@ class VerboseParser ( Parser ):
         self.enterRule(localctx, 50, self.RULE_do_while)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 270
+            self.state = 274
             self.block()
-            self.state = 271
+            self.state = 275
             self.match(VerboseParser.WHILE)
-            self.state = 272
+            self.state = 276
             self.expression(0)
-            self.state = 273
+            self.state = 277
             self.match(VerboseParser.P_PERIOD)
         except RecognitionException as re:
             localctx.exception = re
@@ -2638,9 +2689,9 @@ class VerboseParser ( Parser ):
         self.enterRule(localctx, 52, self.RULE_return_type_decl_part)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 275
+            self.state = 279
             self.match(VerboseParser.RETURNING)
-            self.state = 276
+            self.state = 280
             self.type_expr()
         except RecognitionException as re:
             localctx.exception = re
@@ -2690,10 +2741,113 @@ class VerboseParser ( Parser ):
         self.enterRule(localctx, 54, self.RULE_name_decl_part)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 278
+            self.state = 282
             self.match(VerboseParser.NAMED)
-            self.state = 279
+            self.state = 283
             self.match(VerboseParser.V_IDENTIFIER)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class Target_decl_partContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def type_expr(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(VerboseParser.Type_exprContext)
+            else:
+                return self.getTypedRuleContext(VerboseParser.Type_exprContext,i)
+
+
+        def TARGET(self):
+            return self.getToken(VerboseParser.TARGET, 0)
+
+        def TARGETS(self):
+            return self.getToken(VerboseParser.TARGETS, 0)
+
+        def P_COMMA(self, i:int=None):
+            if i is None:
+                return self.getTokens(VerboseParser.P_COMMA)
+            else:
+                return self.getToken(VerboseParser.P_COMMA, i)
+
+        def END(self):
+            return self.getToken(VerboseParser.END, 0)
+
+        def getRuleIndex(self):
+            return VerboseParser.RULE_target_decl_part
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterTarget_decl_part" ):
+                listener.enterTarget_decl_part(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitTarget_decl_part" ):
+                listener.exitTarget_decl_part(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTarget_decl_part" ):
+                return visitor.visitTarget_decl_part(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def target_decl_part(self):
+
+        localctx = VerboseParser.Target_decl_partContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 56, self.RULE_target_decl_part)
+        self._la = 0 # Token type
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 285
+            _la = self._input.LA(1)
+            if not(_la==36 or _la==37):
+                self._errHandler.recoverInline(self)
+            else:
+                self._errHandler.reportMatch(self)
+                self.consume()
+            self.state = 286
+            self.type_expr()
+            self.state = 291
+            self._errHandler.sync(self)
+            _alt = self._interp.adaptivePredict(self._input,30,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
+                    self.state = 287
+                    self.match(VerboseParser.P_COMMA)
+                    self.state = 288
+                    self.type_expr() 
+                self.state = 293
+                self._errHandler.sync(self)
+                _alt = self._interp.adaptivePredict(self._input,30,self._ctx)
+
+            self.state = 295
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            if _la==7:
+                self.state = 294
+                self.match(VerboseParser.P_COMMA)
+
+
+            self.state = 298
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            if _la==51:
+                self.state = 297
+                self.match(VerboseParser.END)
+
+
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -2752,40 +2906,40 @@ class VerboseParser ( Parser ):
     def arguments_decl_part(self):
 
         localctx = VerboseParser.Arguments_decl_partContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 56, self.RULE_arguments_decl_part)
+        self.enterRule(localctx, 58, self.RULE_arguments_decl_part)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 281
+            self.state = 300
             self.match(VerboseParser.ARGUMENTS)
-            self.state = 287
+            self.state = 306
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,31,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,33,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
-                    self.state = 282
+                    self.state = 301
                     self.var_decl()
-                    self.state = 283
+                    self.state = 302
                     self.match(VerboseParser.P_COMMA) 
-                self.state = 289
+                self.state = 308
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,31,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,33,self._ctx)
 
-            self.state = 290
+            self.state = 309
             self.var_decl()
-            self.state = 292
+            self.state = 311
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==7:
-                self.state = 291
+                self.state = 310
                 self.match(VerboseParser.P_COMMA)
 
 
-            self.state = 295
+            self.state = 314
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==48:
-                self.state = 294
+            if _la==51:
+                self.state = 313
                 self.match(VerboseParser.END)
 
 
@@ -2820,6 +2974,10 @@ class VerboseParser ( Parser ):
             return self.getTypedRuleContext(VerboseParser.Name_decl_partContext,0)
 
 
+        def target_decl_part(self):
+            return self.getTypedRuleContext(VerboseParser.Target_decl_partContext,0)
+
+
         def arguments_decl_part(self):
             return self.getTypedRuleContext(VerboseParser.Arguments_decl_partContext,0)
 
@@ -2847,37 +3005,45 @@ class VerboseParser ( Parser ):
     def function(self):
 
         localctx = VerboseParser.FunctionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 58, self.RULE_function)
+        self.enterRule(localctx, 60, self.RULE_function)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 297
+            self.state = 316
             self.match(VerboseParser.FUNCTION)
-            self.state = 299
+            self.state = 318
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==39:
-                self.state = 298
+            if _la==41:
+                self.state = 317
                 self.return_type_decl_part()
 
 
-            self.state = 302
+            self.state = 321
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==30:
-                self.state = 301
+                self.state = 320
                 self.name_decl_part()
 
 
-            self.state = 305
+            self.state = 324
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            if _la==36 or _la==37:
+                self.state = 323
+                self.target_decl_part()
+
+
+            self.state = 327
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==35:
-                self.state = 304
+                self.state = 326
                 self.arguments_decl_part()
 
 
-            self.state = 307
+            self.state = 329
             self.block()
         except RecognitionException as re:
             localctx.exception = re
@@ -2894,6 +3060,10 @@ class VerboseParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
+
+        def section(self):
+            return self.getTypedRuleContext(VerboseParser.SectionContext,0)
+
 
         def function(self):
             return self.getTypedRuleContext(VerboseParser.FunctionContext,0)
@@ -2929,26 +3099,179 @@ class VerboseParser ( Parser ):
     def module_item(self):
 
         localctx = VerboseParser.Module_itemContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 60, self.RULE_module_item)
+        self.enterRule(localctx, 62, self.RULE_module_item)
         try:
-            self.state = 313
+            self.state = 336
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [34]:
+            if token in [36, 37, 50]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 309
+                self.state = 331
+                self.section()
+                pass
+            elif token in [34]:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 332
                 self.function()
                 pass
-            elif token in [40, 42, 49, 50, 51, 59]:
-                self.enterOuterAlt(localctx, 2)
-                self.state = 310
+            elif token in [42, 44, 52, 53, 54, 62]:
+                self.enterOuterAlt(localctx, 3)
+                self.state = 333
                 self.var_decl()
-                self.state = 311
+                self.state = 334
                 self.match(VerboseParser.P_PERIOD)
                 pass
             else:
                 raise NoViableAltException(self)
 
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class Section_headerContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+
+        def getRuleIndex(self):
+            return VerboseParser.RULE_section_header
+
+     
+        def copyFrom(self, ctx:ParserRuleContext):
+            super().copyFrom(ctx)
+
+
+
+    class TargetContext(Section_headerContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a VerboseParser.Section_headerContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def target_decl_part(self):
+            return self.getTypedRuleContext(VerboseParser.Target_decl_partContext,0)
+
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterTarget" ):
+                listener.enterTarget(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitTarget" ):
+                listener.exitTarget(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTarget" ):
+                return visitor.visitTarget(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+    def section_header(self):
+
+        localctx = VerboseParser.Section_headerContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 64, self.RULE_section_header)
+        try:
+            localctx = VerboseParser.TargetContext(self, localctx)
+            self.enterOuterAlt(localctx, 1)
+            self.state = 338
+            self.target_decl_part()
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class SectionContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def BEGIN(self):
+            return self.getToken(VerboseParser.BEGIN, 0)
+
+        def END(self):
+            return self.getToken(VerboseParser.END, 0)
+
+        def section_header(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(VerboseParser.Section_headerContext)
+            else:
+                return self.getTypedRuleContext(VerboseParser.Section_headerContext,i)
+
+
+        def module_item(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(VerboseParser.Module_itemContext)
+            else:
+                return self.getTypedRuleContext(VerboseParser.Module_itemContext,i)
+
+
+        def getRuleIndex(self):
+            return VerboseParser.RULE_section
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSection" ):
+                listener.enterSection(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSection" ):
+                listener.exitSection(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSection" ):
+                return visitor.visitSection(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def section(self):
+
+        localctx = VerboseParser.SectionContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 66, self.RULE_section)
+        self._la = 0 # Token type
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 343
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            while _la==36 or _la==37:
+                self.state = 340
+                self.section_header()
+                self.state = 345
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+
+            self.state = 346
+            self.match(VerboseParser.BEGIN)
+            self.state = 350
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 4644359329296678912) != 0):
+                self.state = 347
+                self.module_item()
+                self.state = 352
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+
+            self.state = 353
+            self.match(VerboseParser.END)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -2998,21 +3321,21 @@ class VerboseParser ( Parser ):
     def module(self):
 
         localctx = VerboseParser.ModuleContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 62, self.RULE_module)
+        self.enterRule(localctx, 68, self.RULE_module)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 318
+            self.state = 358
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 580406916715380736) != 0):
-                self.state = 315
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 4644359329296678912) != 0):
+                self.state = 355
                 self.module_item()
-                self.state = 320
+                self.state = 360
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 321
+            self.state = 361
             self.match(VerboseParser.EOF)
         except RecognitionException as re:
             localctx.exception = re
@@ -3042,19 +3365,19 @@ class VerboseParser ( Parser ):
 
     def expression_sempred(self, localctx:ExpressionContext, predIndex:int):
             if predIndex == 1:
-                return self.precpred(self._ctx, 5)
+                return self.precpred(self._ctx, 6)
          
 
             if predIndex == 2:
-                return self.precpred(self._ctx, 4)
+                return self.precpred(self._ctx, 5)
          
 
             if predIndex == 3:
-                return self.precpred(self._ctx, 3)
+                return self.precpred(self._ctx, 4)
          
 
             if predIndex == 4:
-                return self.precpred(self._ctx, 2)
+                return self.precpred(self._ctx, 3)
          
 
 

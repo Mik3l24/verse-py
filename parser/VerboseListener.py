@@ -89,6 +89,15 @@ class VerboseListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by VerboseParser#Call.
+    def enterCall(self, ctx:VerboseParser.CallContext):
+        pass
+
+    # Exit a parse tree produced by VerboseParser#Call.
+    def exitCall(self, ctx:VerboseParser.CallContext):
+        pass
+
+
     # Enter a parse tree produced by VerboseParser#UnaryOp.
     def enterUnaryOp(self, ctx:VerboseParser.UnaryOpContext):
         pass
@@ -98,21 +107,21 @@ class VerboseListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by VerboseParser#CallOrAccess.
-    def enterCallOrAccess(self, ctx:VerboseParser.CallOrAccessContext):
-        pass
-
-    # Exit a parse tree produced by VerboseParser#CallOrAccess.
-    def exitCallOrAccess(self, ctx:VerboseParser.CallOrAccessContext):
-        pass
-
-
     # Enter a parse tree produced by VerboseParser#Literal.
     def enterLiteral(self, ctx:VerboseParser.LiteralContext):
         pass
 
     # Exit a parse tree produced by VerboseParser#Literal.
     def exitLiteral(self, ctx:VerboseParser.LiteralContext):
+        pass
+
+
+    # Enter a parse tree produced by VerboseParser#Access.
+    def enterAccess(self, ctx:VerboseParser.AccessContext):
+        pass
+
+    # Exit a parse tree produced by VerboseParser#Access.
+    def exitAccess(self, ctx:VerboseParser.AccessContext):
         pass
 
 
@@ -323,6 +332,15 @@ class VerboseListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by VerboseParser#target_decl_part.
+    def enterTarget_decl_part(self, ctx:VerboseParser.Target_decl_partContext):
+        pass
+
+    # Exit a parse tree produced by VerboseParser#target_decl_part.
+    def exitTarget_decl_part(self, ctx:VerboseParser.Target_decl_partContext):
+        pass
+
+
     # Enter a parse tree produced by VerboseParser#arguments_decl_part.
     def enterArguments_decl_part(self, ctx:VerboseParser.Arguments_decl_partContext):
         pass
@@ -347,6 +365,24 @@ class VerboseListener(ParseTreeListener):
 
     # Exit a parse tree produced by VerboseParser#module_item.
     def exitModule_item(self, ctx:VerboseParser.Module_itemContext):
+        pass
+
+
+    # Enter a parse tree produced by VerboseParser#Target.
+    def enterTarget(self, ctx:VerboseParser.TargetContext):
+        pass
+
+    # Exit a parse tree produced by VerboseParser#Target.
+    def exitTarget(self, ctx:VerboseParser.TargetContext):
+        pass
+
+
+    # Enter a parse tree produced by VerboseParser#section.
+    def enterSection(self, ctx:VerboseParser.SectionContext):
+        pass
+
+    # Exit a parse tree produced by VerboseParser#section.
+    def exitSection(self, ctx:VerboseParser.SectionContext):
         pass
 
 

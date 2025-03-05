@@ -64,6 +64,8 @@ TO: 'to';
 
 FUNCTION: 'function';
 ARGUMENTS: 'arguments';
+TARGETS: 'targets';
+TARGET: 'target';
 WHILE: 'while';
 IF: 'if';
 ELSE: 'else';
@@ -79,6 +81,7 @@ CONTINUE: 'continue';
 
 PROCEDURE: 'procedure';
 DO: 'do';
+BEGIN: 'begin';
 END: 'end';
 
 VARIABLE: 'variable';
@@ -212,7 +215,7 @@ call_arguments
 ;
 // TODO refactor the expression call to use the above rules
 
-/** These argments are implicitly passed by pointer/reference. */
+/** These argments may be implicitly passed by pointer/reference. */
 call_target
 : access_expr
 ;
@@ -249,6 +252,7 @@ block_item
 | if
 | while
 | do_while
+// Allow function declarations in blocks?
 ;
 
 block
@@ -278,6 +282,10 @@ name_decl_part
 : NAMED V_IDENTIFIER
 ;
 
+target_decl_part
+: (TARGET|TARGETS) type_expr (P_COMMA type_expr)* P_COMMA? END?
+;
+
 arguments_decl_part
 : ARGUMENTS (var_decl P_COMMA)* var_decl P_COMMA? END?
 ;
@@ -286,17 +294,29 @@ function
 : FUNCTION
   return_type_decl_part?
   name_decl_part?
+  target_decl_part?
   arguments_decl_part?
   block
 ;
 
+//## Module
 module_item
-: function
+: section
+| function
 | var_decl P_PERIOD
 // Future
 //| type_decl
 //| compiler_instruction
 //| include_decl
+;
+
+section_header
+: target_decl_part # Target
+// More in the future, like generics, public etc.
+;
+
+section
+: section_header* BEGIN module_item* END
 ;
 
 module: module_item* EOF;
