@@ -59,6 +59,11 @@ class VerboseVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by VerboseParser#sizeof_expr.
+    def visitSizeof_expr(self, ctx:VerboseParser.Sizeof_exprContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by VerboseParser#Call.
     def visitCall(self, ctx:VerboseParser.CallContext):
         return self.visitChildren(ctx)
@@ -81,6 +86,11 @@ class VerboseVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by VerboseParser#Molec.
     def visitMolec(self, ctx:VerboseParser.MolecContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by VerboseParser#Sizeof.
+    def visitSizeof(self, ctx:VerboseParser.SizeofContext):
         return self.visitChildren(ctx)
 
 

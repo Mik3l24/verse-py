@@ -98,6 +98,15 @@ class VerboseListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by VerboseParser#sizeof_expr.
+    def enterSizeof_expr(self, ctx:VerboseParser.Sizeof_exprContext):
+        pass
+
+    # Exit a parse tree produced by VerboseParser#sizeof_expr.
+    def exitSizeof_expr(self, ctx:VerboseParser.Sizeof_exprContext):
+        pass
+
+
     # Enter a parse tree produced by VerboseParser#Call.
     def enterCall(self, ctx:VerboseParser.CallContext):
         pass
@@ -140,6 +149,15 @@ class VerboseListener(ParseTreeListener):
 
     # Exit a parse tree produced by VerboseParser#Molec.
     def exitMolec(self, ctx:VerboseParser.MolecContext):
+        pass
+
+
+    # Enter a parse tree produced by VerboseParser#Sizeof.
+    def enterSizeof(self, ctx:VerboseParser.SizeofContext):
+        pass
+
+    # Exit a parse tree produced by VerboseParser#Sizeof.
+    def exitSizeof(self, ctx:VerboseParser.SizeofContext):
         pass
 
 

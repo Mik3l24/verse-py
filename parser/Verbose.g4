@@ -23,6 +23,8 @@ INLINE_COMMENT: '//' ~[\r\n]* -> skip;
 
 V_FLOAT: DIGIT* '.' DIGIT+;
 V_INTEGER: DIGIT+;
+V_INTEGER_HEX: '0x' [0-9a-fA-F]+;
+V_INTEGER_BIN: '0b' [01_]+;
 V_STRING: '"' ( ~["\\] | '\\' . )* '"'; // FUTURE - state based strings?
 
 P_PERIOD: '.';
@@ -99,6 +101,8 @@ NOT: 'not';
 
 CALL: 'call';
 
+SIZEOF: 'sizeof' | 'sizeOf';
+
 V_IDENTIFIER: [a-zA-Z_] [a-zA-Z0-9_]*;
 
 // FUTURE - Compiler instructions
@@ -150,11 +154,15 @@ access_expr_nonterm
 ;
 
 //## Generic expressions
-///** currently expressions must be always explicitly terminated. */
+sizeof_expr
+: SIZEOF type_expr
+;
+
 expression
-: V_INTEGER # Literal
+: (V_INTEGER|V_INTEGER_HEX|V_INTEGER_BIN) # Literal
 | V_FLOAT # Literal
 | V_STRING # Literal
+| sizeof_expr # Sizeof
 // Parethesis
 | L_PARENTHESIS expression R_PARENTHESIS # Molec
 | L_BRACKET expression R_BRACKET # Molec
