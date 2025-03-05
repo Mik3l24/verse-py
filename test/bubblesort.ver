@@ -1,0 +1,66 @@
+type named Array is pointer to variable Int32.
+
+
+inline function named swap
+targets
+    inline Int32 named a,
+arguments
+    inline Int32 named b,
+procedure
+    variable Int32 named buffer assigned a.
+    assign a value b.
+    assign b value buffer.
+end
+
+
+function named bubbleSort
+targets
+    constant Array named array,
+arguments
+    constant Int32 named array_size,
+procedure
+    variable Int32 named items_to_sort assigned array_size.
+
+    while items_to_sort != 0
+    do
+        variable Int32 named item_i assigned 0.
+        while item_i < items_to_sort - 1
+        do 
+            if array at item_i; > array at item_i + 1;
+            do
+                swap array at item_i with array at item_i + 1.
+            end
+
+            increment item_i.
+        end
+
+        decrement items_to_sort.
+    end
+end
+
+
+function named usageExample
+procedure
+    inline Int32 named array_size assigned 0xF0.
+    variable Array named array assigned allocateMem with array_size * sizeof Int32.
+
+    // Fill the array (ommitted)
+
+    bubbleSort array with array_size.
+
+    // Display? (ommitted)
+
+    deallocate array.
+end
+
+
+
+// W linii `if array at item_i; > array at item_i + 1`
+// znak `;` oznacza koniec wyrażenia po `at`.
+//
+// W innym przypadku byłoby to zinterpretowane jako:
+// `if array at (item_i > array at item_i + 1)`
+// 
+// Choć tutaj mogłoby mieć sens, by zmienić tą zasadę,
+// bo raczej nie ma sensu by w indeksie używać operatorów porównania.
+
