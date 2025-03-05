@@ -4,7 +4,7 @@ variable Float32 named global_var.
 
 function named increment
 arguments
-    constant pointer to variable Float32 named foo,
+    constant pointer to variable Float32 named foo, // Separate it out to "targets"?
     variable Float32 named bar assigned 1.0
 procedure
     assign at foo value foo + bar.
@@ -17,6 +17,10 @@ procedure
 
     variable pointer to variable Int8 named ptr
         assigned allocateMem with 2.
+    
+    assign at ptr value 65.
+    assign at ptr + 1 value 66.
+
     inline Float32 named pi assigned 3.14159.
 
     assign global_var value 73.56.
