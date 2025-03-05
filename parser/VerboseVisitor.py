@@ -29,8 +29,8 @@ class VerboseVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by VerboseParser#expr_call_nonterm.
-    def visitExpr_call_nonterm(self, ctx:VerboseParser.Expr_call_nontermContext):
+    # Visit a parse tree produced by VerboseParser#ArrayAccess.
+    def visitArrayAccess(self, ctx:VerboseParser.ArrayAccessContext):
         return self.visitChildren(ctx)
 
 
@@ -44,23 +44,18 @@ class VerboseVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by VerboseParser#Nonterm.
-    def visitNonterm(self, ctx:VerboseParser.NontermContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by VerboseParser#Dereference.
     def visitDereference(self, ctx:VerboseParser.DereferenceContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by VerboseParser#ArrayAccess.
-    def visitArrayAccess(self, ctx:VerboseParser.ArrayAccessContext):
+    # Visit a parse tree produced by VerboseParser#sizeof_expr.
+    def visitSizeof_expr(self, ctx:VerboseParser.Sizeof_exprContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by VerboseParser#sizeof_expr.
-    def visitSizeof_expr(self, ctx:VerboseParser.Sizeof_exprContext):
+    # Visit a parse tree produced by VerboseParser#Float.
+    def visitFloat(self, ctx:VerboseParser.FloatContext):
         return self.visitChildren(ctx)
 
 
@@ -71,11 +66,6 @@ class VerboseVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by VerboseParser#UnaryOp.
     def visitUnaryOp(self, ctx:VerboseParser.UnaryOpContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by VerboseParser#Literal.
-    def visitLiteral(self, ctx:VerboseParser.LiteralContext):
         return self.visitChildren(ctx)
 
 
@@ -91,6 +81,16 @@ class VerboseVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by VerboseParser#Sizeof.
     def visitSizeof(self, ctx:VerboseParser.SizeofContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by VerboseParser#String.
+    def visitString(self, ctx:VerboseParser.StringContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by VerboseParser#Int.
+    def visitInt(self, ctx:VerboseParser.IntContext):
         return self.visitChildren(ctx)
 
 

@@ -44,12 +44,12 @@ class VerboseListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by VerboseParser#expr_call_nonterm.
-    def enterExpr_call_nonterm(self, ctx:VerboseParser.Expr_call_nontermContext):
+    # Enter a parse tree produced by VerboseParser#ArrayAccess.
+    def enterArrayAccess(self, ctx:VerboseParser.ArrayAccessContext):
         pass
 
-    # Exit a parse tree produced by VerboseParser#expr_call_nonterm.
-    def exitExpr_call_nonterm(self, ctx:VerboseParser.Expr_call_nontermContext):
+    # Exit a parse tree produced by VerboseParser#ArrayAccess.
+    def exitArrayAccess(self, ctx:VerboseParser.ArrayAccessContext):
         pass
 
 
@@ -71,15 +71,6 @@ class VerboseListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by VerboseParser#Nonterm.
-    def enterNonterm(self, ctx:VerboseParser.NontermContext):
-        pass
-
-    # Exit a parse tree produced by VerboseParser#Nonterm.
-    def exitNonterm(self, ctx:VerboseParser.NontermContext):
-        pass
-
-
     # Enter a parse tree produced by VerboseParser#Dereference.
     def enterDereference(self, ctx:VerboseParser.DereferenceContext):
         pass
@@ -89,21 +80,21 @@ class VerboseListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by VerboseParser#ArrayAccess.
-    def enterArrayAccess(self, ctx:VerboseParser.ArrayAccessContext):
-        pass
-
-    # Exit a parse tree produced by VerboseParser#ArrayAccess.
-    def exitArrayAccess(self, ctx:VerboseParser.ArrayAccessContext):
-        pass
-
-
     # Enter a parse tree produced by VerboseParser#sizeof_expr.
     def enterSizeof_expr(self, ctx:VerboseParser.Sizeof_exprContext):
         pass
 
     # Exit a parse tree produced by VerboseParser#sizeof_expr.
     def exitSizeof_expr(self, ctx:VerboseParser.Sizeof_exprContext):
+        pass
+
+
+    # Enter a parse tree produced by VerboseParser#Float.
+    def enterFloat(self, ctx:VerboseParser.FloatContext):
+        pass
+
+    # Exit a parse tree produced by VerboseParser#Float.
+    def exitFloat(self, ctx:VerboseParser.FloatContext):
         pass
 
 
@@ -122,15 +113,6 @@ class VerboseListener(ParseTreeListener):
 
     # Exit a parse tree produced by VerboseParser#UnaryOp.
     def exitUnaryOp(self, ctx:VerboseParser.UnaryOpContext):
-        pass
-
-
-    # Enter a parse tree produced by VerboseParser#Literal.
-    def enterLiteral(self, ctx:VerboseParser.LiteralContext):
-        pass
-
-    # Exit a parse tree produced by VerboseParser#Literal.
-    def exitLiteral(self, ctx:VerboseParser.LiteralContext):
         pass
 
 
@@ -158,6 +140,24 @@ class VerboseListener(ParseTreeListener):
 
     # Exit a parse tree produced by VerboseParser#Sizeof.
     def exitSizeof(self, ctx:VerboseParser.SizeofContext):
+        pass
+
+
+    # Enter a parse tree produced by VerboseParser#String.
+    def enterString(self, ctx:VerboseParser.StringContext):
+        pass
+
+    # Exit a parse tree produced by VerboseParser#String.
+    def exitString(self, ctx:VerboseParser.StringContext):
+        pass
+
+
+    # Enter a parse tree produced by VerboseParser#Int.
+    def enterInt(self, ctx:VerboseParser.IntContext):
+        pass
+
+    # Exit a parse tree produced by VerboseParser#Int.
+    def exitInt(self, ctx:VerboseParser.IntContext):
         pass
 
 

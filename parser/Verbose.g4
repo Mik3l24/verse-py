@@ -131,26 +131,15 @@ inline_part
 //## In-expression calls
 expr_call
 : CALL function_access
-| expr_call_nonterm P_SEMIC?
+| CALL? function_access WITH ARGUMENTS? call_arguments P_SEMIC?
 ;
-
-
-expr_call_nonterm
-: CALL? function_access WITH ARGUMENTS? call_arguments
-// | function_access access_expr_nonterm // Should in-expression calls be allowed to use pre-"with" arguments? (pre-with are always implicit pointers)
-;
-
 
 //## Access expressions (variables, dereference, array access, member access)
 access_expr
-: V_IDENTIFIER # Variable
-| access_expr_nonterm P_SEMIC? # Nonterm
+: AT expression P_SEMIC? # Dereference
 | access_expr P_ACCESSOR V_IDENTIFIER # MemberAccess
-;
-
-access_expr_nonterm
-: AT expression # Dereference
-| INDEX access_expr AT expression # ArrayAccess
+| access_expr AT expression P_SEMIC? # ArrayAccess
+| V_IDENTIFIER # Variable
 ;
 
 //## Generic expressions
@@ -159,17 +148,14 @@ sizeof_expr
 ;
 
 expression
-: (V_INTEGER|V_INTEGER_HEX|V_INTEGER_BIN) # Literal
-| V_FLOAT # Literal
-| V_STRING # Literal
+: (V_INTEGER|V_INTEGER_HEX|V_INTEGER_BIN) # Int
+| V_FLOAT # Float
+| V_STRING # String
 | sizeof_expr # Sizeof
 // Parethesis
 | L_PARENTHESIS expression R_PARENTHESIS # Molec
 | L_BRACKET expression R_BRACKET # Molec
 | L_BRACE expression R_BRACE # Molec
-// Expressions that may need termination
-| expr_call # Call
-| access_expr # Access
 // Unary operators
 | O_MINUS expression # UnaryOp
 | O_BIT_NOT expression # UnaryOp
@@ -178,6 +164,10 @@ expression
 | expression operator=(O_TIMES|O_DIVIDE) expression # BinaryOp
 | expression operator=(O_PLUS|O_MINUS) expression # BinaryOp
 | expression operator=(O_BIT_AND|O_BIT_XOR|O_BIT_OR) expression # BinaryOp
+// Expressions that may need termination
+| expr_call # Call
+| access_expr # Access
+// Comparison operators
 | expression operator=(O_EQUAL|O_NOT_EQUAL|O_LESS|O_GREATER|O_LESS_EQUAL|O_GREATER_EQUAL) expression # BinaryOp
 ;
 
@@ -267,7 +257,7 @@ block_item
 ;
 
 block
-: (PROCEDURE|DO) name_decl_part? block_item* (END|P_SEMIC) 
+: (PROCEDURE|DO) name_decl_part? block_item* (END)
 // The do keyword could be made optional in some blocks?
 ;
 
