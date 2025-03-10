@@ -225,7 +225,8 @@ call_target
 ;
 
 call_statement
-: function_access call_target? (WITH ARGUMENTS? call_arguments)?
+: function_access call_target? WITH ARGUMENTS? call_arguments
+| function_access call_target
 ;
 
 //## Variable declaration
