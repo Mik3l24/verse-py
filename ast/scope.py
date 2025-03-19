@@ -13,7 +13,13 @@ class FuncVariants(ScopeItem):
     def implement(self, func: VFunction):
         self.__funcs.append(func)
 
+    # TODO - implement function for finding the best match for signature (function overloading)
+    # though - with the current implementation of scopes, this would prioritize
+    # the FuncVariant closest to the current scope
+    # TODO - find a way to solve the above issue (maybe w/ a separate class for FunctionScope)
 
+
+# TODO - separate out `FunctionScope` to a child class
 class Scope:
     symbols: dict[str, ScopeItem]
     parent: Optional["Scope"]
@@ -39,18 +45,32 @@ class Scope:
         
         raise NameConflictError(f"Name {name} already defined in this scope")
 
-    def lookup(self, name: str) -> Optional[ScopeItem]:
+    def lookup(self, name: str) -> Optional[ScopeItem]: # Replace w/ a dunder method?
         if name in self.symbols:
             return self.symbols[name]
         if self.parent:
             return self.parent.lookup(name)
         return None
 
-# Add a module scope (inheriting from Scope) that could differentiate between public and private symbols?
+# Add a module scope (inheriting from Scope or MultiScope) that could differentiate between public and private symbols?
+
+class MultiScope:
+    functions: Scope
+    variables: Scope
+    types: Scope
+    labels: Scope
+
+    def __init__(self, parent: Optional["MultiScope"] = None):
+        self.functions = Scope(parent.functions if parent else None)
+        self.variables = Scope(parent.variables if parent else None)
+        self.types = Scope(parent.types if parent else None)
+        self.labels = Scope(parent.labels if parent else None)
+
+    # Could also add a generic lookup method that would search through all scopes, if context is ambiguous
 
 
 class Context:
-    _scope_stack: list[Scope]
+    _scope_stack: list[MultiScope] = []
 
     def __init__(self):
         self._scope_stack = []
@@ -63,7 +83,7 @@ class Context:
     
     def push_scope(self):
         self._scope_stack.append(
-            Scope(parent=self.cur_scope)
+            MultiScope(parent=self.cur_scope)
         )
     
     def pop_scope(self):
