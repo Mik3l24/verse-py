@@ -1,0 +1,29 @@
+target constant GPIO_Pin named pin
+begin
+    inline function named set
+    procedure
+        //assign pin's register value pin's register | pin's mask.
+        or pin's register with pin's mask.
+    end
+
+    inline function named unset
+    procedure
+        assign pin's register value pin's register & inverted pin's mask.
+        //and pin's register with inverted pin's mask.
+    end
+end
+
+function named main
+procedure
+    initSystemClock.
+    initPeripherals.
+
+    procedure named main_loop
+      set led1.
+      sleep with 500. // ms
+      unset led1.
+      sleep with 500.
+
+      continue main_loop.
+    end
+end

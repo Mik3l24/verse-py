@@ -55,7 +55,7 @@ O_GREATER_EQUAL: '>=';
 O_BIT_AND: '&';
 O_BIT_OR: '|';
 O_BIT_XOR: '^';
-O_BIT_NOT: 'invert' | '~';
+O_BIT_NOT: 'inverted' | '~';
 
 
 // Keywords
@@ -227,6 +227,7 @@ call_target
 call_statement
 : function_access call_target? WITH ARGUMENTS? call_arguments
 | function_access call_target
+| CALL? function_access
 ;
 
 //## Variable declaration
