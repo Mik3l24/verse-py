@@ -24,6 +24,11 @@ class VerboseVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by VerboseParser#qualifiers_part.
+    def visitQualifiers_part(self, ctx:VerboseParser.Qualifiers_partContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by VerboseParser#expr_call.
     def visitExpr_call(self, ctx:VerboseParser.Expr_callContext):
         return self.visitChildren(ctx)
@@ -49,8 +54,8 @@ class VerboseVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by VerboseParser#sizeof_expr.
-    def visitSizeof_expr(self, ctx:VerboseParser.Sizeof_exprContext):
+    # Visit a parse tree produced by VerboseParser#of_expr.
+    def visitOf_expr(self, ctx:VerboseParser.Of_exprContext):
         return self.visitChildren(ctx)
 
 
@@ -59,28 +64,13 @@ class VerboseVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by VerboseParser#Call.
-    def visitCall(self, ctx:VerboseParser.CallContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by VerboseParser#UnaryOp.
     def visitUnaryOp(self, ctx:VerboseParser.UnaryOpContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by VerboseParser#Access.
-    def visitAccess(self, ctx:VerboseParser.AccessContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by VerboseParser#Molec.
     def visitMolec(self, ctx:VerboseParser.MolecContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by VerboseParser#Sizeof.
-    def visitSizeof(self, ctx:VerboseParser.SizeofContext):
         return self.visitChildren(ctx)
 
 
@@ -229,8 +219,8 @@ class VerboseVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by VerboseParser#Target.
-    def visitTarget(self, ctx:VerboseParser.TargetContext):
+    # Visit a parse tree produced by VerboseParser#Target_section_header.
+    def visitTarget_section_header(self, ctx:VerboseParser.Target_section_headerContext):
         return self.visitChildren(ctx)
 
 

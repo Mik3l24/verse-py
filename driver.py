@@ -2,7 +2,7 @@ import sys
 from antlr4 import InputStream, FileStream, StdinStream, CommonTokenStream
 from parser.VerboseLexer import VerboseLexer
 from parser.VerboseParser import VerboseParser
-#from parser.VisitorInterp import VisitorInterp
+from compiler.transformer import Transformer
 
 def main(argv):
     input_stream = FileStream(argv[1])
@@ -11,6 +11,11 @@ def main(argv):
     parser = VerboseParser(stream)
     tree = parser.module()
     print(tree.toStringTree(recog=parser))
+    transformer = Transformer()
+    module = transformer.visit(tree)
+
+    print("Transformed module:")
+    print(module)
 
 
 if __name__ == '__main__':

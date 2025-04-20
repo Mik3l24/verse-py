@@ -20,10 +20,12 @@ options {
 // Lexer rules
 WS: [ \t\r\n]+ -> skip;
 INLINE_COMMENT: '//' ~[\r\n]* -> skip;
+// TODO add multiline comment
 
 V_FLOAT: DIGIT* '.' DIGIT+;
 V_INTEGER: DIGIT+;
-V_INTEGER_HEX: '0x' [0-9a-fA-F]+;
+V_INTEGER_HEX: '0x' [0-9a-fA-F_]+;
+V_INTEGER_OCT: '0o' [0-7_]+;
 V_INTEGER_BIN: '0b' [01_]+;
 V_STRING: '"' ( ~["\\] | '\\' . )* '"'; // FUTURE - state based strings?
 
@@ -89,6 +91,7 @@ END: 'end';
 VARIABLE: 'variable';
 CONSTANT: 'constant';
 POINTER: 'pointer';
+REFERENCE : 'reference';
 
 ASSIGNED: 'assigned';
 ASSIGN: 'assign';
@@ -98,10 +101,17 @@ INDEX: 'index';
 AT: 'at';
 
 NOT: 'not';
+AND: 'and';
+OR: 'or';
 
 CALL: 'call';
 
-SIZEOF: 'sizeof' | 'sizeOf';
+SIZE: 'size';
+LOCATION: 'location';
+MAX: 'max';
+MIN: 'min';
+CODE: 'code';
+OF: 'of';
 
 TYPE: 'type';
 IS: 'is';
@@ -123,55 +133,72 @@ fragment DIGIT: [0-9];
 module: module_item* EOF;
 
 //# Common
-function_access: V_IDENTIFIER;
+function_access
+: (V_IDENTIFIER
+// Keywords allowed as function names:
+| AND | OR
+| MAX | MIN
+);
 
 inline_part
 : OPTIONAL? INLINE
-|
+;
+
+qualifiers_part
+: (inline_part)? // Might add more in future, then replace ? with *
 ;
 
 //# Expressions
 //## In-expression calls
 expr_call
-: CALL function_access
-| CALL? function_access WITH ARGUMENTS? call_arguments P_SEMIC?
+: CALL? func=function_access target=call_target? WITH ARGUMENTS? args=call_arguments P_SEMIC?
+| CALL? func=function_access target=call_target
+| CALL func=function_access
 ;
 
 //## Access expressions (variables, dereference, array access, member access)
 access_expr
-: AT expression P_SEMIC? # Dereference
-| access_expr P_ACCESSOR V_IDENTIFIER # MemberAccess
-| access_expr AT expression P_SEMIC? # ArrayAccess
-| V_IDENTIFIER # Variable
+: AT expr=expression P_SEMIC? # Dereference
+| source=access_expr P_ACCESSOR member=V_IDENTIFIER # MemberAccess // Might want to access type properties here? Though, by name should be enough for now
+| array=access_expr AT index=expression P_SEMIC? # ArrayAccess
+| name=V_IDENTIFIER # Variable
 ;
+
+//## Other expressions
+of_expr
+: variant=SIZE OF type_expr
+| variant=(MAX|MIN) OF V_IDENTIFIER // Of a fundamental type.
+| variant=LOCATION OF access_expr
+| variant=CODE OF function_access // Needs a distinct construction from LOCATION OF, as functions have a separate namespace.
+;
+
+// TODO - cast expressions
 
 //## Generic expressions
-sizeof_expr
-: SIZEOF type_expr
-;
-
 expression
-: (V_INTEGER|V_INTEGER_HEX|V_INTEGER_BIN) # Int
+: (V_INTEGER|V_INTEGER_HEX|V_INTEGER_OCT|V_INTEGER_BIN) # Int
 | V_FLOAT # Float
 | V_STRING # String
-| sizeof_expr # Sizeof
+| of_expr # Molec
 // Parethesis
 | L_PARENTHESIS expression R_PARENTHESIS # Molec
 | L_BRACKET expression R_BRACKET # Molec
 | L_BRACE expression R_BRACE # Molec
 // Unary operators
-| O_MINUS expression # UnaryOp
-| O_BIT_NOT expression # UnaryOp
-| NOT expression # UnaryOp
+| operator=O_MINUS expression # UnaryOp
+| operator=O_BIT_NOT expression # UnaryOp
+| operator=NOT expression # UnaryOp
 // Binary operators
 | expression operator=(O_TIMES|O_DIVIDE) expression # BinaryOp
 | expression operator=(O_PLUS|O_MINUS) expression # BinaryOp
 | expression operator=(O_BIT_AND|O_BIT_XOR|O_BIT_OR) expression # BinaryOp
 // Expressions that may need termination
-| expr_call # Call
-| access_expr # Access
+| expr_call # Molec
+| access_expr # Molec
 // Comparison operators
 | expression operator=(O_EQUAL|O_NOT_EQUAL|O_LESS|O_GREATER|O_LESS_EQUAL|O_GREATER_EQUAL) expression # BinaryOp
+| expression operator=AND expression # BinaryOp
+| expression operator=OR expression # BinaryOp
 ;
 
 
@@ -181,14 +208,14 @@ type_expr
 | simple_type_expr
 ;
 
-mutability_node: mut=(CONSTANT | VARIABLE) simple_type_expr;
+mutability_node: mut=(CONSTANT | VARIABLE) expr=simple_type_expr;
 
 simple_type_expr
-: V_IDENTIFIER
+: name=V_IDENTIFIER
 | pointer_node
 ;
 
-pointer_node: POINTER TO type_expr;
+pointer_node: ptr_kind=(POINTER|REFERENCE) TO expr=type_expr;
 
 
 //# Statements
@@ -205,7 +232,7 @@ statement
 
 
 assignment
-: ASSIGN access_expr VALUE expression
+: ASSIGN target=access_expr VALUE value=expression
 ;
 
 //## Call statements
@@ -215,7 +242,7 @@ call_argument
 ;
 
 call_arguments
-: (call_argument P_COMMA)* call_argument P_COMMA?
+: (args=call_argument P_COMMA)* args=call_argument P_COMMA?
 ;
 // TODO refactor the expression call to use the above rules
 
@@ -225,29 +252,29 @@ call_target
 ;
 
 call_statement
-: function_access call_target? WITH ARGUMENTS? call_arguments
-| function_access call_target
-| CALL? function_access
+: func=function_access target=call_target? WITH ARGUMENTS? args=call_arguments
+| func=function_access target=call_target
+| CALL? func=function_access
 ;
 
 //## Variable declaration
 var_decl
-: inline_part type_expr name_decl_part (ASSIGNED expression)?
+: qualifiers=qualifiers_part type=type_expr name=name_decl_part (ASSIGNED value=expression)?
 ;
 
 //## Control flow statements
 // Optional labels on blocks are a replacement for goto
 // Useful for breaking out of nested loops, etc.
 break_statement
-: BREAK V_IDENTIFIER? 
+: BREAK label=V_IDENTIFIER?
 ;
 
 continue_statement
-: CONTINUE V_IDENTIFIER? 
+: CONTINUE label=V_IDENTIFIER?
 ;
 
 return_statement
-: RETURN expression?
+: RETURN expr=expression?
 ;
 
 
@@ -262,53 +289,54 @@ block_item
 ;
 
 block
-: (PROCEDURE|DO) name_decl_part? block_item* (END)
+: (PROCEDURE|DO) label=name_decl_part? block_item* (END)
 // The do keyword could be made optional in some blocks?
 ;
 
 if
-: IF expression block (ELSE (block|if))?
+: IF expr=expression bl=block (ELSE (elbl=block|elifbl=if))?
 ;
 
 while
-: WHILE expression block
+: WHILE expr=expression bl=block
 ;
 
 do_while
-: block WHILE expression P_PERIOD
+: bl=block WHILE expr=expression P_PERIOD
 ;
 
 //# Declarations
 //## Function
 return_type_decl_part
-: RETURNING type_expr
+: RETURNING type=type_expr
 ;
 
 name_decl_part
-: NAMED V_IDENTIFIER
+: NAMED name=V_IDENTIFIER
+// IDEA - add `in "c" c_name` part as the name used in generated c headers
 ;
 
 target_decl_part
-: (TARGET|TARGETS) var_decl (P_COMMA type_expr)* P_COMMA? END?
+: (TARGET|TARGETS) var_decl (P_COMMA var_decl)* P_COMMA? END?
 ;
 
 arguments_decl_part
-: ARGUMENTS var_decl (P_COMMA type_expr)* P_COMMA? END?
+: ARGUMENTS var_decl (P_COMMA var_decl)* P_COMMA? END?
 ;
 
 function
-: inline_part
+: qualifiers=qualifiers_part
   FUNCTION
-  return_type_decl_part?
-  name_decl_part?
-  target_decl_part?
-  arguments_decl_part?
-  block
+  type=return_type_decl_part?
+  name=name_decl_part?
+  target=target_decl_part?
+  args=arguments_decl_part?
+  bl=block
 ;
 
 //## Type
 type_decl
-: TYPE NAMED? V_IDENTIFIER IS type_expr
+: TYPE NAMED? name=V_IDENTIFIER IS type=type_expr
 ;
 
 //## Module
@@ -323,10 +351,10 @@ module_item
 ;
 
 section_header
-: target_decl_part # Target
+: target_decl_part # Target_section_header
 // More in the future, like generics, public etc.
 ;
 
 section
-: section_header* BEGIN module_item* END
+: headers=section_header* BEGIN items=module_item* END // TODO - no, labels don't work like this
 ;

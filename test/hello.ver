@@ -1,0 +1,7 @@
+function returning Int32 named main
+procedure
+    constant pointer to constant int8 named message
+        assigned "Hello World!\n".
+    puts message.
+    return 0.
+end

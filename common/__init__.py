@@ -1,2 +1,2 @@
-from errors import *
-from classes import *
+from .errors import *
+from .classes import *

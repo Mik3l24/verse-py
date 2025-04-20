@@ -3,7 +3,7 @@ begin
     inline function named set
     procedure
         //assign pin's register value pin's register | pin's mask.
-        or pin's register with pin's mask.
+        or pin's register with pin's mask. // Conflict - or may be used as a keyword.
     end
 
     inline function named unset
