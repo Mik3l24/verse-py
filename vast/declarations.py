@@ -3,11 +3,10 @@ from enum import Enum, IntFlag
 
 from typing import Optional
 
-from . import VASTNode
 from .statements import VBlock
 from .types import VType
 from .expressions import VExpression
-from .base import ScopeItem
+from .base import VASTNode, ScopeItem
 
 
 class Qualifiers(IntFlag):
@@ -48,7 +47,7 @@ class VArgument(VVariable):
 
 @dataclass
 class VFunction(VDeclaration):
-    name: str # Should there be a name here, if it's going to be in the scope's dict? - yes
+    name: str
     c_name: Optional[str]
     targets: list[VArgument]
     args: list[VArgument]

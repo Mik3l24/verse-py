@@ -1,6 +1,6 @@
 from typing import Optional, TypeVar
 #from vast.declarations import VFunction
-from common import NameConflictError
+from common import NameConflictError, ObjectAlreadyDefinedException
 from .base import ScopeItem
 
 
@@ -31,22 +31,26 @@ class Scope[ItemType]:
         self.symbols = {}
         self.parent = parent
 
-    # def define(self, name: str, value: ItemType):
-    #     if name not in self.symbols:
-    #         self.symbols[name] = value
-    #         return
-    #
-    #     cur_item = self.symbols[name]
-    #
-    #     if isinstance(value, VFunction):
-    #         if isinstance(cur_item, FuncVariants):
-    #             cur_item.implement(value)
-    #             return
-    #         elif isinstance(cur_item, VFunction):
-    #             self.symbols[name] = FuncVariants(funcs=[cur_item, value])
-    #             return
-    #
-    #     raise NameConflictError(f"Name {name} already defined in this scope")
+    def define(self, name: str, value: ItemType):
+        from vast.declarations import VFunction
+        if name not in self.symbols:
+            self.symbols[name] = value
+            return
+
+        cur_item = self.symbols[name]
+
+        if value is cur_item:
+            raise ObjectAlreadyDefinedException(f"Object {name} already defined in this scope")
+
+        if isinstance(value, VFunction):
+            if isinstance(cur_item, FuncVariants):
+                cur_item.implement(value)
+                return
+            elif isinstance(cur_item, VFunction):
+                self.symbols[name] = FuncVariants(funcs=[cur_item, value])
+                return
+
+        raise NameConflictError(f"Name {name} already defined in this scope")
 
     def lookup(self, name: str) -> Optional[ScopeItem]: # Replace w/ a dunder method?
         if name in self.symbols:
@@ -57,17 +61,17 @@ class Scope[ItemType]:
 
 # Add a module scope (inheriting from Scope or MultiScope) that could differentiate between public and private symbols?
 
-# class MultiScope:
-#     functions: Scope[VFunction]
-#     variables: Scope[VVariable]
-#     types: Scope[VType]
-#     labels: Scope[VBlock]
-#
-#     def __init__(self, parent: Optional["MultiScope"] = None):
-#         self.functions = Scope(parent.functions if parent else None)
-#         self.variables = Scope(parent.variables if parent else None)
-#         self.types = Scope(parent.types if parent else None)
-#         self.labels = Scope(parent.labels if parent else None)
+class MultiScope:
+    functions: FunctionScope
+    variables: Scope[VVariable]
+    types: Scope[VType]
+    labels: Scope[VBlock]
+
+    def __init__(self, parent: Optional["MultiScope"] = None):
+        self.functions = Scope(parent.functions if parent else None)
+        self.variables = Scope(parent.variables if parent else None)
+        self.types = Scope(parent.types if parent else None)
+        self.labels = Scope(parent.labels if parent else None)
 
     # Could also add a generic lookup method that would search through all scopes, if context is ambiguous
 

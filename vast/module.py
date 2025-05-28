@@ -3,18 +3,22 @@ from typing import Optional
 
 from vast.scope import Scope
 from .declarations import VModuleItem
-from .base import ScopeItem, Location
+from .base import VASTNode, ScopeItem, Location
 
 
 @dataclass
-class VSection(VModuleItem):
+class VModuleBase(VASTNode):
+    items: list[VModuleItem]
+
+@dataclass
+class VSection(VModuleBase, VModuleItem):
     # TODO - Implement
     pass
 
 
 @dataclass
-class VModule(ScopeItem):
-    items: list[VModuleItem]
+class VModule(VModuleBase, ScopeItem):
+
     name: Optional[str]
     scope: Scope
 

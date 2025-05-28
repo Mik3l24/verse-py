@@ -30,7 +30,7 @@ class Transformer(VerboseVisitor):
 
     @override
     def visitInline_part(self, ctx:Par.Inline_partContext):
-        if ctx.children[0].type == Lex.OPTIONAL:
+        if ctx.children[0].symbol.type == Lex.OPTIONAL:
             raise NotImplementedError("Optional inline not implemented yet")
         return Qualifiers.INLINE
 
@@ -42,15 +42,15 @@ class Transformer(VerboseVisitor):
             return qualifiers
         for child in ctx.children:
             qualifier = None
-            if child is Par.Inline_partContext:
+            if isinstance(child, Par.Inline_partContext):
                 qualifier = self.visit(child)
-            elif child is CommonToken:
+            elif isinstance(child, CommonToken):
                 qualifier = {
                     # Lex.ENTRYPOINT: FuncQualifiers.ENTRYPOINT,
                     # TODO - add more qualifiers
                 }.get(child.type, None)
             if qualifier is None:
-                raise ValueError(f"Unknown qualifier: {child.text}")
+                raise ValueError(f"Unknown qualifier: {child}")
             qualifiers |= qualifier
         return qualifiers
 

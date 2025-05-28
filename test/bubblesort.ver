@@ -53,14 +53,3 @@ procedure
     deallocate array.
 end
 
-
-
-// W linii `if array at item_i; > array at item_i + 1`
-// znak `;` oznacza koniec wyrażenia po `at`.
-//
-// W innym przypadku byłoby to zinterpretowane jako:
-// `if array at (item_i > array at item_i + 1)`
-// 
-// Choć tutaj mogłoby mieć sens, by zmienić tą zasadę,
-// bo raczej nie ma sensu by w indeksie używać operatorów porównania.
-
