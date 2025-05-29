@@ -22,10 +22,12 @@ class VModule(VModuleBase, ScopeItem):
     name: Optional[str]
     scope: Scope
 
-    def __init__(self, items: list[VModuleItem], name: Optional[str] = None, scope: Optional[Scope] = None, location: Optional[Location] = None):
+    def __init__(self, items: list[VModuleItem], name: Optional[str] = None, scope: Optional[Scope] = None,
+                 meta: dict = None):
+        super().__init__(meta)
         self.items = items
         self.name = name
         self.scope = scope if scope is not None else Scope()
-        self.location = location
+        self.meta = meta
 
 

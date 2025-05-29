@@ -13,4 +13,7 @@ class Location:
 
 @dataclass
 class VASTNode:
-    location: Optional[Location]
+    meta: dict
+
+    def __init__(self, meta: dict = None) -> None:
+        self.meta = meta or dict()

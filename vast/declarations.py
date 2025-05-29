@@ -13,15 +13,18 @@ class Qualifiers(IntFlag):
     # Common
     NONE       = 0b_0000_0000
     INLINE     = 0b_0000_0001
+    EXTERNAL   = 0b_0000_1000
     # Function-only
     ENTRYPOINT = 0b_0001_0000
 
 
 
 # Base classes
+@dataclass
 class VModuleItem(VASTNode):
     pass
 
+@dataclass
 class VDeclaration(VModuleItem, ScopeItem):
     pass
 
@@ -39,6 +42,12 @@ class VVariable(VDeclaration):
     init_value: Optional[VExpression]
     qualifiers: Qualifiers
 
+    def __init__(self, name: str, type: VType, init_value: Optional[VExpression] = None, qualifiers: Qualifiers = Qualifiers.NONE, meta: dict = None):
+        super().__init__(meta)
+        self.name = name
+        self.type = type
+        self.init_value = init_value
+        self.qualifiers = qualifiers
 
 
 class VArgument(VVariable):

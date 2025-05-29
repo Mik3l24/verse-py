@@ -15,10 +15,10 @@ class VAssignment(VStatement):
     target: VAccess
     value: VExpression
 
-    def __init__(self, target: VAccess, value: VExpression, location: Optional[Location] = None):
+    def __init__(self, target: VAccess, value: VExpression, meta: dict = None):
+        super().__init__(meta)
         self.target = target
         self.value = value
-        self.location = location
 
 
 
@@ -37,21 +37,20 @@ class VCall(VStatement, VExpression):
     targets: list[VAccess]
     args: list[VExpression]
 
-    def __init__(self, func: VAccess, targets: list[VAccess], args: list[VExpression], location: Optional[Location] = None):
-        super().__init__()
+    def __init__(self, func: VAccess, targets: list[VAccess], args: list[VExpression], meta: dict = None):
+        super().__init__(meta)
         self.func = func
         self.targets = targets
         self.args = args
-        self.location = location
 
 
 @dataclass
 class VReturn(VStatement):
-    values: list[VExpression]
+    values: list[VExpression] = None
 
-    def __init__(self, values: list[VExpression], location: Optional[Location] = None):
+    def __init__(self, values: list[VExpression], meta: dict = None):
+        super().__init__(meta)
         self.values = values
-        self.location = location
 
 
 @dataclass
@@ -62,23 +61,24 @@ class VBreak(VStatement):
     kind: Kind
     label: str
 
-    def __init__(self, kind: Kind, label: str = "", location: Optional[Location] = None):
+    def __init__(self, kind: Kind, label: str = "", meta: dict = None):
+        super().__init__(meta)
         self.kind = kind
         self.label = label
-        self.location = location
 
 
 @dataclass
 class VBlock(VStatement):
-    body: list[VStatement]
+    body: list[VStatement] 
     label: Optional[str]
     scope: Scope
 
-    def __init__(self, body: list[VStatement], label: Optional[str] = None, scope: Optional[Scope] = None, location: Optional[Location] = None):
+    def __init__(self, body: list[VStatement], label: Optional[str] = None, scope: Optional[Scope] = None,
+                 meta: dict = None):
+        super().__init__(meta)
         self.body = body
         self.label = label
         self.scope = scope if scope is not None else Scope()
-        self.location = location
 
 
 @dataclass
@@ -87,10 +87,22 @@ class VIf(VStatement):
     block: VBlock
     else_block: Optional[Union["VIf", VBlock]] = None
 
+    def __init__(self, cond: VExpression, block: VBlock, else_block: VBlock = None, meta: dict = None):
+        super().__init__(meta)
+        self.cond = cond
+        self.block = block
+        self.else_block = else_block
+
 
 @dataclass
 class VWhile(VStatement):
     cond: VExpression
     block: VBlock
     is_do_while: bool
+
+    def __init__(self, cond: VExpression, block: VBlock, is_do_while: bool, meta: dict = None):
+        super().__init__(meta)
+        self.cond = cond
+        self.block = block
+        self.is_do_while = is_do_while
 
