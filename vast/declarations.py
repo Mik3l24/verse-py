@@ -22,11 +22,13 @@ class Qualifiers(IntFlag):
 # Base classes
 @dataclass
 class VModuleItem(VASTNode):
-    pass
+    def __init__(self, meta: Optional[dict]):
+        super().__init__(meta)
 
 @dataclass
 class VDeclaration(VModuleItem, ScopeItem):
-    pass
+    def __init__(self, meta: Optional[dict]):
+        super().__init__(meta)
 
 
 @dataclass
@@ -87,6 +89,6 @@ class VFunction(VDeclaration):
             self.args = args if args is not None else []
             self.return_type = return_type
             self.qualifiers = qualifiers
-            self.body = body if body is not None else VBlock(body=[])
+            self.body = body
 
 

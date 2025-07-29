@@ -1,6 +1,7 @@
 # TODO Split into production and development requirements
 # Production
 antlr4-python3-runtime==4.13.2
+llvmlite==0.44.0
 
 # Development
 antlr4-tools==0.2.1

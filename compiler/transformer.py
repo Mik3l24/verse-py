@@ -322,7 +322,7 @@ class Transformer(VerboseVisitor):
 
     @override
     def visitName_decl_part(self, ctx:Par.Name_decl_partContext):
-        return self.visitChildren(ctx)
+        return ctx.children[1].symbol.text
 
 
     @override
@@ -341,7 +341,7 @@ class Transformer(VerboseVisitor):
         return VFunction(
             qualifiers=self.visit(ctx.qualifiers),
             return_type=self.visit(ctx.type_) if ctx.type_ else None,
-            name=self.visit(ctx.name) if ctx.name else None,
+            name=self.visit(ctx.name) if ctx.name else "",
             extern_kind=VFunction.ExternKind.NOT_EXTERN,
             extern_name=None, # TODO - implement externs in grammar and here
             targets=self.visit(ctx.target) if ctx.target else None,
