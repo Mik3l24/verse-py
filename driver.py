@@ -2,7 +2,11 @@ import sys
 from antlr4 import InputStream, FileStream, StdinStream, CommonTokenStream
 from parser.VerboseLexer import VerboseLexer
 from parser.VerboseParser import VerboseParser
+from vast.scope import Scope
 from compiler.transformer import Transformer
+from compiler.resolve_stage import register_module
+from compiler.contexts import CompileContext
+from compiler.intrinsics import intrinsic_scope
 
 def main(argv):
     input_stream = FileStream(argv[1])
@@ -13,9 +17,13 @@ def main(argv):
     print(tree.toStringTree(recog=parser))
     transformer = Transformer()
     module = transformer.visit(tree)
+    print("Parsing stage end")
 
-    print("Transformed module:")
-    print(module)
+    print("Resolve stage begin")
+    module.scope.parent = intrinsic_scope
+    ctx = CompileContext()
+    register_module(module, ctx)
+    print("Resolve stage end")
 
 
 if __name__ == '__main__':

@@ -20,7 +20,8 @@ class VExpression(VASTNode):
 
 @dataclass
 class VLiteral(VExpression):
-    pass
+    def __init__(self, meta: dict = None):
+        super().__init__(meta)
 
 
 @dataclass

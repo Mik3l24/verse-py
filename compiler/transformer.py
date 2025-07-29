@@ -10,6 +10,9 @@ from parser.VerboseLexer import VerboseLexer as Lex
 from vast import *
 from vast.base import Location, VASTNode
 
+from .meta import LOCATION
+from . import intrinsics
+
 
 class Transformer(VerboseVisitor):
 
@@ -18,7 +21,7 @@ class Transformer(VerboseVisitor):
         return VModule(
             items=[self.visit(child) for child in ctx.children if isinstance(child, Par.Module_itemContext)],
             name=None,
-            meta={"location": Location(ctx.start.line, ctx.start.column)},
+            meta={LOCATION: Location(ctx.start.line, ctx.start.column)},
         )
 
 
@@ -111,7 +114,7 @@ class Transformer(VerboseVisitor):
             Lex.O_BIT_NOT: VUnaryOp.Op.BITNOT,
             Lex.NOT: VUnaryOp.Op.NOT,
         }.get(ctx.operator.type, None)
-        return VUnaryOp(expr=self.visit(ctx.expr), op=op, meta={"location": Location(ctx.start.line, ctx.start.column)})
+        return VUnaryOp(expr=self.visit(ctx.expr), op=op, meta={LOCATION: Location(ctx.start.line, ctx.start.column)})
 
 
     @override
@@ -123,8 +126,8 @@ class Transformer(VerboseVisitor):
     @override
     def visitString(self, ctx:Par.StringContext):
         # TODO - implement string parsing - to handle escape sequences
-        return VLiteral(ctx.children[0].symbol.text, VNamedType("CString", Constness.CONSTANT),
-                        meta={"location": Location(ctx.start.line, ctx.start.column)})
+        return VStringLiteral(value=ctx.children[0].symbol.text, type=intrinsics.util_types["CString"],
+                        meta={LOCATION: Location(ctx.start.line, ctx.start.column)})
 
 
     @override
@@ -133,8 +136,8 @@ class Transformer(VerboseVisitor):
         # Do int parsing
         # TODO implement something better, that can handle more int literal types
         num = int(text)
-        return VLiteral(num, VFundamentalType(VFundamentalType.T.INT, VFundamentalType.Bits.UNSPECIFIED, Constness.CONSTANT),
-                        meta={"location": Location(ctx.start.line, ctx.start.column)})
+        return VIntLiteral(value=num, type=intrinsics.fundamental_types["Int32"],
+                        meta={LOCATION: Location(ctx.start.line, ctx.start.column)})
 
 
     @override
@@ -166,7 +169,7 @@ class Transformer(VerboseVisitor):
             raise ValueError(f"Unknown operator: {ctx.operator.text}")
 
         return VBinaryOp(self.visit(ctx.children[0]), self.visit(ctx.children[2]), operator,
-                         meta={"location": Location(ctx.start.line, ctx.start.column)})
+                         meta={LOCATION: Location(ctx.start.line, ctx.start.column)})
 
 
     @override
@@ -191,7 +194,7 @@ class Transformer(VerboseVisitor):
     @override
     def visitSimple_type_expr(self, ctx:Par.Simple_type_exprContext):
         if ctx.name is not None: # We must have named type
-            return VNamedType(ctx.name.text, meta={"location": Location(ctx.start.line, ctx.start.column)})
+            return VNamedType(ctx.name.text, meta={LOCATION: Location(ctx.start.line, ctx.start.column)})
         return self.visitChildren(ctx)
 
 
@@ -213,7 +216,7 @@ class Transformer(VerboseVisitor):
     @override
     def visitAssignment(self, ctx:Par.AssignmentContext):
         return VAssignment(self.visit(ctx.target), self.visit(ctx.value),
-                           meta={"location": Location(ctx.start.line, ctx.start.column)})
+                           meta={LOCATION: Location(ctx.start.line, ctx.start.column)})
 
 
     @override
@@ -239,10 +242,10 @@ class Transformer(VerboseVisitor):
     @override
     def visitCall_statement(self, ctx:Par.Call_statementContext):
         func = self.visit(ctx.func)
-        targets = self.visit(ctx.target) if ctx.target else None # Should return a list
-        args = self.visit(ctx.args) if ctx.args else None
+        targets = self.visit(ctx.target) if ctx.target else [] # Should return a list
+        args = self.visit(ctx.args) if ctx.args else []
         return VCall(func=func, targets=targets, args=args,
-                     meta={"location": Location(ctx.start.line, ctx.start.column)},)
+                     meta={LOCATION: Location(ctx.start.line, ctx.start.column)},)
 
 
     @override
@@ -253,32 +256,32 @@ class Transformer(VerboseVisitor):
             qualifiers=self.visit(ctx.qualifiers),
             init_value=self.visit(ctx.value) if ctx.value else None,
 
-            meta={"location": Location(ctx.start.line, ctx.start.column)},
+            meta={LOCATION: Location(ctx.start.line, ctx.start.column)},
         )
 
 
     @override
     def visitBreak_statement(self, ctx:Par.Break_statementContext):
         return VBreak(VBreak.Kind.BREAK, ctx.label.text if ctx.label is not None else "",
-                      meta={"location": Location(ctx.start.line, ctx.start.column)},)
+                      meta={LOCATION: Location(ctx.start.line, ctx.start.column)},)
 
 
     @override
     def visitContinue_statement(self, ctx:Par.Continue_statementContext):
         return VBreak(VBreak.Kind.CONTINUE, ctx.label.text if ctx.label is not None else "",
-                      meta={"location": Location(ctx.start.line, ctx.start.column)},)
+                      meta={LOCATION: Location(ctx.start.line, ctx.start.column)},)
 
 
     @override
     def visitReturn_statement(self, ctx:Par.Return_statementContext):
         return VReturn([self.visit(ctx.expr)], # atm, only one return value supported in grammar.
-                       meta={"location": Location(ctx.start.line, ctx.start.column)},)
+                       meta={LOCATION: Location(ctx.start.line, ctx.start.column)},)
 
 
     @override
     def visitBlock_item(self, ctx:Par.Block_itemContext):
         # A yet another grammatical rule
-        return self.visitChildren(ctx)
+        return self.visit(ctx.children[0])
 
 
     @override
@@ -290,26 +293,26 @@ class Transformer(VerboseVisitor):
                 # Though, how efficient is list comprehension?
                 self.visit(child) for child in ctx.children if isinstance(child, Par.Block_itemContext)
             ],
-            meta={"location": Location(ctx.start.line, ctx.start.column)},
+            meta={LOCATION: Location(ctx.start.line, ctx.start.column)},
         )
 
 
     @override
     def visitIf(self, ctx:Par.IfContext):
         return VIf(cond=self.visit(ctx.expr), block=self.visit(ctx.bl), else_block=self.visit(ctx.elbl or ctx.elifbl),
-                   meta={"location": Location(ctx.start.line, ctx.start.column)},)
+                   meta={LOCATION: Location(ctx.start.line, ctx.start.column)},)
 
 
     @override
     def visitWhile(self, ctx:Par.WhileContext):
         return VWhile(cond=self.visit(ctx.expr), block=self.visit(ctx.bl), is_do_while=False,
-                      meta={"location": Location(ctx.start.line, ctx.start.column)},)
+                      meta={LOCATION: Location(ctx.start.line, ctx.start.column)},)
 
 
     @override
     def visitDo_while(self, ctx:Par.Do_whileContext):
         return VWhile(cond=self.visit(ctx.expr), block=self.visit(ctx.bl), is_do_while=True,
-                      meta={"location": Location(ctx.start.line, ctx.start.column)},)
+                      meta={LOCATION: Location(ctx.start.line, ctx.start.column)},)
 
 
     @override
@@ -339,12 +342,13 @@ class Transformer(VerboseVisitor):
             qualifiers=self.visit(ctx.qualifiers),
             return_type=self.visit(ctx.type_) if ctx.type_ else None,
             name=self.visit(ctx.name) if ctx.name else None,
-            c_name=None,
+            extern_kind=VFunction.ExternKind.NOT_EXTERN,
+            extern_name=None, # TODO - implement externs in grammar and here
             targets=self.visit(ctx.target) if ctx.target else None,
             args=self.visit(ctx.args) if ctx.args else None,
             body=self.visit(ctx.bl) if ctx.bl else None,
 
-            meta={"location": Location(ctx.start.line, ctx.start.column)},
+            meta={LOCATION: Location(ctx.start.line, ctx.start.column)},
         )
 
 
@@ -354,7 +358,7 @@ class Transformer(VerboseVisitor):
             name=ctx.name.text,
             type=self.visit(ctx.type_),
 
-            meta={"location": Location(ctx.start.line, ctx.start.column)},
+            meta={LOCATION: Location(ctx.start.line, ctx.start.column)},
         )
 
 

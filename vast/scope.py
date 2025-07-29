@@ -31,6 +31,12 @@ class Scope[ItemType]:
         self.symbols = {}
         self.parent = parent
 
+    @classmethod
+    def from_dict(cls, symbols: dict[str, ItemType], parent: Optional["Scope"] = None) -> "Scope":
+        scope = cls(parent)
+        scope.symbols = symbols
+        return scope
+
     def define(self, name: str, value: ItemType):
         from vast.declarations import VFunction
         if name not in self.symbols:
@@ -62,11 +68,6 @@ class Scope[ItemType]:
 # Add a module scope (inheriting from Scope or MultiScope) that could differentiate between public and private symbols?
 
 class MultiScope:
-    functions: FunctionScope
-    variables: Scope[VVariable]
-    types: Scope[VType]
-    labels: Scope[VBlock]
-
     def __init__(self, parent: Optional["MultiScope"] = None):
         self.functions = Scope(parent.functions if parent else None)
         self.variables = Scope(parent.variables if parent else None)

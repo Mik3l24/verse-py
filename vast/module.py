@@ -8,7 +8,8 @@ from .base import VASTNode, ScopeItem, Location
 
 @dataclass
 class VModuleBase(VASTNode):
-    items: list[VModuleItem]
+    def __init__(self, meta: dict = None):
+        super().__init__(meta)
 
 @dataclass
 class VSection(VModuleBase, VModuleItem):
@@ -18,7 +19,7 @@ class VSection(VModuleBase, VModuleItem):
 
 @dataclass
 class VModule(VModuleBase, ScopeItem):
-
+    items: list[VModuleItem]
     name: Optional[str]
     scope: Scope
 
