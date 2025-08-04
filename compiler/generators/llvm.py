@@ -20,6 +20,9 @@ class LLVMGeneratorContext:
         self.current_function = None
         self.current_builder = None
 
+    def default_file_name(self, vmodule: VModule) -> str:
+        return f"{vmodule.name if vmodule.name else 'module'}.ll"
+
     def enter_function(self, function: ir.Function):
         ctx = self
         class FunctionContext:
