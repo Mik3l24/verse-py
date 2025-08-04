@@ -13,6 +13,27 @@ from vast.base import Location, VASTNode
 from .meta import LOCATION
 from . import intrinsics
 
+import re
+import codecs
+
+ESCAPE_SEQUENCE_RE = re.compile(r"""
+    ( \\U[0-9a-fA-F]{8}
+    | \\u[0-9a-fA-F]{4}
+    | \\x[0-9a-fA-F]{2}
+    | \\[0-7]{1,3}
+    | \\N\{[^}]+}
+    | \\[\\'"abfnrtv]
+    )""", re.UNICODE | re.VERBOSE)
+
+# Thanks, https://stackoverflow.com/a/24519338
+def decode_escapes(text: str) -> str:
+    def replace_escape(match):
+        try:
+            return codecs.decode(match.group(0), "unicode_escape")
+        except UnicodeDecodeError:
+            return match.group(0)
+    return ESCAPE_SEQUENCE_RE.sub(replace_escape, text)
+
 
 class Transformer(VerboseVisitor):
 
@@ -125,8 +146,10 @@ class Transformer(VerboseVisitor):
 
     @override
     def visitString(self, ctx:Par.StringContext):
-        # TODO - implement string parsing - to handle escape sequences
-        return VStringLiteral(value=ctx.children[0].symbol.text, type=intrinsics.util_types["CString"],
+        text: str = ctx.children[0].symbol.text
+        text = text.strip("\"")
+        text = decode_escapes(text)
+        return VStringLiteral(value=text, type=intrinsics.util_types["CString"],
                         meta={LOCATION: Location(ctx.start.line, ctx.start.column)})
 
 
