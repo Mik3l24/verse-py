@@ -78,6 +78,7 @@ RETURNING: 'returning';
 INLINE: 'inline';
 FORCED: 'forced';
 OPTIONAL: 'optional';
+EXTERNAL: 'external';
 
 RETURN: 'return';
 BREAK: 'break';
@@ -115,6 +116,7 @@ OF: 'of';
 
 TYPE: 'type';
 IS: 'is';
+IN: 'in';
 
 V_IDENTIFIER: [a-zA-Z_] [a-zA-Z0-9_]*;
 
@@ -145,7 +147,9 @@ inline_part
 ;
 
 qualifiers_part
-: (inline_part)? // Might add more in future, then replace ? with *
+: (inline_part
+    | EXTERNAL
+    )* // Might add more in future, then replace ? with *
 ;
 
 //# Expressions
@@ -313,7 +317,11 @@ return_type_decl_part
 
 name_decl_part
 : NAMED name=V_IDENTIFIER
-// IDEA - add `in "c" c_name` part as the name used in generated c headers
+;
+
+function_name_decl_part
+: NAMED name=V_IDENTIFIER
+| NAMED name=V_IDENTIFIER? IN extern_type=(V_IDENTIFIER|V_STRING) extern_name=V_IDENTIFIER
 ;
 
 target_decl_part
@@ -328,10 +336,18 @@ function
 : qualifiers=qualifiers_part
   FUNCTION
   type=return_type_decl_part?
-  name=name_decl_part?
+  names=function_name_decl_part?
   target=target_decl_part?
   args=arguments_decl_part?
-  bl=block
+  (bl=block|P_PERIOD)
+
+| qualifiers=qualifiers_part
+  FUNCTION
+  names=function_name_decl_part?
+  type=return_type_decl_part?
+  target=target_decl_part?
+  args=arguments_decl_part?
+  (bl=block|P_PERIOD)
 ;
 
 //## Type

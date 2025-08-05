@@ -79,9 +79,12 @@ def resolve(node, ctx: CompileContext):
         case VFunction():
             func: VFunction = node
 
+            # TODO - warning if function has no body and is not set as external (VER-WARN-IMPLICIT-EXTERNAL)
+
             # Resolve the function signature
             resolve(func.return_type, ctx)
-            with ctx.enter_scope(func.body.scope), ctx.enter_parenthood(func):
+            scope = func.body.scope if func.body is not None else Scope() # Workaround for external functions until scope is decoupled from AST classes
+            with ctx.enter_scope(scope), ctx.enter_parenthood(func):
                 for target in func.targets:
                     resolve(target, ctx)
                 for arg in func.args:
@@ -89,7 +92,9 @@ def resolve(node, ctx: CompileContext):
                 # TODO - generate the function signature object
 
             # Body's resolve will also enter its scope, so we need to exit it here
-            resolve(func.body, ctx)
+            if func.body is not None:
+                resolve(func.body, ctx)
+
             # Register the function in the current scope
             define_if_local(func, ctx)
 
@@ -128,9 +133,9 @@ def resolve(node, ctx: CompileContext):
             access: VNameAccess = node
             resolves_to = ctx.current_scope.lookup(access.name)
             if resolves_to is None:
-                raise CompileError(f"{access.meta["location"]} Undefined name {access.name}") # This should be a critical error
+                raise CompileError(f"{access.meta[LOCATION]} Undefined name {access.name}") # This should be a critical error
             if ctx.is_illegally_recursive(resolves_to):
-                raise CompileError(f"{access.meta['location']} Illegal recursion to name {access.name}")
+                raise CompileError(f"{access.meta[LOCATION]} Illegal recursion to name {access.name}")
             access.meta[RESOLVES_TO] = resolves_to
         #end VNameAccess
         case VBlock():
@@ -151,11 +156,15 @@ def resolve(node, ctx: CompileContext):
             # Lookup the type in the current scope
             resolves_to = ctx.current_scope.lookup(named_type.name)
             if resolves_to is None:
-                raise CompileError(f"{named_type.meta['location']} Undefined type {named_type.name}")
+                raise CompileError(f"{named_type.meta[LOCATION]} Undefined type {named_type.name}")
             if ctx.is_illegally_recursive(resolves_to):
-                raise CompileError(f"{named_type.meta['location']} Illegal recursion to type {named_type.name}")
+                raise CompileError(f"{named_type.meta[LOCATION]} Illegal recursion to type {named_type.name}")
             named_type.meta[RESOLVES_TO] = resolves_to
         #end VNamedType
+        case VPointerType():
+            pointer_type: VPointerType = node
+            resolve(pointer_type.to, ctx)
+        #end VPointerType
         case _:
             # I think all nodes are going to be here?
             raise TypeError(f"Unexpected node type: {type(node)}")

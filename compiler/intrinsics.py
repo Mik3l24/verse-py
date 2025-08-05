@@ -20,18 +20,7 @@ util_types = {
 }
 
 
-functions = {
-    # Made into an intrinsic until I introduce externs to grammar, so I can do a quick "Hello, World!"
-    "PutCString": VFunction(
-        name="PutCString", extern_kind=VFunction.ExternKind.C, extern_name="puts",
-        return_type=fundamental_types["Int32"],
-        targets=[],
-        args=[
-            VArgument(name="string", type=util_types["CString"], init_value=None),
-        ],
-        body=None
-    )
-}
+functions = {}
 
 intrinsic_scope = Scope.from_dict({
     **fundamental_types,

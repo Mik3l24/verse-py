@@ -194,6 +194,11 @@ class VerboseVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by VerboseParser#function_name_decl_part.
+    def visitFunction_name_decl_part(self, ctx:VerboseParser.Function_name_decl_partContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by VerboseParser#target_decl_part.
     def visitTarget_decl_part(self, ctx:VerboseParser.Target_decl_partContext):
         return self.visitChildren(ctx)

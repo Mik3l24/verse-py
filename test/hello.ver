@@ -1,8 +1,10 @@
-// function named puts
-// arguments constant pointer to constant UInt8 named message.
+external function named Print in C printf
+returning Int32
+arguments
+    constant CString named message.
 
 function returning Int32 named main
 procedure
-    PutCString with "Hello World!\n".
+    Print with "Hello World!\n".
     return 0.
 end

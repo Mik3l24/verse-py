@@ -34,6 +34,11 @@ def decode_escapes(text: str) -> str:
             return match.group(0)
     return ESCAPE_SEQUENCE_RE.sub(replace_escape, text)
 
+def clean_string_literal(text: str) -> str:
+    text = text.strip("\"")
+    text = decode_escapes(text)
+    return text
+
 
 class Transformer(VerboseVisitor):
 
@@ -49,7 +54,7 @@ class Transformer(VerboseVisitor):
     @override
     def visitFunction_access(self, ctx:Par.Function_accessContext):
         # This simple implementation is fine, but only until we implement function namespaces
-        return VNameAccess(name=ctx.children[0].symbol.text)
+        return VNameAccess(name=ctx.children[0].symbol.text, meta={LOCATION: Location(ctx.start.line, ctx.start.column)})
 
 
     @override
@@ -68,11 +73,12 @@ class Transformer(VerboseVisitor):
             qualifier = None
             if isinstance(child, Par.Inline_partContext):
                 qualifier = self.visit(child)
-            elif isinstance(child, CommonToken):
+            elif child.symbol and isinstance(child.symbol, CommonToken):
                 qualifier = {
+                    Lex.EXTERNAL: Qualifiers.EXTERNAL,
                     # Lex.ENTRYPOINT: FuncQualifiers.ENTRYPOINT,
                     # TODO - add more qualifiers
-                }.get(child.type, None)
+                }.get(child.symbol.type, None)
             if qualifier is None:
                 raise ValueError(f"Unknown qualifier: {child}")
             qualifiers |= qualifier
@@ -147,8 +153,7 @@ class Transformer(VerboseVisitor):
     @override
     def visitString(self, ctx:Par.StringContext):
         text: str = ctx.children[0].symbol.text
-        text = text.strip("\"")
-        text = decode_escapes(text)
+        text = clean_string_literal(text)
         return VStringLiteral(value=text, type=intrinsics.util_types["CString"],
                         meta={LOCATION: Location(ctx.start.line, ctx.start.column)})
 
@@ -347,6 +352,19 @@ class Transformer(VerboseVisitor):
     def visitName_decl_part(self, ctx:Par.Name_decl_partContext):
         return ctx.children[1].symbol.text
 
+    @override
+    def visitFunction_name_decl_part(self, ctx:Par.Function_name_decl_partContext):
+        name = ctx.name.text if ctx.name else None
+        if ctx.extern_type:
+            extern_type_token: CommonToken = ctx.extern_type
+            extern_kind = extern_type_token.text
+            if extern_type_token.type == Lex.V_STRING:
+                extern_kind = clean_string_literal(extern_kind)
+            extern_kind = VFunction.ExternKind(extern_kind)
+        else:
+            extern_kind = VFunction.ExternKind.NOT_EXTERN
+        extern_name = ctx.extern_name.text if ctx.extern_name else None
+        return name, extern_kind, extern_name
 
     @override
     def visitTarget_decl_part(self, ctx:Par.Target_decl_partContext):
@@ -361,12 +379,17 @@ class Transformer(VerboseVisitor):
     @override
     def visitFunction(self, ctx:Par.FunctionContext):
         # Might need to be refactored to allow a freer function signature
+        name, extern_kind, extern_name = self.visit(ctx.names)
+        if name is None:
+            name = extern_name
+            # If extern_name is None, it will be set to None in VFunction
+            # But it's ok for anonymous functions.
         return VFunction(
             qualifiers=self.visit(ctx.qualifiers),
             return_type=self.visit(ctx.type_) if ctx.type_ else None,
-            name=self.visit(ctx.name) if ctx.name else "",
-            extern_kind=VFunction.ExternKind.NOT_EXTERN,
-            extern_name=None, # TODO - implement externs in grammar and here
+            name=name,
+            extern_kind=extern_kind,
+            extern_name=extern_name,
             targets=self.visit(ctx.target) if ctx.target else None,
             args=self.visit(ctx.args) if ctx.args else None,
             body=self.visit(ctx.bl) if ctx.bl else None,
