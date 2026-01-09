@@ -258,7 +258,7 @@ class Transformer(VerboseVisitor):
         # Should return a list - but need to ignore commas in children?
         # Unfortunately, using labels does not work - it doesn't produce a list.
         # Ok, detecting if it's a token should work, as a single arg should be wrapped in a rule
-        return [self.visit(child) for child in ctx.children if not isinstance(child, CommonToken)]
+        return [self.visit(child) for child in ctx.children if not isinstance(child, TerminalNode)]
 
 
     @override

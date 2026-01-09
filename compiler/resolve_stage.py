@@ -150,6 +150,9 @@ def resolve(node, ctx: CompileContext):
             # TODO - Type inference?
             pass
         #end VStringLiteral
+        case VIntLiteral():
+            pass
+        #end VIntLiteral
         # Types - should maybe be moved to a dedicated function
         case VNamedType():
             named_type: VNamedType = node
