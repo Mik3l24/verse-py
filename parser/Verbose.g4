@@ -253,6 +253,7 @@ call_arguments
 /** These argments may be implicitly passed by pointer/reference. */
 call_target
 : access_expr
+| V_STRING
 ;
 
 call_statement

@@ -263,6 +263,8 @@ class Transformer(VerboseVisitor):
 
     @override
     def visitCall_target(self, ctx:Par.Call_targetContext):
+        if isinstance(ctx.children[0], TerminalNode) and ctx.children[0].symbol.type == Lex.V_STRING:
+            return [self.visitString(ctx)] # Yeah, type checker complains, it's a bit of a hack to avoid code duplication without refactoring.
         # In the future - may be a longer list. However, atm only one target is allowed
         return [self.visit(ctx.children[0])]
 

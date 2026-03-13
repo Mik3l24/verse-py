@@ -1,12 +1,14 @@
 external function named PrintToStdOut in C printf
 returning Int32
-arguments
+target
     constant CString named message,
+arguments
     constant UInt32 named a,
 end.
 
 function returning Int32 named main
 procedure
-    PrintToStdOut with "Hello World no. %d!\n", 1.
+    PrintToStdOut "Hello World no. %d!\n" with 1.
+    PrintToStdOut ":%d\n" with 3.
     return 0.
 end
