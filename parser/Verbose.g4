@@ -68,6 +68,7 @@ TO: 'to';
 
 FUNCTION: 'function';
 ARGUMENTS: 'arguments';
+VARIADIC: 'variadic';
 TARGETS: 'targets';
 TARGET: 'target';
 WHILE: 'while';
@@ -330,7 +331,8 @@ target_decl_part
 ;
 
 arguments_decl_part
-: ARGUMENTS var_decl (P_COMMA var_decl)* P_COMMA? END?
+: ARGUMENTS var_decl (P_COMMA var_decl)* P_COMMA? is_variadic=VARIADIC? END?
+| ARGUMENTS is_variadic=VARIADIC END?
 ;
 
 function

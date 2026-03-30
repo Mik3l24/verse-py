@@ -16,6 +16,7 @@ class Qualifiers(IntFlag):
     EXTERNAL   = 0b_0000_1000
     # Function-only
     ENTRYPOINT = 0b_0001_0000
+    VARIADIC   = 0b_0010_0000
 
 
 

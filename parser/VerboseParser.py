@@ -10,7 +10,7 @@ else:
 
 def serializedATN():
     return [
-        4,1,78,453,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        4,1,79,463,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
         6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
         2,14,7,14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,20,
         7,20,2,21,7,21,2,22,7,22,2,23,7,23,2,24,7,24,2,25,7,25,2,26,7,26,
@@ -40,56 +40,57 @@ def serializedATN():
         1,29,1,29,3,29,348,8,29,1,30,1,30,1,30,1,30,5,30,354,8,30,10,30,
         12,30,357,9,30,1,30,3,30,360,8,30,1,30,3,30,363,8,30,1,31,1,31,1,
         31,1,31,5,31,369,8,31,10,31,12,31,372,9,31,1,31,3,31,375,8,31,1,
-        31,3,31,378,8,31,1,32,1,32,1,32,3,32,383,8,32,1,32,3,32,386,8,32,
-        1,32,3,32,389,8,32,1,32,3,32,392,8,32,1,32,1,32,3,32,396,8,32,1,
-        32,1,32,1,32,3,32,401,8,32,1,32,3,32,404,8,32,1,32,3,32,407,8,32,
-        1,32,3,32,410,8,32,1,32,1,32,3,32,414,8,32,3,32,416,8,32,1,33,1,
-        33,3,33,420,8,33,1,33,1,33,1,33,1,33,1,34,1,34,1,34,1,34,1,34,1,
-        34,1,34,1,34,3,34,434,8,34,1,35,1,35,1,36,5,36,439,8,36,10,36,12,
-        36,442,9,36,1,36,1,36,5,36,446,8,36,10,36,12,36,449,9,36,1,36,1,
-        36,1,36,0,2,10,14,37,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,
-        32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,0,
-        12,3,0,66,67,71,72,78,78,1,0,71,72,1,0,4,7,1,0,21,22,1,0,19,20,1,
-        0,29,31,1,0,23,28,1,0,56,57,1,0,58,59,1,0,52,53,2,0,8,8,78,78,1,
-        0,39,40,504,0,77,1,0,0,0,2,82,1,0,0,0,4,85,1,0,0,0,6,93,1,0,0,0,
-        8,119,1,0,0,0,10,128,1,0,0,0,12,156,1,0,0,0,14,183,1,0,0,0,16,210,
+        31,3,31,378,8,31,1,31,3,31,381,8,31,1,31,1,31,1,31,3,31,386,8,31,
+        3,31,388,8,31,1,32,1,32,1,32,3,32,393,8,32,1,32,3,32,396,8,32,1,
+        32,3,32,399,8,32,1,32,3,32,402,8,32,1,32,1,32,3,32,406,8,32,1,32,
+        1,32,1,32,3,32,411,8,32,1,32,3,32,414,8,32,1,32,3,32,417,8,32,1,
+        32,3,32,420,8,32,1,32,1,32,3,32,424,8,32,3,32,426,8,32,1,33,1,33,
+        3,33,430,8,33,1,33,1,33,1,33,1,33,1,34,1,34,1,34,1,34,1,34,1,34,
+        1,34,1,34,3,34,444,8,34,1,35,1,35,1,36,5,36,449,8,36,10,36,12,36,
+        452,9,36,1,36,1,36,5,36,456,8,36,10,36,12,36,459,9,36,1,36,1,36,
+        1,36,0,2,10,14,37,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,
+        34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,0,12,
+        3,0,67,68,72,73,79,79,1,0,72,73,1,0,4,7,1,0,21,22,1,0,19,20,1,0,
+        29,31,1,0,23,28,1,0,57,58,1,0,59,60,1,0,53,54,2,0,8,8,79,79,1,0,
+        40,41,517,0,77,1,0,0,0,2,82,1,0,0,0,4,85,1,0,0,0,6,93,1,0,0,0,8,
+        119,1,0,0,0,10,128,1,0,0,0,12,156,1,0,0,0,14,183,1,0,0,0,16,210,
         1,0,0,0,18,212,1,0,0,0,20,217,1,0,0,0,22,219,1,0,0,0,24,229,1,0,
         0,0,26,233,1,0,0,0,28,238,1,0,0,0,30,245,1,0,0,0,32,254,1,0,0,0,
         34,273,1,0,0,0,36,275,1,0,0,0,38,282,1,0,0,0,40,286,1,0,0,0,42,290,
         1,0,0,0,44,299,1,0,0,0,46,301,1,0,0,0,48,313,1,0,0,0,50,323,1,0,
         0,0,52,327,1,0,0,0,54,332,1,0,0,0,56,335,1,0,0,0,58,347,1,0,0,0,
-        60,349,1,0,0,0,62,364,1,0,0,0,64,415,1,0,0,0,66,417,1,0,0,0,68,433,
-        1,0,0,0,70,435,1,0,0,0,72,440,1,0,0,0,74,76,3,68,34,0,75,74,1,0,
+        60,349,1,0,0,0,62,387,1,0,0,0,64,425,1,0,0,0,66,427,1,0,0,0,68,443,
+        1,0,0,0,70,445,1,0,0,0,72,450,1,0,0,0,74,76,3,68,34,0,75,74,1,0,
         0,0,76,79,1,0,0,0,77,75,1,0,0,0,77,78,1,0,0,0,78,80,1,0,0,0,79,77,
         1,0,0,0,80,81,5,0,0,1,81,1,1,0,0,0,82,83,7,0,0,0,83,3,1,0,0,0,84,
-        86,5,47,0,0,85,84,1,0,0,0,85,86,1,0,0,0,86,87,1,0,0,0,87,88,5,45,
-        0,0,88,5,1,0,0,0,89,92,3,4,2,0,90,92,5,48,0,0,91,89,1,0,0,0,91,90,
+        86,5,48,0,0,85,84,1,0,0,0,85,86,1,0,0,0,86,87,1,0,0,0,87,88,5,46,
+        0,0,88,5,1,0,0,0,89,92,3,4,2,0,90,92,5,49,0,0,91,89,1,0,0,0,91,90,
         1,0,0,0,92,95,1,0,0,0,93,91,1,0,0,0,93,94,1,0,0,0,94,7,1,0,0,0,95,
-        93,1,0,0,0,96,98,5,68,0,0,97,96,1,0,0,0,97,98,1,0,0,0,98,99,1,0,
+        93,1,0,0,0,96,98,5,69,0,0,97,96,1,0,0,0,97,98,1,0,0,0,98,99,1,0,
         0,0,99,101,3,2,1,0,100,102,3,32,16,0,101,100,1,0,0,0,101,102,1,0,
         0,0,102,103,1,0,0,0,103,105,5,35,0,0,104,106,5,38,0,0,105,104,1,
         0,0,0,105,106,1,0,0,0,106,107,1,0,0,0,107,109,3,30,15,0,108,110,
         5,11,0,0,109,108,1,0,0,0,109,110,1,0,0,0,110,120,1,0,0,0,111,113,
-        5,68,0,0,112,111,1,0,0,0,112,113,1,0,0,0,113,114,1,0,0,0,114,115,
-        3,2,1,0,115,116,3,32,16,0,116,120,1,0,0,0,117,118,5,68,0,0,118,120,
+        5,69,0,0,112,111,1,0,0,0,112,113,1,0,0,0,113,114,1,0,0,0,114,115,
+        3,2,1,0,115,116,3,32,16,0,116,120,1,0,0,0,117,118,5,69,0,0,118,120,
         3,2,1,0,119,97,1,0,0,0,119,112,1,0,0,0,119,117,1,0,0,0,120,9,1,0,
-        0,0,121,122,6,5,-1,0,122,123,5,64,0,0,123,125,3,14,7,0,124,126,5,
+        0,0,121,122,6,5,-1,0,122,123,5,65,0,0,123,125,3,14,7,0,124,126,5,
         11,0,0,125,124,1,0,0,0,125,126,1,0,0,0,126,129,1,0,0,0,127,129,5,
-        78,0,0,128,121,1,0,0,0,128,127,1,0,0,0,129,141,1,0,0,0,130,131,10,
-        3,0,0,131,132,5,12,0,0,132,140,5,78,0,0,133,134,10,2,0,0,134,135,
-        5,64,0,0,135,137,3,14,7,0,136,138,5,11,0,0,137,136,1,0,0,0,137,138,
+        79,0,0,128,121,1,0,0,0,128,127,1,0,0,0,129,141,1,0,0,0,130,131,10,
+        3,0,0,131,132,5,12,0,0,132,140,5,79,0,0,133,134,10,2,0,0,134,135,
+        5,65,0,0,135,137,3,14,7,0,136,138,5,11,0,0,137,136,1,0,0,0,137,138,
         1,0,0,0,138,140,1,0,0,0,139,130,1,0,0,0,139,133,1,0,0,0,140,143,
         1,0,0,0,141,139,1,0,0,0,141,142,1,0,0,0,142,11,1,0,0,0,143,141,1,
-        0,0,0,144,145,5,69,0,0,145,146,5,74,0,0,146,157,3,16,8,0,147,148,
-        7,1,0,0,148,149,5,74,0,0,149,157,5,78,0,0,150,151,5,70,0,0,151,152,
-        5,74,0,0,152,157,3,10,5,0,153,154,5,73,0,0,154,155,5,74,0,0,155,
+        0,0,0,144,145,5,70,0,0,145,146,5,75,0,0,146,157,3,16,8,0,147,148,
+        7,1,0,0,148,149,5,75,0,0,149,157,5,79,0,0,150,151,5,71,0,0,151,152,
+        5,75,0,0,152,157,3,10,5,0,153,154,5,74,0,0,154,155,5,75,0,0,155,
         157,3,2,1,0,156,144,1,0,0,0,156,147,1,0,0,0,156,150,1,0,0,0,156,
         153,1,0,0,0,157,13,1,0,0,0,158,159,6,7,-1,0,159,184,7,2,0,0,160,
         184,5,3,0,0,161,184,5,8,0,0,162,184,3,12,6,0,163,164,5,13,0,0,164,
         165,3,14,7,0,165,166,5,14,0,0,166,184,1,0,0,0,167,168,5,15,0,0,168,
         169,3,14,7,0,169,170,5,16,0,0,170,184,1,0,0,0,171,172,5,17,0,0,172,
         173,3,14,7,0,173,174,5,18,0,0,174,184,1,0,0,0,175,176,5,20,0,0,176,
-        184,3,14,7,11,177,178,5,32,0,0,178,184,3,14,7,10,179,180,5,65,0,
+        184,3,14,7,11,177,178,5,32,0,0,178,184,3,14,7,10,179,180,5,66,0,
         0,180,184,3,14,7,9,181,184,3,8,4,0,182,184,3,10,5,0,183,158,1,0,
         0,0,183,160,1,0,0,0,183,161,1,0,0,0,183,162,1,0,0,0,183,163,1,0,
         0,0,183,167,1,0,0,0,183,171,1,0,0,0,183,175,1,0,0,0,183,177,1,0,
@@ -97,20 +98,20 @@ def serializedATN():
         0,0,185,186,10,8,0,0,186,187,7,3,0,0,187,204,3,14,7,9,188,189,10,
         7,0,0,189,190,7,4,0,0,190,204,3,14,7,8,191,192,10,6,0,0,192,193,
         7,5,0,0,193,204,3,14,7,7,194,195,10,3,0,0,195,196,7,6,0,0,196,204,
-        3,14,7,4,197,198,10,2,0,0,198,199,5,66,0,0,199,204,3,14,7,3,200,
-        201,10,1,0,0,201,202,5,67,0,0,202,204,3,14,7,2,203,185,1,0,0,0,203,
+        3,14,7,4,197,198,10,2,0,0,198,199,5,67,0,0,199,204,3,14,7,3,200,
+        201,10,1,0,0,201,202,5,68,0,0,202,204,3,14,7,2,203,185,1,0,0,0,203,
         188,1,0,0,0,203,191,1,0,0,0,203,194,1,0,0,0,203,197,1,0,0,0,203,
         200,1,0,0,0,204,207,1,0,0,0,205,203,1,0,0,0,205,206,1,0,0,0,206,
         15,1,0,0,0,207,205,1,0,0,0,208,211,3,18,9,0,209,211,3,20,10,0,210,
         208,1,0,0,0,210,209,1,0,0,0,211,17,1,0,0,0,212,213,7,7,0,0,213,214,
-        3,20,10,0,214,19,1,0,0,0,215,218,5,78,0,0,216,218,3,22,11,0,217,
+        3,20,10,0,214,19,1,0,0,0,215,218,5,79,0,0,216,218,3,22,11,0,217,
         215,1,0,0,0,217,216,1,0,0,0,218,21,1,0,0,0,219,220,7,8,0,0,220,221,
         5,36,0,0,221,222,3,16,8,0,222,23,1,0,0,0,223,230,3,34,17,0,224,230,
         3,36,18,0,225,230,3,26,13,0,226,230,3,38,19,0,227,230,3,40,20,0,
         228,230,3,42,21,0,229,223,1,0,0,0,229,224,1,0,0,0,229,225,1,0,0,
         0,229,226,1,0,0,0,229,227,1,0,0,0,229,228,1,0,0,0,229,230,1,0,0,
-        0,230,231,1,0,0,0,231,232,5,9,0,0,232,25,1,0,0,0,233,234,5,61,0,
-        0,234,235,3,10,5,0,235,236,5,62,0,0,236,237,3,14,7,0,237,27,1,0,
+        0,230,231,1,0,0,0,231,232,5,9,0,0,232,25,1,0,0,0,233,234,5,62,0,
+        0,234,235,3,10,5,0,235,236,5,63,0,0,236,237,3,14,7,0,237,27,1,0,
         0,0,238,239,3,14,7,0,239,29,1,0,0,0,240,241,3,28,14,0,241,242,5,
         10,0,0,242,244,1,0,0,0,243,240,1,0,0,0,244,247,1,0,0,0,245,243,1,
         0,0,0,245,246,1,0,0,0,246,248,1,0,0,0,247,245,1,0,0,0,248,250,3,
@@ -120,67 +121,70 @@ def serializedATN():
         1,0,0,0,258,259,1,0,0,0,259,260,1,0,0,0,260,262,5,35,0,0,261,263,
         5,38,0,0,262,261,1,0,0,0,262,263,1,0,0,0,263,264,1,0,0,0,264,265,
         3,30,15,0,265,274,1,0,0,0,266,267,3,2,1,0,267,268,3,32,16,0,268,
-        274,1,0,0,0,269,271,5,68,0,0,270,269,1,0,0,0,270,271,1,0,0,0,271,
+        274,1,0,0,0,269,271,5,69,0,0,270,269,1,0,0,0,270,271,1,0,0,0,271,
         272,1,0,0,0,272,274,3,2,1,0,273,256,1,0,0,0,273,266,1,0,0,0,273,
         270,1,0,0,0,274,35,1,0,0,0,275,276,3,6,3,0,276,277,3,16,8,0,277,
-        280,3,56,28,0,278,279,5,60,0,0,279,281,3,14,7,0,280,278,1,0,0,0,
-        280,281,1,0,0,0,281,37,1,0,0,0,282,284,5,50,0,0,283,285,5,78,0,0,
-        284,283,1,0,0,0,284,285,1,0,0,0,285,39,1,0,0,0,286,288,5,51,0,0,
-        287,289,5,78,0,0,288,287,1,0,0,0,288,289,1,0,0,0,289,41,1,0,0,0,
-        290,292,5,49,0,0,291,293,3,14,7,0,292,291,1,0,0,0,292,293,1,0,0,
+        280,3,56,28,0,278,279,5,61,0,0,279,281,3,14,7,0,280,278,1,0,0,0,
+        280,281,1,0,0,0,281,37,1,0,0,0,282,284,5,51,0,0,283,285,5,79,0,0,
+        284,283,1,0,0,0,284,285,1,0,0,0,285,39,1,0,0,0,286,288,5,52,0,0,
+        287,289,5,79,0,0,288,287,1,0,0,0,288,289,1,0,0,0,289,41,1,0,0,0,
+        290,292,5,50,0,0,291,293,3,14,7,0,292,291,1,0,0,0,292,293,1,0,0,
         0,293,43,1,0,0,0,294,300,3,24,12,0,295,300,3,46,23,0,296,300,3,48,
         24,0,297,300,3,50,25,0,298,300,3,52,26,0,299,294,1,0,0,0,299,295,
         1,0,0,0,299,296,1,0,0,0,299,297,1,0,0,0,299,298,1,0,0,0,300,45,1,
         0,0,0,301,303,7,9,0,0,302,304,3,56,28,0,303,302,1,0,0,0,303,304,
         1,0,0,0,304,308,1,0,0,0,305,307,3,44,22,0,306,305,1,0,0,0,307,310,
         1,0,0,0,308,306,1,0,0,0,308,309,1,0,0,0,309,311,1,0,0,0,310,308,
-        1,0,0,0,311,312,5,55,0,0,312,47,1,0,0,0,313,314,5,42,0,0,314,315,
-        3,14,7,0,315,321,3,46,23,0,316,319,5,43,0,0,317,320,3,46,23,0,318,
+        1,0,0,0,311,312,5,56,0,0,312,47,1,0,0,0,313,314,5,43,0,0,314,315,
+        3,14,7,0,315,321,3,46,23,0,316,319,5,44,0,0,317,320,3,46,23,0,318,
         320,3,48,24,0,319,317,1,0,0,0,319,318,1,0,0,0,320,322,1,0,0,0,321,
-        316,1,0,0,0,321,322,1,0,0,0,322,49,1,0,0,0,323,324,5,41,0,0,324,
+        316,1,0,0,0,321,322,1,0,0,0,322,49,1,0,0,0,323,324,5,42,0,0,324,
         325,3,14,7,0,325,326,3,46,23,0,326,51,1,0,0,0,327,328,3,46,23,0,
-        328,329,5,41,0,0,329,330,3,14,7,0,330,331,5,9,0,0,331,53,1,0,0,0,
-        332,333,5,44,0,0,333,334,3,16,8,0,334,55,1,0,0,0,335,336,5,33,0,
-        0,336,337,5,78,0,0,337,57,1,0,0,0,338,339,5,33,0,0,339,348,5,78,
-        0,0,340,342,5,33,0,0,341,343,5,78,0,0,342,341,1,0,0,0,342,343,1,
-        0,0,0,343,344,1,0,0,0,344,345,5,77,0,0,345,346,7,10,0,0,346,348,
-        5,78,0,0,347,338,1,0,0,0,347,340,1,0,0,0,348,59,1,0,0,0,349,350,
+        328,329,5,42,0,0,329,330,3,14,7,0,330,331,5,9,0,0,331,53,1,0,0,0,
+        332,333,5,45,0,0,333,334,3,16,8,0,334,55,1,0,0,0,335,336,5,33,0,
+        0,336,337,5,79,0,0,337,57,1,0,0,0,338,339,5,33,0,0,339,348,5,79,
+        0,0,340,342,5,33,0,0,341,343,5,79,0,0,342,341,1,0,0,0,342,343,1,
+        0,0,0,343,344,1,0,0,0,344,345,5,78,0,0,345,346,7,10,0,0,346,348,
+        5,79,0,0,347,338,1,0,0,0,347,340,1,0,0,0,348,59,1,0,0,0,349,350,
         7,11,0,0,350,355,3,36,18,0,351,352,5,10,0,0,352,354,3,36,18,0,353,
         351,1,0,0,0,354,357,1,0,0,0,355,353,1,0,0,0,355,356,1,0,0,0,356,
         359,1,0,0,0,357,355,1,0,0,0,358,360,5,10,0,0,359,358,1,0,0,0,359,
-        360,1,0,0,0,360,362,1,0,0,0,361,363,5,55,0,0,362,361,1,0,0,0,362,
+        360,1,0,0,0,360,362,1,0,0,0,361,363,5,56,0,0,362,361,1,0,0,0,362,
         363,1,0,0,0,363,61,1,0,0,0,364,365,5,38,0,0,365,370,3,36,18,0,366,
         367,5,10,0,0,367,369,3,36,18,0,368,366,1,0,0,0,369,372,1,0,0,0,370,
         368,1,0,0,0,370,371,1,0,0,0,371,374,1,0,0,0,372,370,1,0,0,0,373,
         375,5,10,0,0,374,373,1,0,0,0,374,375,1,0,0,0,375,377,1,0,0,0,376,
-        378,5,55,0,0,377,376,1,0,0,0,377,378,1,0,0,0,378,63,1,0,0,0,379,
-        380,3,6,3,0,380,382,5,37,0,0,381,383,3,54,27,0,382,381,1,0,0,0,382,
-        383,1,0,0,0,383,385,1,0,0,0,384,386,3,58,29,0,385,384,1,0,0,0,385,
-        386,1,0,0,0,386,388,1,0,0,0,387,389,3,60,30,0,388,387,1,0,0,0,388,
-        389,1,0,0,0,389,391,1,0,0,0,390,392,3,62,31,0,391,390,1,0,0,0,391,
-        392,1,0,0,0,392,395,1,0,0,0,393,396,3,46,23,0,394,396,5,9,0,0,395,
-        393,1,0,0,0,395,394,1,0,0,0,396,416,1,0,0,0,397,398,3,6,3,0,398,
-        400,5,37,0,0,399,401,3,58,29,0,400,399,1,0,0,0,400,401,1,0,0,0,401,
-        403,1,0,0,0,402,404,3,54,27,0,403,402,1,0,0,0,403,404,1,0,0,0,404,
-        406,1,0,0,0,405,407,3,60,30,0,406,405,1,0,0,0,406,407,1,0,0,0,407,
-        409,1,0,0,0,408,410,3,62,31,0,409,408,1,0,0,0,409,410,1,0,0,0,410,
-        413,1,0,0,0,411,414,3,46,23,0,412,414,5,9,0,0,413,411,1,0,0,0,413,
-        412,1,0,0,0,414,416,1,0,0,0,415,379,1,0,0,0,415,397,1,0,0,0,416,
-        65,1,0,0,0,417,419,5,75,0,0,418,420,5,33,0,0,419,418,1,0,0,0,419,
-        420,1,0,0,0,420,421,1,0,0,0,421,422,5,78,0,0,422,423,5,76,0,0,423,
-        424,3,16,8,0,424,67,1,0,0,0,425,434,3,72,36,0,426,434,3,64,32,0,
-        427,428,3,36,18,0,428,429,5,9,0,0,429,434,1,0,0,0,430,431,3,66,33,
-        0,431,432,5,9,0,0,432,434,1,0,0,0,433,425,1,0,0,0,433,426,1,0,0,
-        0,433,427,1,0,0,0,433,430,1,0,0,0,434,69,1,0,0,0,435,436,3,60,30,
-        0,436,71,1,0,0,0,437,439,3,70,35,0,438,437,1,0,0,0,439,442,1,0,0,
-        0,440,438,1,0,0,0,440,441,1,0,0,0,441,443,1,0,0,0,442,440,1,0,0,
-        0,443,447,5,54,0,0,444,446,3,68,34,0,445,444,1,0,0,0,446,449,1,0,
-        0,0,447,445,1,0,0,0,447,448,1,0,0,0,448,450,1,0,0,0,449,447,1,0,
-        0,0,450,451,5,55,0,0,451,73,1,0,0,0,61,77,85,91,93,97,101,105,109,
-        112,119,125,128,137,139,141,156,183,203,205,210,217,229,245,250,
-        254,258,262,270,273,280,284,288,292,299,303,308,319,321,342,347,
-        355,359,362,370,374,377,382,385,388,391,395,400,403,406,409,413,
-        415,419,433,440,447
+        378,5,39,0,0,377,376,1,0,0,0,377,378,1,0,0,0,378,380,1,0,0,0,379,
+        381,5,56,0,0,380,379,1,0,0,0,380,381,1,0,0,0,381,388,1,0,0,0,382,
+        383,5,38,0,0,383,385,5,39,0,0,384,386,5,56,0,0,385,384,1,0,0,0,385,
+        386,1,0,0,0,386,388,1,0,0,0,387,364,1,0,0,0,387,382,1,0,0,0,388,
+        63,1,0,0,0,389,390,3,6,3,0,390,392,5,37,0,0,391,393,3,54,27,0,392,
+        391,1,0,0,0,392,393,1,0,0,0,393,395,1,0,0,0,394,396,3,58,29,0,395,
+        394,1,0,0,0,395,396,1,0,0,0,396,398,1,0,0,0,397,399,3,60,30,0,398,
+        397,1,0,0,0,398,399,1,0,0,0,399,401,1,0,0,0,400,402,3,62,31,0,401,
+        400,1,0,0,0,401,402,1,0,0,0,402,405,1,0,0,0,403,406,3,46,23,0,404,
+        406,5,9,0,0,405,403,1,0,0,0,405,404,1,0,0,0,406,426,1,0,0,0,407,
+        408,3,6,3,0,408,410,5,37,0,0,409,411,3,58,29,0,410,409,1,0,0,0,410,
+        411,1,0,0,0,411,413,1,0,0,0,412,414,3,54,27,0,413,412,1,0,0,0,413,
+        414,1,0,0,0,414,416,1,0,0,0,415,417,3,60,30,0,416,415,1,0,0,0,416,
+        417,1,0,0,0,417,419,1,0,0,0,418,420,3,62,31,0,419,418,1,0,0,0,419,
+        420,1,0,0,0,420,423,1,0,0,0,421,424,3,46,23,0,422,424,5,9,0,0,423,
+        421,1,0,0,0,423,422,1,0,0,0,424,426,1,0,0,0,425,389,1,0,0,0,425,
+        407,1,0,0,0,426,65,1,0,0,0,427,429,5,76,0,0,428,430,5,33,0,0,429,
+        428,1,0,0,0,429,430,1,0,0,0,430,431,1,0,0,0,431,432,5,79,0,0,432,
+        433,5,77,0,0,433,434,3,16,8,0,434,67,1,0,0,0,435,444,3,72,36,0,436,
+        444,3,64,32,0,437,438,3,36,18,0,438,439,5,9,0,0,439,444,1,0,0,0,
+        440,441,3,66,33,0,441,442,5,9,0,0,442,444,1,0,0,0,443,435,1,0,0,
+        0,443,436,1,0,0,0,443,437,1,0,0,0,443,440,1,0,0,0,444,69,1,0,0,0,
+        445,446,3,60,30,0,446,71,1,0,0,0,447,449,3,70,35,0,448,447,1,0,0,
+        0,449,452,1,0,0,0,450,448,1,0,0,0,450,451,1,0,0,0,451,453,1,0,0,
+        0,452,450,1,0,0,0,453,457,5,55,0,0,454,456,3,68,34,0,455,454,1,0,
+        0,0,456,459,1,0,0,0,457,455,1,0,0,0,457,458,1,0,0,0,458,460,1,0,
+        0,0,459,457,1,0,0,0,460,461,5,56,0,0,461,73,1,0,0,0,64,77,85,91,
+        93,97,101,105,109,112,119,125,128,137,139,141,156,183,203,205,210,
+        217,229,245,250,254,258,262,270,273,280,284,288,292,299,303,308,
+        319,321,342,347,355,359,362,370,374,377,380,385,387,392,395,398,
+        401,405,410,413,416,419,423,425,429,443,450,457
     ]
 
 class VerboseParser ( Parser ):
@@ -199,15 +203,16 @@ class VerboseParser ( Parser ):
                      "')'", "'['", "']'", "'{'", "'}'", "'+'", "'-'", "'*'", 
                      "'/'", "<INVALID>", "'!='", "'<'", "'>'", "'<='", "'>='", 
                      "'&'", "'|'", "'^'", "<INVALID>", "'named'", "'from'", 
-                     "'with'", "'to'", "'function'", "'arguments'", "'targets'", 
-                     "'target'", "'while'", "'if'", "'else'", "'returning'", 
-                     "'inline'", "'forced'", "'optional'", "'external'", 
-                     "'return'", "'break'", "'continue'", "'procedure'", 
-                     "'do'", "'begin'", "'end'", "'variable'", "'constant'", 
-                     "'pointer'", "'reference'", "'assigned'", "'assign'", 
-                     "'value'", "'index'", "'at'", "'not'", "'and'", "'or'", 
-                     "'call'", "'size'", "'location'", "'max'", "'min'", 
-                     "'code'", "'of'", "'type'", "'is'", "'in'" ]
+                     "'with'", "'to'", "'function'", "'arguments'", "'variadic'", 
+                     "'targets'", "'target'", "'while'", "'if'", "'else'", 
+                     "'returning'", "'inline'", "'forced'", "'optional'", 
+                     "'external'", "'return'", "'break'", "'continue'", 
+                     "'procedure'", "'do'", "'begin'", "'end'", "'variable'", 
+                     "'constant'", "'pointer'", "'reference'", "'assigned'", 
+                     "'assign'", "'value'", "'index'", "'at'", "'not'", 
+                     "'and'", "'or'", "'call'", "'size'", "'location'", 
+                     "'max'", "'min'", "'code'", "'of'", "'type'", "'is'", 
+                     "'in'" ]
 
     symbolicNames = [ "<INVALID>", "WS", "INLINE_COMMENT", "V_FLOAT", "V_INTEGER", 
                       "V_INTEGER_HEX", "V_INTEGER_OCT", "V_INTEGER_BIN", 
@@ -217,14 +222,14 @@ class VerboseParser ( Parser ):
                       "O_DIVIDE", "O_EQUAL", "O_NOT_EQUAL", "O_LESS", "O_GREATER", 
                       "O_LESS_EQUAL", "O_GREATER_EQUAL", "O_BIT_AND", "O_BIT_OR", 
                       "O_BIT_XOR", "O_BIT_NOT", "NAMED", "FROM", "WITH", 
-                      "TO", "FUNCTION", "ARGUMENTS", "TARGETS", "TARGET", 
-                      "WHILE", "IF", "ELSE", "RETURNING", "INLINE", "FORCED", 
-                      "OPTIONAL", "EXTERNAL", "RETURN", "BREAK", "CONTINUE", 
-                      "PROCEDURE", "DO", "BEGIN", "END", "VARIABLE", "CONSTANT", 
-                      "POINTER", "REFERENCE", "ASSIGNED", "ASSIGN", "VALUE", 
-                      "INDEX", "AT", "NOT", "AND", "OR", "CALL", "SIZE", 
-                      "LOCATION", "MAX", "MIN", "CODE", "OF", "TYPE", "IS", 
-                      "IN", "V_IDENTIFIER" ]
+                      "TO", "FUNCTION", "ARGUMENTS", "VARIADIC", "TARGETS", 
+                      "TARGET", "WHILE", "IF", "ELSE", "RETURNING", "INLINE", 
+                      "FORCED", "OPTIONAL", "EXTERNAL", "RETURN", "BREAK", 
+                      "CONTINUE", "PROCEDURE", "DO", "BEGIN", "END", "VARIABLE", 
+                      "CONSTANT", "POINTER", "REFERENCE", "ASSIGNED", "ASSIGN", 
+                      "VALUE", "INDEX", "AT", "NOT", "AND", "OR", "CALL", 
+                      "SIZE", "LOCATION", "MAX", "MIN", "CODE", "OF", "TYPE", 
+                      "IS", "IN", "V_IDENTIFIER" ]
 
     RULE_module = 0
     RULE_function_access = 1
@@ -314,46 +319,47 @@ class VerboseParser ( Parser ):
     TO=36
     FUNCTION=37
     ARGUMENTS=38
-    TARGETS=39
-    TARGET=40
-    WHILE=41
-    IF=42
-    ELSE=43
-    RETURNING=44
-    INLINE=45
-    FORCED=46
-    OPTIONAL=47
-    EXTERNAL=48
-    RETURN=49
-    BREAK=50
-    CONTINUE=51
-    PROCEDURE=52
-    DO=53
-    BEGIN=54
-    END=55
-    VARIABLE=56
-    CONSTANT=57
-    POINTER=58
-    REFERENCE=59
-    ASSIGNED=60
-    ASSIGN=61
-    VALUE=62
-    INDEX=63
-    AT=64
-    NOT=65
-    AND=66
-    OR=67
-    CALL=68
-    SIZE=69
-    LOCATION=70
-    MAX=71
-    MIN=72
-    CODE=73
-    OF=74
-    TYPE=75
-    IS=76
-    IN=77
-    V_IDENTIFIER=78
+    VARIADIC=39
+    TARGETS=40
+    TARGET=41
+    WHILE=42
+    IF=43
+    ELSE=44
+    RETURNING=45
+    INLINE=46
+    FORCED=47
+    OPTIONAL=48
+    EXTERNAL=49
+    RETURN=50
+    BREAK=51
+    CONTINUE=52
+    PROCEDURE=53
+    DO=54
+    BEGIN=55
+    END=56
+    VARIABLE=57
+    CONSTANT=58
+    POINTER=59
+    REFERENCE=60
+    ASSIGNED=61
+    ASSIGN=62
+    VALUE=63
+    INDEX=64
+    AT=65
+    NOT=66
+    AND=67
+    OR=68
+    CALL=69
+    SIZE=70
+    LOCATION=71
+    MAX=72
+    MIN=73
+    CODE=74
+    OF=75
+    TYPE=76
+    IS=77
+    IN=78
+    V_IDENTIFIER=79
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -411,7 +417,7 @@ class VerboseParser ( Parser ):
             self.state = 77
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((((_la - 37)) & ~0x3f) == 0 and ((1 << (_la - 37)) & 2473909161229) != 0):
+            while ((((_la - 37)) & ~0x3f) == 0 and ((1 << (_la - 37)) & 4947818322457) != 0):
                 self.state = 74
                 self.module_item()
                 self.state = 79
@@ -480,7 +486,7 @@ class VerboseParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 82
             _la = self._input.LA(1)
-            if not(((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & 4195) != 0)):
+            if not(((((_la - 67)) & ~0x3f) == 0 and ((1 << (_la - 67)) & 4195) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -537,7 +543,7 @@ class VerboseParser ( Parser ):
             self.state = 85
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==47:
+            if _la==48:
                 self.state = 84
                 self.match(VerboseParser.OPTIONAL)
 
@@ -603,15 +609,15 @@ class VerboseParser ( Parser ):
             self.state = 93
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 457396837154816) != 0):
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 914793674309632) != 0):
                 self.state = 91
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
-                if token in [45, 47]:
+                if token in [46, 48]:
                     self.state = 89
                     self.inline_part()
                     pass
-                elif token in [48]:
+                elif token in [49]:
                     self.state = 90
                     self.match(VerboseParser.EXTERNAL)
                     pass
@@ -699,7 +705,7 @@ class VerboseParser ( Parser ):
                 self.state = 97
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==68:
+                if _la==69:
                     self.state = 96
                     self.match(VerboseParser.CALL)
 
@@ -709,7 +715,7 @@ class VerboseParser ( Parser ):
                 self.state = 101
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==8 or _la==64 or _la==78:
+                if _la==8 or _la==65 or _la==79:
                     self.state = 100
                     localctx.target = self.call_target()
 
@@ -741,7 +747,7 @@ class VerboseParser ( Parser ):
                 self.state = 112
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==68:
+                if _la==69:
                     self.state = 111
                     self.match(VerboseParser.CALL)
 
@@ -919,7 +925,7 @@ class VerboseParser ( Parser ):
             self.state = 128
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [64]:
+            if token in [65]:
                 localctx = VerboseParser.DereferenceContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
@@ -937,7 +943,7 @@ class VerboseParser ( Parser ):
 
 
                 pass
-            elif token in [78]:
+            elif token in [79]:
                 localctx = VerboseParser.VariableContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
@@ -1079,7 +1085,7 @@ class VerboseParser ( Parser ):
             self.state = 156
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [69]:
+            if token in [70]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 144
                 localctx.variant = self.match(VerboseParser.SIZE)
@@ -1088,12 +1094,12 @@ class VerboseParser ( Parser ):
                 self.state = 146
                 self.type_expr()
                 pass
-            elif token in [71, 72]:
+            elif token in [72, 73]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 147
                 localctx.variant = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==71 or _la==72):
+                if not(_la==72 or _la==73):
                     localctx.variant = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -1103,7 +1109,7 @@ class VerboseParser ( Parser ):
                 self.state = 149
                 self.match(VerboseParser.V_IDENTIFIER)
                 pass
-            elif token in [70]:
+            elif token in [71]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 150
                 localctx.variant = self.match(VerboseParser.LOCATION)
@@ -1112,7 +1118,7 @@ class VerboseParser ( Parser ):
                 self.state = 152
                 self.access_expr(0)
                 pass
-            elif token in [73]:
+            elif token in [74]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 153
                 localctx.variant = self.match(VerboseParser.CODE)
@@ -1670,12 +1676,12 @@ class VerboseParser ( Parser ):
             self.state = 210
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [56, 57]:
+            if token in [57, 58]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 208
                 self.mutability_node()
                 pass
-            elif token in [58, 59, 78]:
+            elif token in [59, 60, 79]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 209
                 self.simple_type_expr()
@@ -1741,7 +1747,7 @@ class VerboseParser ( Parser ):
             self.state = 212
             localctx.mut = self._input.LT(1)
             _la = self._input.LA(1)
-            if not(_la==56 or _la==57):
+            if not(_la==57 or _la==58):
                 localctx.mut = self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -1800,12 +1806,12 @@ class VerboseParser ( Parser ):
             self.state = 217
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [78]:
+            if token in [79]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 215
                 localctx.name = self.match(VerboseParser.V_IDENTIFIER)
                 pass
-            elif token in [58, 59]:
+            elif token in [59, 60]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 216
                 self.pointer_node()
@@ -1874,7 +1880,7 @@ class VerboseParser ( Parser ):
             self.state = 219
             localctx.ptr_kind = self._input.LT(1)
             _la = self._input.LA(1)
-            if not(_la==58 or _la==59):
+            if not(_la==59 or _la==60):
                 localctx.ptr_kind = self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -2226,7 +2232,7 @@ class VerboseParser ( Parser ):
             self.state = 254
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [64, 78]:
+            if token in [65, 79]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 252
                 self.access_expr(0)
@@ -2315,7 +2321,7 @@ class VerboseParser ( Parser ):
                 self.state = 258
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==8 or _la==64 or _la==78:
+                if _la==8 or _la==65 or _la==79:
                     self.state = 257
                     localctx.target = self.call_target()
 
@@ -2347,7 +2353,7 @@ class VerboseParser ( Parser ):
                 self.state = 270
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==68:
+                if _la==69:
                     self.state = 269
                     self.match(VerboseParser.CALL)
 
@@ -2432,7 +2438,7 @@ class VerboseParser ( Parser ):
             self.state = 280
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==60:
+            if _la==61:
                 self.state = 278
                 self.match(VerboseParser.ASSIGNED)
                 self.state = 279
@@ -2494,7 +2500,7 @@ class VerboseParser ( Parser ):
             self.state = 284
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==78:
+            if _la==79:
                 self.state = 283
                 localctx.label = self.match(VerboseParser.V_IDENTIFIER)
 
@@ -2554,7 +2560,7 @@ class VerboseParser ( Parser ):
             self.state = 288
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==78:
+            if _la==79:
                 self.state = 287
                 localctx.label = self.match(VerboseParser.V_IDENTIFIER)
 
@@ -2615,7 +2621,7 @@ class VerboseParser ( Parser ):
             self.state = 292
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 4296188408) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & 17407) != 0):
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 4296188408) != 0) or ((((_la - 65)) & ~0x3f) == 0 and ((1 << (_la - 65)) & 17407) != 0):
                 self.state = 291
                 localctx.expr = self.expression(0)
 
@@ -2781,7 +2787,7 @@ class VerboseParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 301
             _la = self._input.LA(1)
-            if not(_la==52 or _la==53):
+            if not(_la==53 or _la==54):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -2797,7 +2803,7 @@ class VerboseParser ( Parser ):
             self.state = 308
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 3404622362245595648) != 0) or ((((_la - 66)) & ~0x3f) == 0 and ((1 << (_la - 66)) & 4199) != 0):
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 6809244724491190784) != 0) or ((((_la - 67)) & ~0x3f) == 0 and ((1 << (_la - 67)) & 4199) != 0):
                 self.state = 305
                 self.block_item()
                 self.state = 310
@@ -2883,17 +2889,17 @@ class VerboseParser ( Parser ):
             self.state = 321
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==43:
+            if _la==44:
                 self.state = 316
                 self.match(VerboseParser.ELSE)
                 self.state = 319
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
-                if token in [52, 53]:
+                if token in [53, 54]:
                     self.state = 317
                     localctx.elbl = self.block()
                     pass
-                elif token in [42]:
+                elif token in [43]:
                     self.state = 318
                     localctx.elifbl = self.if_()
                     pass
@@ -3214,7 +3220,7 @@ class VerboseParser ( Parser ):
                 self.state = 342
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==78:
+                if _la==79:
                     self.state = 341
                     localctx.name = self.match(VerboseParser.V_IDENTIFIER)
 
@@ -3224,7 +3230,7 @@ class VerboseParser ( Parser ):
                 self.state = 345
                 localctx.extern_type = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==8 or _la==78):
+                if not(_la==8 or _la==79):
                     localctx.extern_type = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -3301,7 +3307,7 @@ class VerboseParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 349
             _la = self._input.LA(1)
-            if not(_la==39 or _la==40):
+            if not(_la==40 or _la==41):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -3332,7 +3338,7 @@ class VerboseParser ( Parser ):
             self.state = 362
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==55:
+            if _la==56:
                 self.state = 361
                 self.match(VerboseParser.END)
 
@@ -3352,6 +3358,7 @@ class VerboseParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
+            self.is_variadic = None # Token
 
         def ARGUMENTS(self):
             return self.getToken(VerboseParser.ARGUMENTS, 0)
@@ -3371,6 +3378,9 @@ class VerboseParser ( Parser ):
 
         def END(self):
             return self.getToken(VerboseParser.END, 0)
+
+        def VARIADIC(self):
+            return self.getToken(VerboseParser.VARIADIC, 0)
 
         def getRuleIndex(self):
             return VerboseParser.RULE_arguments_decl_part
@@ -3398,38 +3408,69 @@ class VerboseParser ( Parser ):
         self.enterRule(localctx, 62, self.RULE_arguments_decl_part)
         self._la = 0 # Token type
         try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 364
-            self.match(VerboseParser.ARGUMENTS)
-            self.state = 365
-            self.var_decl()
-            self.state = 370
+            self.state = 387
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,43,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
-                    self.state = 366
-                    self.match(VerboseParser.P_COMMA)
-                    self.state = 367
-                    self.var_decl() 
-                self.state = 372
+            la_ = self._interp.adaptivePredict(self._input,48,self._ctx)
+            if la_ == 1:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 364
+                self.match(VerboseParser.ARGUMENTS)
+                self.state = 365
+                self.var_decl()
+                self.state = 370
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,43,self._ctx)
+                while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                    if _alt==1:
+                        self.state = 366
+                        self.match(VerboseParser.P_COMMA)
+                        self.state = 367
+                        self.var_decl() 
+                    self.state = 372
+                    self._errHandler.sync(self)
+                    _alt = self._interp.adaptivePredict(self._input,43,self._ctx)
 
-            self.state = 374
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            if _la==10:
-                self.state = 373
-                self.match(VerboseParser.P_COMMA)
+                self.state = 374
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                if _la==10:
+                    self.state = 373
+                    self.match(VerboseParser.P_COMMA)
 
 
-            self.state = 377
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            if _la==55:
-                self.state = 376
-                self.match(VerboseParser.END)
+                self.state = 377
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                if _la==39:
+                    self.state = 376
+                    localctx.is_variadic = self.match(VerboseParser.VARIADIC)
+
+
+                self.state = 380
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                if _la==56:
+                    self.state = 379
+                    self.match(VerboseParser.END)
+
+
+                pass
+
+            elif la_ == 2:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 382
+                self.match(VerboseParser.ARGUMENTS)
+                self.state = 383
+                localctx.is_variadic = self.match(VerboseParser.VARIADIC)
+                self.state = 385
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                if _la==56:
+                    self.state = 384
+                    self.match(VerboseParser.END)
+
+
+                pass
 
 
         except RecognitionException as re:
@@ -3510,56 +3551,56 @@ class VerboseParser ( Parser ):
         self.enterRule(localctx, 64, self.RULE_function)
         self._la = 0 # Token type
         try:
-            self.state = 415
+            self.state = 425
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,56,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,59,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 379
+                self.state = 389
                 localctx.qualifiers = self.qualifiers_part()
-                self.state = 380
+                self.state = 390
                 self.match(VerboseParser.FUNCTION)
-                self.state = 382
+                self.state = 392
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==44:
-                    self.state = 381
+                if _la==45:
+                    self.state = 391
                     localctx.type_ = self.return_type_decl_part()
-
-
-                self.state = 385
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-                if _la==33:
-                    self.state = 384
-                    localctx.names = self.function_name_decl_part()
-
-
-                self.state = 388
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-                if _la==39 or _la==40:
-                    self.state = 387
-                    localctx.target = self.target_decl_part()
-
-
-                self.state = 391
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-                if _la==38:
-                    self.state = 390
-                    localctx.args = self.arguments_decl_part()
 
 
                 self.state = 395
                 self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                if _la==33:
+                    self.state = 394
+                    localctx.names = self.function_name_decl_part()
+
+
+                self.state = 398
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                if _la==40 or _la==41:
+                    self.state = 397
+                    localctx.target = self.target_decl_part()
+
+
+                self.state = 401
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                if _la==38:
+                    self.state = 400
+                    localctx.args = self.arguments_decl_part()
+
+
+                self.state = 405
+                self._errHandler.sync(self)
                 token = self._input.LA(1)
-                if token in [52, 53]:
-                    self.state = 393
+                if token in [53, 54]:
+                    self.state = 403
                     localctx.bl = self.block()
                     pass
                 elif token in [9]:
-                    self.state = 394
+                    self.state = 404
                     self.match(VerboseParser.P_PERIOD)
                     pass
                 else:
@@ -3569,51 +3610,51 @@ class VerboseParser ( Parser ):
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 397
+                self.state = 407
                 localctx.qualifiers = self.qualifiers_part()
-                self.state = 398
+                self.state = 408
                 self.match(VerboseParser.FUNCTION)
-                self.state = 400
+                self.state = 410
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==33:
-                    self.state = 399
+                    self.state = 409
                     localctx.names = self.function_name_decl_part()
-
-
-                self.state = 403
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-                if _la==44:
-                    self.state = 402
-                    localctx.type_ = self.return_type_decl_part()
-
-
-                self.state = 406
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-                if _la==39 or _la==40:
-                    self.state = 405
-                    localctx.target = self.target_decl_part()
-
-
-                self.state = 409
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-                if _la==38:
-                    self.state = 408
-                    localctx.args = self.arguments_decl_part()
 
 
                 self.state = 413
                 self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                if _la==45:
+                    self.state = 412
+                    localctx.type_ = self.return_type_decl_part()
+
+
+                self.state = 416
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                if _la==40 or _la==41:
+                    self.state = 415
+                    localctx.target = self.target_decl_part()
+
+
+                self.state = 419
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                if _la==38:
+                    self.state = 418
+                    localctx.args = self.arguments_decl_part()
+
+
+                self.state = 423
+                self._errHandler.sync(self)
                 token = self._input.LA(1)
-                if token in [52, 53]:
-                    self.state = 411
+                if token in [53, 54]:
+                    self.state = 421
                     localctx.bl = self.block()
                     pass
                 elif token in [9]:
-                    self.state = 412
+                    self.state = 422
                     self.match(VerboseParser.P_PERIOD)
                     pass
                 else:
@@ -3683,21 +3724,21 @@ class VerboseParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 417
+            self.state = 427
             self.match(VerboseParser.TYPE)
-            self.state = 419
+            self.state = 429
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==33:
-                self.state = 418
+                self.state = 428
                 self.match(VerboseParser.NAMED)
 
 
-            self.state = 421
+            self.state = 431
             localctx.name = self.match(VerboseParser.V_IDENTIFIER)
-            self.state = 422
+            self.state = 432
             self.match(VerboseParser.IS)
-            self.state = 423
+            self.state = 433
             localctx.type_ = self.type_expr()
         except RecognitionException as re:
             localctx.exception = re
@@ -3759,34 +3800,34 @@ class VerboseParser ( Parser ):
         localctx = VerboseParser.Module_itemContext(self, self._ctx, self.state)
         self.enterRule(localctx, 68, self.RULE_module_item)
         try:
-            self.state = 433
+            self.state = 443
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,58,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,61,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 425
+                self.state = 435
                 self.section()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 426
+                self.state = 436
                 self.function()
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 427
+                self.state = 437
                 self.var_decl()
-                self.state = 428
+                self.state = 438
                 self.match(VerboseParser.P_PERIOD)
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 430
+                self.state = 440
                 self.type_decl()
-                self.state = 431
+                self.state = 441
                 self.match(VerboseParser.P_PERIOD)
                 pass
 
@@ -3850,7 +3891,7 @@ class VerboseParser ( Parser ):
         try:
             localctx = VerboseParser.Target_section_headerContext(self, localctx)
             self.enterOuterAlt(localctx, 1)
-            self.state = 435
+            self.state = 445
             self.target_decl_part()
         except RecognitionException as re:
             localctx.exception = re
@@ -3917,29 +3958,29 @@ class VerboseParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 440
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            while _la==39 or _la==40:
-                self.state = 437
-                localctx.headers = self.section_header()
-                self.state = 442
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-
-            self.state = 443
-            self.match(VerboseParser.BEGIN)
-            self.state = 447
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            while ((((_la - 37)) & ~0x3f) == 0 and ((1 << (_la - 37)) & 2473909161229) != 0):
-                self.state = 444
-                localctx.items = self.module_item()
-                self.state = 449
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-
             self.state = 450
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            while _la==40 or _la==41:
+                self.state = 447
+                localctx.headers = self.section_header()
+                self.state = 452
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+
+            self.state = 453
+            self.match(VerboseParser.BEGIN)
+            self.state = 457
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            while ((((_la - 37)) & ~0x3f) == 0 and ((1 << (_la - 37)) & 4947818322457) != 0):
+                self.state = 454
+                localctx.items = self.module_item()
+                self.state = 459
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+
+            self.state = 460
             self.match(VerboseParser.END)
         except RecognitionException as re:
             localctx.exception = re

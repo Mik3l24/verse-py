@@ -73,6 +73,7 @@ def generate(node: VASTNode, ctx: LLVMGeneratorContext, **kwargs) -> ir.Value | 
             llvm_function_type = ir.FunctionType(generate(vfunction.return_type, ctx),
                                                  args=(*(generate(arg.type, ctx) for arg in vfunction.targets),
                                                    *(generate(arg.type, ctx) for arg in vfunction.args)),
+                                                 var_arg=vfunction.qualifiers & Qualifiers.VARIADIC != 0,
                                                  )
             if vfunction.extern_name:
                 name = vfunction.extern_name

@@ -375,7 +375,11 @@ class Transformer(VerboseVisitor):
 
     @override
     def visitArguments_decl_part(self, ctx:Par.Arguments_decl_partContext):
-        return [self.visit(child) for child in ctx.children if isinstance(child, Par.Var_declContext)]
+        try:
+            is_variadic = ctx.is_variadic is not None
+        except AttributeError:
+            is_variadic = False
+        return [self.visit(child) for child in ctx.children if isinstance(child, Par.Var_declContext)], is_variadic
 
 
     @override
@@ -386,14 +390,18 @@ class Transformer(VerboseVisitor):
             name = extern_name
             # If extern_name is None, it will be set to None in VFunction
             # But it's ok for anonymous functions.
+        if ctx.args is not None:
+            args, is_variadic = self.visit(ctx.args)
+        else:
+            args, is_variadic = None, False
         return VFunction(
-            qualifiers=self.visit(ctx.qualifiers),
+            qualifiers=self.visit(ctx.qualifiers) | Qualifiers.VARIADIC if is_variadic else 0,
             return_type=self.visit(ctx.type_) if ctx.type_ else None,
             name=name,
             extern_kind=extern_kind,
             extern_name=extern_name,
             targets=self.visit(ctx.target) if ctx.target else None,
-            args=self.visit(ctx.args) if ctx.args else None,
+            args=args,
             body=self.visit(ctx.bl) if ctx.bl else None,
 
             meta={LOCATION: Location(ctx.start.line, ctx.start.column)},
